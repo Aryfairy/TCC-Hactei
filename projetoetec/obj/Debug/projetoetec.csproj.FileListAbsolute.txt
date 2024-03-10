@@ -1,0 +1,14 @@
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\bin\Debug\projetoetec.exe.config
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\bin\Debug\projetoetec.exe
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\bin\Debug\projetoetec.pdb
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.frmCalendario.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.frmLogin.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.frmReserva.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.exe
+C:\Users\JEFFERSON\source\repos\projetoetec\projetoetec\obj\Debug\projetoetec.pdb
