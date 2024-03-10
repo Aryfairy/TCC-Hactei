@@ -74,7 +74,7 @@ namespace projetoetec
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(119, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(742, 413);
+            this.panel2.Size = new System.Drawing.Size(742, 400);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
