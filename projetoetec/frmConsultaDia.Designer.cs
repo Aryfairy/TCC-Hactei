@@ -181,6 +181,7 @@ namespace projetoetec
             // pnlConsultaDia
             // 
             this.pnlConsultaDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
+            this.pnlConsultaDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlConsultaDia.Controls.Add(this.dateTimePicker1);
             this.pnlConsultaDia.Controls.Add(this.cboDisponibilidade);
             this.pnlConsultaDia.Controls.Add(this.lblLaboratorio);
