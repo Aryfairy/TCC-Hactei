@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace projetoetec
 {
-    public partial class frmConsultaGeral : Form
+    public partial class frmSplash : Form
     {
-        public frmConsultaGeral()
+        public frmSplash()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void frmSplash_Load(object sender, EventArgs e)
         {
 
         }

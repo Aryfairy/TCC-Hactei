@@ -30,399 +30,496 @@ namespace projetoetec
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.pnlCadastro = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtDisciplinaProf = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtProfessor = new System.Windows.Forms.TextBox();
+            this.txtDisciplinaLab = new System.Windows.Forms.TextBox();
+            this.txtLaboratorio = new System.Windows.Forms.TextBox();
+            this.btnDeletarprof = new System.Windows.Forms.Button();
+            this.btnCadastrarProf = new System.Windows.Forms.Button();
+            this.btnDeletarLab = new System.Windows.Forms.Button();
+            this.btnCadastrarLab = new System.Windows.Forms.Button();
+            this.cboProfessor = new System.Windows.Forms.ComboBox();
+            this.cboLaboratorio = new System.Windows.Forms.ComboBox();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblDisciplinaProf = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblProfessor = new System.Windows.Forms.Label();
+            this.lblDisciplina = new System.Windows.Forms.Label();
+            this.lblLaboratorio = new System.Windows.Forms.Label();
+            this.pnlOpc = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lnkCadastro = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lnkReserva = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lnkConsultaGeral = new System.Windows.Forms.LinkLabel();
+            this.lnkConsultaDia = new System.Windows.Forms.LinkLabel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.picMudarTema = new System.Windows.Forms.PictureBox();
+            this.pnlCadastro.SuspendLayout();
+            this.pnlOpc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlCadastro
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(118, 97);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 400);
-            this.panel1.TabIndex = 0;
+            this.pnlCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
+            this.pnlCadastro.Controls.Add(this.maskedTextBox1);
+            this.pnlCadastro.Controls.Add(this.panel3);
+            this.pnlCadastro.Controls.Add(this.txtDisciplinaProf);
+            this.pnlCadastro.Controls.Add(this.txtEmail);
+            this.pnlCadastro.Controls.Add(this.txtProfessor);
+            this.pnlCadastro.Controls.Add(this.txtDisciplinaLab);
+            this.pnlCadastro.Controls.Add(this.txtLaboratorio);
+            this.pnlCadastro.Controls.Add(this.btnDeletarprof);
+            this.pnlCadastro.Controls.Add(this.btnCadastrarProf);
+            this.pnlCadastro.Controls.Add(this.btnDeletarLab);
+            this.pnlCadastro.Controls.Add(this.btnCadastrarLab);
+            this.pnlCadastro.Controls.Add(this.cboProfessor);
+            this.pnlCadastro.Controls.Add(this.cboLaboratorio);
+            this.pnlCadastro.Controls.Add(this.lblCelular);
+            this.pnlCadastro.Controls.Add(this.lblDisciplinaProf);
+            this.pnlCadastro.Controls.Add(this.lblEmail);
+            this.pnlCadastro.Controls.Add(this.lblProfessor);
+            this.pnlCadastro.Controls.Add(this.lblDisciplina);
+            this.pnlCadastro.Controls.Add(this.lblLaboratorio);
+            this.pnlCadastro.Location = new System.Drawing.Point(88, 79);
+            this.pnlCadastro.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCadastro.Name = "pnlCadastro";
+            this.pnlCadastro.Size = new System.Drawing.Size(557, 325);
+            this.pnlCadastro.TabIndex = 0;
+            this.pnlCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // maskedTextBox1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.linkLabel4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.linkLabel3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.linkLabel2);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-1, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(987, 63);
-            this.panel2.TabIndex = 1;
+            this.maskedTextBox1.Location = new System.Drawing.Point(417, 172);
+            this.maskedTextBox1.Mask = "(00) 99999-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(108, 20);
+            this.maskedTextBox1.TabIndex = 14;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.panel3.Location = new System.Drawing.Point(31, 141);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(494, 4);
+            this.panel3.TabIndex = 18;
             // 
-            // linkLabel1
+            // txtDisciplinaProf
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Gold;
-            this.linkLabel1.Location = new System.Drawing.Point(114, 25);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(211, 25);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "CONSULTA DO DIA";
+            this.txtDisciplinaProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.txtDisciplinaProf.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisciplinaProf.Location = new System.Drawing.Point(128, 250);
+            this.txtDisciplinaProf.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDisciplinaProf.MaxLength = 50;
+            this.txtDisciplinaProf.Name = "txtDisciplinaProf";
+            this.txtDisciplinaProf.Size = new System.Drawing.Size(316, 22);
+            this.txtDisciplinaProf.TabIndex = 9;
             // 
-            // linkLabel2
+            // txtEmail
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Gold;
-            this.linkLabel2.Location = new System.Drawing.Point(391, 25);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(208, 25);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "CONSULTA GERAL";
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.txtEmail.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(128, 211);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(398, 22);
+            this.txtEmail.TabIndex = 8;
             // 
-            // linkLabel3
+            // txtProfessor
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Gold;
-            this.linkLabel3.Location = new System.Drawing.Point(659, 25);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(113, 25);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "RESERVA";
+            this.txtProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.txtProfessor.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProfessor.Location = new System.Drawing.Point(128, 174);
+            this.txtProfessor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProfessor.MaxLength = 50;
+            this.txtProfessor.Name = "txtProfessor";
+            this.txtProfessor.Size = new System.Drawing.Size(214, 22);
+            this.txtProfessor.TabIndex = 6;
             // 
-            // linkLabel4
+            // txtDisciplinaLab
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Gold;
-            this.linkLabel4.Location = new System.Drawing.Point(824, 25);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(133, 25);
-            this.linkLabel4.TabIndex = 4;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "CADASTRO";
+            this.txtDisciplinaLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.txtDisciplinaLab.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisciplinaLab.Location = new System.Drawing.Point(128, 61);
+            this.txtDisciplinaLab.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDisciplinaLab.MaxLength = 20;
+            this.txtDisciplinaLab.Name = "txtDisciplinaLab";
+            this.txtDisciplinaLab.Size = new System.Drawing.Size(316, 22);
+            this.txtDisciplinaLab.TabIndex = 2;
             // 
-            // label1
+            // txtLaboratorio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(348, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 32);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "|";
+            this.txtLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.txtLaboratorio.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLaboratorio.Location = new System.Drawing.Point(128, 28);
+            this.txtLaboratorio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLaboratorio.MaxLength = 50;
+            this.txtLaboratorio.Name = "txtLaboratorio";
+            this.txtLaboratorio.Size = new System.Drawing.Size(398, 22);
+            this.txtLaboratorio.TabIndex = 1;
             // 
-            // label2
+            // btnDeletarprof
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(620, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 32);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "|";
+            this.btnDeletarprof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnDeletarprof.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarprof.Location = new System.Drawing.Point(448, 291);
+            this.btnDeletarprof.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletarprof.Name = "btnDeletarprof";
+            this.btnDeletarprof.Size = new System.Drawing.Size(79, 23);
+            this.btnDeletarprof.TabIndex = 12;
+            this.btnDeletarprof.Text = "Deletar";
+            this.btnDeletarprof.UseCompatibleTextRendering = true;
+            this.btnDeletarprof.UseVisualStyleBackColor = false;
+            this.btnDeletarprof.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnCadastrarProf
+            // 
+            this.btnCadastrarProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnCadastrarProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProf.Location = new System.Drawing.Point(448, 250);
+            this.btnCadastrarProf.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastrarProf.Name = "btnCadastrarProf";
+            this.btnCadastrarProf.Size = new System.Drawing.Size(79, 22);
+            this.btnCadastrarProf.TabIndex = 10;
+            this.btnCadastrarProf.Text = "Cadastrar";
+            this.btnCadastrarProf.UseCompatibleTextRendering = true;
+            this.btnCadastrarProf.UseVisualStyleBackColor = false;
+            // 
+            // btnDeletarLab
+            // 
+            this.btnDeletarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnDeletarLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarLab.Location = new System.Drawing.Point(447, 97);
+            this.btnDeletarLab.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletarLab.Name = "btnDeletarLab";
+            this.btnDeletarLab.Size = new System.Drawing.Size(79, 23);
+            this.btnDeletarLab.TabIndex = 5;
+            this.btnDeletarLab.Text = "Deletar";
+            this.btnDeletarLab.UseCompatibleTextRendering = true;
+            this.btnDeletarLab.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastrarLab
+            // 
+            this.btnCadastrarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnCadastrarLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarLab.Location = new System.Drawing.Point(448, 61);
+            this.btnCadastrarLab.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastrarLab.Name = "btnCadastrarLab";
+            this.btnCadastrarLab.Size = new System.Drawing.Size(79, 22);
+            this.btnCadastrarLab.TabIndex = 3;
+            this.btnCadastrarLab.Text = "Cadastrar";
+            this.btnCadastrarLab.UseCompatibleTextRendering = true;
+            this.btnCadastrarLab.UseVisualStyleBackColor = false;
+            // 
+            // cboProfessor
+            // 
+            this.cboProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.cboProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProfessor.ForeColor = System.Drawing.Color.Black;
+            this.cboProfessor.FormattingEnabled = true;
+            this.cboProfessor.Location = new System.Drawing.Point(128, 291);
+            this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
+            this.cboProfessor.Name = "cboProfessor";
+            this.cboProfessor.Size = new System.Drawing.Size(316, 23);
+            this.cboProfessor.TabIndex = 11;
+            this.cboProfessor.Text = "Selecione o professor que deseja deletar";
+            // 
+            // cboLaboratorio
+            // 
+            this.cboLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.cboLaboratorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLaboratorio.ForeColor = System.Drawing.Color.Black;
+            this.cboLaboratorio.FormattingEnabled = true;
+            this.cboLaboratorio.Location = new System.Drawing.Point(128, 97);
+            this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2);
+            this.cboLaboratorio.Name = "cboLaboratorio";
+            this.cboLaboratorio.Size = new System.Drawing.Size(316, 23);
+            this.cboLaboratorio.TabIndex = 4;
+            this.cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
+            this.cboLaboratorio.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblCelular.Location = new System.Drawing.Point(346, 174);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(66, 18);
+            this.lblCelular.TabIndex = 5;
+            this.lblCelular.Text = "Celular:";
+            // 
+            // lblDisciplinaProf
+            // 
+            this.lblDisciplinaProf.AutoSize = true;
+            this.lblDisciplinaProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinaProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblDisciplinaProf.Location = new System.Drawing.Point(36, 254);
+            this.lblDisciplinaProf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDisciplinaProf.Name = "lblDisciplinaProf";
+            this.lblDisciplinaProf.Size = new System.Drawing.Size(86, 18);
+            this.lblDisciplinaProf.TabIndex = 4;
+            this.lblDisciplinaProf.Text = "Disciplina:";
+            this.lblDisciplinaProf.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblEmail.Location = new System.Drawing.Point(61, 213);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(61, 18);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "E-mail:";
+            this.lblEmail.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // lblProfessor
+            // 
+            this.lblProfessor.AutoSize = true;
+            this.lblProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblProfessor.Location = new System.Drawing.Point(34, 174);
+            this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(88, 18);
+            this.lblProfessor.TabIndex = 2;
+            this.lblProfessor.Text = "Professor:";
+            this.lblProfessor.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // lblDisciplina
+            // 
+            this.lblDisciplina.AutoSize = true;
+            this.lblDisciplina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblDisciplina.Location = new System.Drawing.Point(36, 63);
+            this.lblDisciplina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDisciplina.Name = "lblDisciplina";
+            this.lblDisciplina.Size = new System.Drawing.Size(86, 18);
+            this.lblDisciplina.TabIndex = 1;
+            this.lblDisciplina.Text = "Disciplina:";
+            this.lblDisciplina.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lblLaboratorio
+            // 
+            this.lblLaboratorio.AutoSize = true;
+            this.lblLaboratorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblLaboratorio.Location = new System.Drawing.Point(22, 28);
+            this.lblLaboratorio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLaboratorio.Name = "lblLaboratorio";
+            this.lblLaboratorio.Size = new System.Drawing.Size(100, 18);
+            this.lblLaboratorio.TabIndex = 0;
+            this.lblLaboratorio.Text = "Laboratório:";
+            this.lblLaboratorio.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // pnlOpc
+            // 
+            this.pnlOpc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.pnlOpc.Controls.Add(this.label3);
+            this.pnlOpc.Controls.Add(this.lnkCadastro);
+            this.pnlOpc.Controls.Add(this.label2);
+            this.pnlOpc.Controls.Add(this.lnkReserva);
+            this.pnlOpc.Controls.Add(this.label1);
+            this.pnlOpc.Controls.Add(this.lnkConsultaGeral);
+            this.pnlOpc.Controls.Add(this.lnkConsultaDia);
+            this.pnlOpc.Controls.Add(this.picLogo);
+            this.pnlOpc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.pnlOpc.Location = new System.Drawing.Point(-1, -1);
+            this.pnlOpc.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlOpc.Name = "pnlOpc";
+            this.pnlOpc.Size = new System.Drawing.Size(740, 51);
+            this.pnlOpc.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(795, 19);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label3.Location = new System.Drawing.Point(596, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 32);
+            this.label3.Size = new System.Drawing.Size(19, 26);
             this.label3.TabIndex = 7;
             this.label3.Text = "|";
             // 
-            // label4
+            // lnkCadastro
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Laboratório:";
+            this.lnkCadastro.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkCadastro.AutoSize = true;
+            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkCadastro.Location = new System.Drawing.Point(620, 20);
+            this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkCadastro.Name = "lnkCadastro";
+            this.lnkCadastro.Size = new System.Drawing.Size(105, 19);
+            this.lnkCadastro.TabIndex = 17;
+            this.lnkCadastro.TabStop = true;
+            this.lnkCadastro.Text = "CADASTRO";
+            this.lnkCadastro.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 24);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Disciplina:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label2.Location = new System.Drawing.Point(465, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 26);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "|";
             // 
-            // label6
+            // lnkReserva
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 213);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 24);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Professor:";
+            this.lnkReserva.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkReserva.AutoSize = true;
+            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkReserva.Location = new System.Drawing.Point(488, 20);
+            this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkReserva.Name = "lnkReserva";
+            this.lnkReserva.Size = new System.Drawing.Size(91, 19);
+            this.lnkReserva.TabIndex = 16;
+            this.lnkReserva.TabStop = true;
+            this.lnkReserva.Text = "RESERVA";
+            this.lnkReserva.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 258);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "E-mail:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label1.Location = new System.Drawing.Point(261, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "|";
             // 
-            // label8
+            // lnkConsultaGeral
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(36, 306);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 24);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Disciplina:";
+            this.lnkConsultaGeral.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaGeral.AutoSize = true;
+            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkConsultaGeral.Location = new System.Drawing.Point(284, 20);
+            this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkConsultaGeral.Name = "lnkConsultaGeral";
+            this.lnkConsultaGeral.Size = new System.Drawing.Size(166, 19);
+            this.lnkConsultaGeral.TabIndex = 15;
+            this.lnkConsultaGeral.TabStop = true;
+            this.lnkConsultaGeral.Text = "CONSULTA GERAL";
+            this.lnkConsultaGeral.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             // 
-            // label9
+            // lnkConsultaDia
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(460, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Celular:";
+            this.lnkConsultaDia.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaDia.AutoSize = true;
+            this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkConsultaDia.Location = new System.Drawing.Point(87, 20);
+            this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkConsultaDia.Name = "lnkConsultaDia";
+            this.lnkConsultaDia.Size = new System.Drawing.Size(169, 19);
+            this.lnkConsultaDia.TabIndex = 14;
+            this.lnkConsultaDia.TabStop = true;
+            this.lnkConsultaDia.Text = "CONSULTA DO DIA";
+            this.lnkConsultaDia.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             // 
-            // comboBox1
+            // picLogo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(170, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(333, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Selecione o laboratório que deseja deletar";
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(2, 5);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(65, 36);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
-            // comboBox2
+            // picMudarTema
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(170, 346);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(333, 24);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Selecione o professor que deseja deletar";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(596, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(515, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkGray;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(596, 303);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 30);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Cadastrar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkGray;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(515, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 29);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Deletar";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(170, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(529, 22);
-            this.textBox1.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(170, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(420, 22);
-            this.textBox2.TabIndex = 13;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(170, 215);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 22);
-            this.textBox3.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(545, 215);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 22);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(170, 257);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(529, 22);
-            this.textBox5.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(170, 305);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(420, 22);
-            this.textBox6.TabIndex = 17;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(41, 174);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(658, 5);
-            this.panel3.TabIndex = 18;
+            this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
+            this.picMudarTema.Location = new System.Drawing.Point(0, 50);
+            this.picMudarTema.Name = "picMudarTema";
+            this.picMudarTema.Size = new System.Drawing.Size(32, 32);
+            this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMudarTema.TabIndex = 2;
+            this.picMudarTema.TabStop = false;
             // 
             // frmCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(982, 553);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.Controls.Add(this.picMudarTema);
+            this.Controls.Add(this.pnlOpc);
+            this.Controls.Add(this.pnlCadastro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "frmCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlCadastro.ResumeLayout(false);
+            this.pnlCadastro.PerformLayout();
+            this.pnlOpc.ResumeLayout(false);
+            this.pnlOpc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCadastro;
+        private System.Windows.Forms.Panel pnlOpc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel lnkCadastro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel lnkReserva;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lnkConsultaGeral;
+        private System.Windows.Forms.LinkLabel lnkConsultaDia;
+        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDisciplinaProf;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtProfessor;
+        private System.Windows.Forms.TextBox txtDisciplinaLab;
+        private System.Windows.Forms.TextBox txtLaboratorio;
+        private System.Windows.Forms.Button btnDeletarprof;
+        private System.Windows.Forms.Button btnCadastrarProf;
+        private System.Windows.Forms.Button btnDeletarLab;
+        private System.Windows.Forms.Button btnCadastrarLab;
+        private System.Windows.Forms.ComboBox cboProfessor;
+        private System.Windows.Forms.ComboBox cboLaboratorio;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.Label lblDisciplinaProf;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblProfessor;
+        private System.Windows.Forms.Label lblDisciplina;
+        private System.Windows.Forms.Label lblLaboratorio;
+        private System.Windows.Forms.PictureBox picMudarTema;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

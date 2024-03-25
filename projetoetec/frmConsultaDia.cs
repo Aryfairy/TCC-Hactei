@@ -21,5 +21,30 @@ namespace projetoetec
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboDisponibilidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLaboratorio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmConsultaDia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
