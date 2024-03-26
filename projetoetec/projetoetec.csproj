@@ -52,11 +52,17 @@
     <Compile Include="frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCalendario.cs">
+    <Compile Include="frmConsultaGeral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCalendario.Designer.cs">
-      <DependentUpon>frmCalendario.cs</DependentUpon>
+    <Compile Include="frmConsultaGeral.Designer.cs">
+      <DependentUpon>frmConsultaGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCodigo.Designer.cs">
+      <DependentUpon>frmCodigo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaDia.cs">
       <SubType>Form</SubType>
@@ -64,11 +70,23 @@
     <Compile Include="frmConsultaDia.Designer.cs">
       <DependentUpon>frmConsultaDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNovaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovaSenha.Designer.cs">
+      <DependentUpon>frmNovaSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReserva.cs">
       <SubType>Form</SubType>
@@ -87,14 +105,23 @@
     <EmbeddedResource Include="frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCalendario.resx">
-      <DependentUpon>frmCalendario.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultaGeral.resx">
+      <DependentUpon>frmConsultaGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCodigo.resx">
+      <DependentUpon>frmCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaDia.resx">
       <DependentUpon>frmConsultaDia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNovaSenha.resx">
+      <DependentUpon>frmNovaSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReserva.resx">
       <DependentUpon>frmReserva.cs</DependentUpon>
@@ -123,12 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\EsqueciSenha\TelaEsqueceuSenha\TelasEsqueciSenha.csproj">
-      <Project>{c4a9acac-5fc4-4eca-8cd3-55c2d8cdad81}</Project>
-      <Name>TelasEsqueciSenha</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
