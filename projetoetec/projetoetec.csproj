@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conectaEmail.cs" />
     <Compile Include="frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>

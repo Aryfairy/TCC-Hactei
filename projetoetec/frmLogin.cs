@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
 namespace projetoetec
 {
@@ -36,5 +32,21 @@ namespace projetoetec
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e )
+        {
+            // Verificar se o endereço de e-mail é válido
+            string destinatario = txbDesti.Text.Trim();
+            EmailFinal(destinatario);
+        }
+
+
+
+        
     }
 }

@@ -33,3 +33,21 @@ C:\Users\rylla\Downloads\telasClean\projetoetec\projetoetec\projetoetec\obj\Debu
 C:\Users\rylla\Downloads\telasCleanAtualizada (1)\telasClean\projetoetec\projetoetec\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
 C:\Users\rylla\Downloads\telasCleanAtualizada (1)\telasClean\projetoetec\projetoetec\projetoetec\obj\Debug\projetoetec.exe
 C:\Users\rylla\Downloads\telasCleanAtualizada (1)\telasClean\projetoetec\projetoetec\projetoetec\obj\Debug\projetoetec.pdb
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\bin\Debug\projetoetec.exe.config
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\bin\Debug\projetoetec.exe
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\bin\Debug\projetoetec.pdb
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmEmail.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmLogin.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmReserva.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.frmSplash.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.exe
+C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.pdb
