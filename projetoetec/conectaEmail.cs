@@ -11,18 +11,18 @@ namespace projetoetec
 {
     class conectaEmail
     {
-        public void EmailFinal(String destinatario)
+        public void EmailFinal(String destinatario, TextBox txbDesti)
         {
 
             if (IsValidEmail(destinatario))
             {
 
-                // Enviar e-mail apenas se o endereço de e-mail for válido
+                /// Enviar e-mail apenas se o endereço de e-mail for válido
                 EnviarEmail(destinatario);
             }
             else
             {
-                // Mostrar mensagem de erro se o endereço de e-mail for inválido
+                /// Mostrar mensagem de erro se o endereço de e-mail for inválido
                 MessageBox.Show("Por favor, insira um endereço de e-mail válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -31,12 +31,12 @@ namespace projetoetec
 
 
         }
-        // Método para validar endereço de e-mail usando expressão regular
+        /// Método para validar endereço de e-mail usando expressão regular
         public bool IsValidEmail(string email)
         {
             try
             {
-                // Utilize uma expressão regular para validar o formato do endereço de e-mail
+                /// Utilize uma expressão regular para validar o formato do endereço de e-mail
                 string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                 Regex regex = new Regex(pattern);
                 return regex.IsMatch(email);
@@ -49,24 +49,24 @@ namespace projetoetec
 
         public void EnviarEmail(string destinatario)
         {
-            // Configurações do servidor SMTP
-            string smtpHost = "smtp.gmail.com"; // Substitua pelo seu servidor SMTP
-            int smtpPort = 587; // Substitua pela porta do seu servidor SMTP
-            string smtpUsername = "vinepesil@gmail.com"; // Substitua pelo seu e-mail
-            string smtpPassword = "eren gqkk njkx hvua"; // Substitua pela sua senha
+            /// Configurações do servidor SMTP
+            string smtpHost = "smtp.gmail.com"; /// Substitua pelo seu servidor SMTP
+            int smtpPort = 587; /// Substitua pela porta do seu servidor SMTP
+            string smtpUsername = "vinepesil@gmail.com"; /// Substitua pelo seu e-mail
+            string smtpPassword = "eren gqkk njkx hvua"; /// Substitua pela sua senha
 
-            // Criando o e-mail de confirmação
+            /// Criando o e-mail de confirmação
             MailMessage mensagem = new MailMessage();
             mensagem.From = new MailAddress(smtpUsername);
             mensagem.To.Add(destinatario);
             mensagem.Subject = "Confirmação de E-mail";
             mensagem.Body = "Obrigado por se inscrever em nosso serviço!";
 
-            // Configurando o cliente SMTP
+            /// Configurando o cliente SMTP
             SmtpClient smtpClient = new SmtpClient(smtpHost, smtpPort);
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
-            smtpClient.EnableSsl = true; // Habilitar SSL se o servidor SMTP exigir
+            smtpClient.EnableSsl = true; /// Habilitar SSL se o servidor SMTP exigir
 
             try
             {

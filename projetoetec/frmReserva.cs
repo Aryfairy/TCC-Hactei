@@ -16,5 +16,10 @@ namespace projetoetec
         {
             InitializeComponent();
         }
+
+        private void frmReserva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -93,6 +93,7 @@ namespace projetoetec
             // 
             // dtpCalendario
             // 
+            this.dtpCalendario.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.dtpCalendario.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCalendario.Location = new System.Drawing.Point(135, 76);
             this.dtpCalendario.Margin = new System.Windows.Forms.Padding(2);
@@ -103,6 +104,7 @@ namespace projetoetec
             // 
             // cboLaboratorio
             // 
+            this.cboLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.cboLaboratorio.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLaboratorio.FormattingEnabled = true;
             this.cboLaboratorio.Location = new System.Drawing.Point(135, 19);
@@ -267,7 +269,7 @@ namespace projetoetec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(1097, 668);
             this.Controls.Add(this.pnlOpc);
             this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlConsultaGeral);

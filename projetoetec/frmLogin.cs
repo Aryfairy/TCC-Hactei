@@ -40,7 +40,7 @@ namespace projetoetec
 
         private void btnEntrar_Click(object sender, EventArgs e )
         {
-            // Verificar se o endereço de e-mail é válido
+            /// Verificar se o endereço de e-mail é válido
             string destinatario = txbDesti.Text.Trim();
             EmailFinal(destinatario);
         }

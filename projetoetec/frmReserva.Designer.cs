@@ -66,20 +66,20 @@ namespace projetoetec
             this.pnlReserva.Controls.Add(this.lblHrrFinal);
             this.pnlReserva.Controls.Add(this.lblHrrInicial);
             this.pnlReserva.Controls.Add(this.lblLaboratorio);
-            this.pnlReserva.Location = new System.Drawing.Point(92, 86);
+            this.pnlReserva.Location = new System.Drawing.Point(100, 108);
             this.pnlReserva.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReserva.Name = "pnlReserva";
-            this.pnlReserva.Size = new System.Drawing.Size(557, 325);
+            this.pnlReserva.Size = new System.Drawing.Size(906, 503);
             this.pnlReserva.TabIndex = 0;
             // 
             // btnReserva
             // 
             this.btnReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserva.Location = new System.Drawing.Point(397, 260);
+            this.btnReserva.Location = new System.Drawing.Point(769, 451);
             this.btnReserva.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserva.Name = "btnReserva";
-            this.btnReserva.Size = new System.Drawing.Size(89, 36);
+            this.btnReserva.Size = new System.Drawing.Size(111, 36);
             this.btnReserva.TabIndex = 5;
             this.btnReserva.Text = "Reservar";
             this.btnReserva.UseVisualStyleBackColor = false;
@@ -87,96 +87,96 @@ namespace projetoetec
             // cboProfessor
             // 
             this.cboProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboProfessor.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProfessor.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.cboProfessor.FormattingEnabled = true;
-            this.cboProfessor.Location = new System.Drawing.Point(209, 209);
+            this.cboProfessor.Location = new System.Drawing.Point(248, 282);
             this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
             this.cboProfessor.Name = "cboProfessor";
-            this.cboProfessor.Size = new System.Drawing.Size(277, 21);
+            this.cboProfessor.Size = new System.Drawing.Size(514, 30);
             this.cboProfessor.TabIndex = 4;
             // 
             // cboHrrFinal
             // 
             this.cboHrrFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboHrrFinal.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboHrrFinal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHrrFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.cboHrrFinal.FormattingEnabled = true;
-            this.cboHrrFinal.Location = new System.Drawing.Point(209, 151);
+            this.cboHrrFinal.Location = new System.Drawing.Point(248, 199);
             this.cboHrrFinal.Margin = new System.Windows.Forms.Padding(2);
             this.cboHrrFinal.Name = "cboHrrFinal";
-            this.cboHrrFinal.Size = new System.Drawing.Size(277, 21);
+            this.cboHrrFinal.Size = new System.Drawing.Size(514, 30);
             this.cboHrrFinal.TabIndex = 3;
             // 
             // cboHrrInicial
             // 
             this.cboHrrInicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboHrrInicial.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboHrrInicial.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHrrInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.cboHrrInicial.FormattingEnabled = true;
-            this.cboHrrInicial.Location = new System.Drawing.Point(209, 95);
+            this.cboHrrInicial.Location = new System.Drawing.Point(248, 121);
             this.cboHrrInicial.Margin = new System.Windows.Forms.Padding(2);
             this.cboHrrInicial.Name = "cboHrrInicial";
-            this.cboHrrInicial.Size = new System.Drawing.Size(277, 21);
+            this.cboHrrInicial.Size = new System.Drawing.Size(514, 30);
             this.cboHrrInicial.TabIndex = 2;
             // 
             // cboLaboratorio
             // 
             this.cboLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboLaboratorio.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLaboratorio.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.cboLaboratorio.FormattingEnabled = true;
-            this.cboLaboratorio.Location = new System.Drawing.Point(209, 41);
+            this.cboLaboratorio.Location = new System.Drawing.Point(248, 41);
             this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2);
             this.cboLaboratorio.Name = "cboLaboratorio";
-            this.cboLaboratorio.Size = new System.Drawing.Size(277, 21);
+            this.cboLaboratorio.Size = new System.Drawing.Size(514, 30);
             this.cboLaboratorio.TabIndex = 1;
             // 
             // lblProfessor
             // 
             this.lblProfessor.AutoSize = true;
-            this.lblProfessor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblProfessor.Location = new System.Drawing.Point(106, 209);
+            this.lblProfessor.Location = new System.Drawing.Point(134, 285);
             this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(99, 19);
+            this.lblProfessor.Size = new System.Drawing.Size(110, 22);
             this.lblProfessor.TabIndex = 3;
             this.lblProfessor.Text = "Professor:";
             // 
             // lblHrrFinal
             // 
             this.lblHrrFinal.AutoSize = true;
-            this.lblHrrFinal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHrrFinal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrrFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblHrrFinal.Location = new System.Drawing.Point(70, 151);
+            this.lblHrrFinal.Location = new System.Drawing.Point(94, 202);
             this.lblHrrFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHrrFinal.Name = "lblHrrFinal";
-            this.lblHrrFinal.Size = new System.Drawing.Size(135, 19);
+            this.lblHrrFinal.Size = new System.Drawing.Size(150, 22);
             this.lblHrrFinal.TabIndex = 2;
             this.lblHrrFinal.Text = "Horário Final:";
             // 
             // lblHrrInicial
             // 
             this.lblHrrInicial.AutoSize = true;
-            this.lblHrrInicial.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHrrInicial.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrrInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblHrrInicial.Location = new System.Drawing.Point(52, 95);
+            this.lblHrrInicial.Location = new System.Drawing.Point(74, 124);
             this.lblHrrInicial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHrrInicial.Name = "lblHrrInicial";
-            this.lblHrrInicial.Size = new System.Drawing.Size(153, 19);
+            this.lblHrrInicial.Size = new System.Drawing.Size(170, 22);
             this.lblHrrInicial.TabIndex = 1;
             this.lblHrrInicial.Text = "Horário Inicial:";
             // 
             // lblLaboratorio
             // 
             this.lblLaboratorio.AutoSize = true;
-            this.lblLaboratorio.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaboratorio.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblLaboratorio.Location = new System.Drawing.Point(88, 41);
+            this.lblLaboratorio.Location = new System.Drawing.Point(114, 44);
             this.lblLaboratorio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaboratorio.Name = "lblLaboratorio";
-            this.lblLaboratorio.Size = new System.Drawing.Size(117, 19);
+            this.lblLaboratorio.Size = new System.Drawing.Size(130, 22);
             this.lblLaboratorio.TabIndex = 0;
             this.lblLaboratorio.Text = "Laboratório:";
             // 
@@ -194,7 +194,7 @@ namespace projetoetec
             this.pnlOpc.Location = new System.Drawing.Point(-1, -1);
             this.pnlOpc.Margin = new System.Windows.Forms.Padding(2);
             this.pnlOpc.Name = "pnlOpc";
-            this.pnlOpc.Size = new System.Drawing.Size(740, 51);
+            this.pnlOpc.Size = new System.Drawing.Size(1097, 51);
             this.pnlOpc.TabIndex = 1;
             // 
             // label7
@@ -202,7 +202,7 @@ namespace projetoetec
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label7.Location = new System.Drawing.Point(584, 13);
+            this.label7.Location = new System.Drawing.Point(865, 13);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(19, 26);
@@ -215,7 +215,7 @@ namespace projetoetec
             this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkCadastro.Location = new System.Drawing.Point(616, 20);
+            this.lnkCadastro.Location = new System.Drawing.Point(927, 19);
             this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkCadastro.Name = "lnkCadastro";
             this.lnkCadastro.Size = new System.Drawing.Size(105, 19);
@@ -228,7 +228,7 @@ namespace projetoetec
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label6.Location = new System.Drawing.Point(459, 14);
+            this.label6.Location = new System.Drawing.Point(622, 12);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 26);
@@ -241,7 +241,7 @@ namespace projetoetec
             this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkReserva.Location = new System.Drawing.Point(488, 20);
+            this.lnkReserva.Location = new System.Drawing.Point(708, 19);
             this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkReserva.Name = "lnkReserva";
             this.lnkReserva.Size = new System.Drawing.Size(91, 19);
@@ -254,7 +254,7 @@ namespace projetoetec
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label5.Location = new System.Drawing.Point(261, 14);
+            this.label5.Location = new System.Drawing.Point(330, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(19, 26);
@@ -268,7 +268,7 @@ namespace projetoetec
             this.lnkConsultaGeral.ForeColor = System.Drawing.Color.Black;
             this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkConsultaGeral.Location = new System.Drawing.Point(290, 19);
+            this.lnkConsultaGeral.Location = new System.Drawing.Point(395, 19);
             this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaGeral.Name = "lnkConsultaGeral";
             this.lnkConsultaGeral.Size = new System.Drawing.Size(166, 19);
@@ -282,7 +282,7 @@ namespace projetoetec
             this.linkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.linkConsultaDia.Location = new System.Drawing.Point(88, 19);
+            this.linkConsultaDia.Location = new System.Drawing.Point(129, 19);
             this.linkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkConsultaDia.Name = "linkConsultaDia";
             this.linkConsultaDia.Size = new System.Drawing.Size(169, 19);
@@ -305,7 +305,7 @@ namespace projetoetec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(1097, 668);
             this.Controls.Add(this.pnlOpc);
             this.Controls.Add(this.pnlReserva);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -315,6 +315,7 @@ namespace projetoetec
             this.Name = "frmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserva";
+            this.Load += new System.EventHandler(this.frmReserva_Load);
             this.pnlReserva.ResumeLayout(false);
             this.pnlReserva.PerformLayout();
             this.pnlOpc.ResumeLayout(false);

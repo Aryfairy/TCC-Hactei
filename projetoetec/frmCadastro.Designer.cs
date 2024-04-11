@@ -97,6 +97,7 @@ namespace projetoetec
             // 
             // maskedTextBox1
             // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.maskedTextBox1.Location = new System.Drawing.Point(417, 172);
             this.maskedTextBox1.Mask = "(00) 99999-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
@@ -467,7 +468,7 @@ namespace projetoetec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(1097, 668);
             this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlOpc);
             this.Controls.Add(this.pnlCadastro);
