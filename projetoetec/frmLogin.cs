@@ -13,40 +13,29 @@ namespace projetoetec
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBemvindo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
+        //
+        //
+        //
+        //
+        // Mudança de telas
         private void btnEntrar_Click(object sender, EventArgs e )
         {
-            /// Verificar se o endereço de e-mail é válido
-            string destinatario = txbDesti.Text.Trim();
-            EmailFinal(destinatario);
+            frmConsultaDia abrir = new frmConsultaDia();
+            abrir.Show();
+            this.Hide();            
         }
 
+        private void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperaEmail abrir = new frmRecuperaEmail();
+            abrir.Show();
+            this.Hide();
+        }
 
-
-        
+        private void lnkCadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //está faltando a tela
+        }
     }
 }

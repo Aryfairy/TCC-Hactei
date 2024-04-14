@@ -17,14 +17,30 @@ namespace projetoetec
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        //
+        //
+        //
+        //
+        // Mudança de telas
+        private void lnkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmConsultaDia abrir = new frmConsultaDia();
+            abrir.Show();
+            this.Close();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmReserva abrir = new frmReserva();
+            abrir.Show();
+            this.Close();
+        }
 
+        private void lnkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCadastro abrir = new frmCadastro();
+            abrir.Show();
+            this.Close();
         }
     }
 }

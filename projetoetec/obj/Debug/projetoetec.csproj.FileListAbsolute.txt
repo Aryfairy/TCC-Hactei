@@ -51,3 +51,30 @@ C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.
 C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
 C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.exe
 C:\Users\Laboratorio-Info\Source\Repos\telas1\projetoetec\obj\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\projetoetec.exe.config
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\projetoetec.exe
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmLogin.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmReserva.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmSplash.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.exe
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.frmRecuperaEmail.resources
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\EntityFramework.dll
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\System.Data.SQLite.dll
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\EntityFramework.xml
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\bin\Debug\System.Data.SQLite.xml
+D:\Projetos Dev\TCC\repos\telas1-main\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete

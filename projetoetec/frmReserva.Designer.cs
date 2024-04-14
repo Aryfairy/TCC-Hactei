@@ -31,13 +31,10 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
             this.pnlReserva = new System.Windows.Forms.Panel();
-            this.btnReserva = new System.Windows.Forms.Button();
+            this.btnReservar = new System.Windows.Forms.Button();
             this.cboProfessor = new System.Windows.Forms.ComboBox();
-            this.cboHrrFinal = new System.Windows.Forms.ComboBox();
-            this.cboHrrInicial = new System.Windows.Forms.ComboBox();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblProfessor = new System.Windows.Forms.Label();
-            this.lblHrrFinal = new System.Windows.Forms.Label();
             this.lblHrrInicial = new System.Windows.Forms.Label();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.pnlOpc = new System.Windows.Forms.Panel();
@@ -57,13 +54,10 @@ namespace projetoetec
             // pnlReserva
             // 
             this.pnlReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
-            this.pnlReserva.Controls.Add(this.btnReserva);
+            this.pnlReserva.Controls.Add(this.btnReservar);
             this.pnlReserva.Controls.Add(this.cboProfessor);
-            this.pnlReserva.Controls.Add(this.cboHrrFinal);
-            this.pnlReserva.Controls.Add(this.cboHrrInicial);
             this.pnlReserva.Controls.Add(this.cboLaboratorio);
             this.pnlReserva.Controls.Add(this.lblProfessor);
-            this.pnlReserva.Controls.Add(this.lblHrrFinal);
             this.pnlReserva.Controls.Add(this.lblHrrInicial);
             this.pnlReserva.Controls.Add(this.lblLaboratorio);
             this.pnlReserva.Location = new System.Drawing.Point(100, 108);
@@ -72,17 +66,17 @@ namespace projetoetec
             this.pnlReserva.Size = new System.Drawing.Size(906, 503);
             this.pnlReserva.TabIndex = 0;
             // 
-            // btnReserva
+            // btnReservar
             // 
-            this.btnReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnReserva.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserva.Location = new System.Drawing.Point(769, 451);
-            this.btnReserva.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReserva.Name = "btnReserva";
-            this.btnReserva.Size = new System.Drawing.Size(111, 36);
-            this.btnReserva.TabIndex = 5;
-            this.btnReserva.Text = "Reservar";
-            this.btnReserva.UseVisualStyleBackColor = false;
+            this.btnReservar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnReservar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservar.Location = new System.Drawing.Point(769, 451);
+            this.btnReservar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(111, 36);
+            this.btnReservar.TabIndex = 5;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = false;
             // 
             // cboProfessor
             // 
@@ -90,35 +84,11 @@ namespace projetoetec
             this.cboProfessor.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.cboProfessor.FormattingEnabled = true;
-            this.cboProfessor.Location = new System.Drawing.Point(248, 282);
+            this.cboProfessor.Location = new System.Drawing.Point(248, 87);
             this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
             this.cboProfessor.Name = "cboProfessor";
             this.cboProfessor.Size = new System.Drawing.Size(514, 30);
-            this.cboProfessor.TabIndex = 4;
-            // 
-            // cboHrrFinal
-            // 
-            this.cboHrrFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboHrrFinal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboHrrFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.cboHrrFinal.FormattingEnabled = true;
-            this.cboHrrFinal.Location = new System.Drawing.Point(248, 199);
-            this.cboHrrFinal.Margin = new System.Windows.Forms.Padding(2);
-            this.cboHrrFinal.Name = "cboHrrFinal";
-            this.cboHrrFinal.Size = new System.Drawing.Size(514, 30);
-            this.cboHrrFinal.TabIndex = 3;
-            // 
-            // cboHrrInicial
-            // 
-            this.cboHrrInicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboHrrInicial.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboHrrInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.cboHrrInicial.FormattingEnabled = true;
-            this.cboHrrInicial.Location = new System.Drawing.Point(248, 121);
-            this.cboHrrInicial.Margin = new System.Windows.Forms.Padding(2);
-            this.cboHrrInicial.Name = "cboHrrInicial";
-            this.cboHrrInicial.Size = new System.Drawing.Size(514, 30);
-            this.cboHrrInicial.TabIndex = 2;
+            this.cboProfessor.TabIndex = 2;
             // 
             // cboLaboratorio
             // 
@@ -137,31 +107,19 @@ namespace projetoetec
             this.lblProfessor.AutoSize = true;
             this.lblProfessor.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblProfessor.Location = new System.Drawing.Point(134, 285);
+            this.lblProfessor.Location = new System.Drawing.Point(134, 87);
             this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProfessor.Name = "lblProfessor";
             this.lblProfessor.Size = new System.Drawing.Size(110, 22);
             this.lblProfessor.TabIndex = 3;
             this.lblProfessor.Text = "Professor:";
             // 
-            // lblHrrFinal
-            // 
-            this.lblHrrFinal.AutoSize = true;
-            this.lblHrrFinal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHrrFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblHrrFinal.Location = new System.Drawing.Point(94, 202);
-            this.lblHrrFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHrrFinal.Name = "lblHrrFinal";
-            this.lblHrrFinal.Size = new System.Drawing.Size(150, 22);
-            this.lblHrrFinal.TabIndex = 2;
-            this.lblHrrFinal.Text = "Horário Final:";
-            // 
             // lblHrrInicial
             // 
             this.lblHrrInicial.AutoSize = true;
             this.lblHrrInicial.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrrInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblHrrInicial.Location = new System.Drawing.Point(74, 124);
+            this.lblHrrInicial.Location = new System.Drawing.Point(74, 233);
             this.lblHrrInicial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHrrInicial.Name = "lblHrrInicial";
             this.lblHrrInicial.Size = new System.Drawing.Size(170, 22);
@@ -212,16 +170,17 @@ namespace projetoetec
             // lnkCadastro
             // 
             this.lnkCadastro.AutoSize = true;
-            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkCadastro.Location = new System.Drawing.Point(927, 19);
             this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkCadastro.Name = "lnkCadastro";
-            this.lnkCadastro.Size = new System.Drawing.Size(105, 19);
+            this.lnkCadastro.Size = new System.Drawing.Size(98, 20);
             this.lnkCadastro.TabIndex = 9;
             this.lnkCadastro.TabStop = true;
             this.lnkCadastro.Text = "CADASTRO";
+            this.lnkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastro_LinkClicked);
             // 
             // label6
             // 
@@ -238,13 +197,13 @@ namespace projetoetec
             // lnkReserva
             // 
             this.lnkReserva.AutoSize = true;
-            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkReserva.Location = new System.Drawing.Point(708, 19);
             this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkReserva.Name = "lnkReserva";
-            this.lnkReserva.Size = new System.Drawing.Size(91, 19);
+            this.lnkReserva.Size = new System.Drawing.Size(88, 20);
             this.lnkReserva.TabIndex = 8;
             this.lnkReserva.TabStop = true;
             this.lnkReserva.Text = "RESERVA";
@@ -264,31 +223,33 @@ namespace projetoetec
             // lnkConsultaGeral
             // 
             this.lnkConsultaGeral.AutoSize = true;
-            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaGeral.ForeColor = System.Drawing.Color.Black;
             this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkConsultaGeral.Location = new System.Drawing.Point(395, 19);
             this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaGeral.Name = "lnkConsultaGeral";
-            this.lnkConsultaGeral.Size = new System.Drawing.Size(166, 19);
+            this.lnkConsultaGeral.Size = new System.Drawing.Size(155, 20);
             this.lnkConsultaGeral.TabIndex = 7;
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
+            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked);
             // 
             // linkConsultaDia
             // 
             this.linkConsultaDia.AutoSize = true;
-            this.linkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkConsultaDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.linkConsultaDia.Location = new System.Drawing.Point(129, 19);
             this.linkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkConsultaDia.Name = "linkConsultaDia";
-            this.linkConsultaDia.Size = new System.Drawing.Size(169, 19);
+            this.linkConsultaDia.Size = new System.Drawing.Size(155, 20);
             this.linkConsultaDia.TabIndex = 6;
             this.linkConsultaDia.TabStop = true;
             this.linkConsultaDia.Text = "CONSULTA DO DIA";
+            this.linkConsultaDia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkConsultaDia_LinkClicked);
             // 
             // picLogo
             // 
@@ -329,13 +290,10 @@ namespace projetoetec
 
         private System.Windows.Forms.Panel pnlReserva;
         private System.Windows.Forms.Panel pnlOpc;
-        private System.Windows.Forms.Button btnReserva;
+        private System.Windows.Forms.Button btnReservar;
         private System.Windows.Forms.ComboBox cboProfessor;
-        private System.Windows.Forms.ComboBox cboHrrFinal;
-        private System.Windows.Forms.ComboBox cboHrrInicial;
         private System.Windows.Forms.ComboBox cboLaboratorio;
         private System.Windows.Forms.Label lblProfessor;
-        private System.Windows.Forms.Label lblHrrFinal;
         private System.Windows.Forms.Label lblHrrInicial;
         private System.Windows.Forms.Label lblLaboratorio;
         private System.Windows.Forms.PictureBox picLogo;

@@ -21,5 +21,31 @@ namespace projetoetec
         {
 
         }
+
+        //
+        //
+        //
+        //
+        // Mudança de telas
+        private void linkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmConsultaDia abrir = new frmConsultaDia();
+            abrir.Show();
+            this.Close();
+        }
+
+        private void lnkConsultaGeral_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmConsultaGeral abrir = new frmConsultaGeral();
+            abrir.Show();
+            this.Close();
+        }
+
+        private void lnkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCadastro abrir = new frmCadastro();
+            abrir.Show();
+            this.Close();
+        }
     }
 }

@@ -31,9 +31,9 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
             this.lnkCadastrar = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckbMostrarSenha = new System.Windows.Forms.CheckBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@ namespace projetoetec
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
-            this.pnlLogin.Controls.Add(this.linkLabel1);
+            this.pnlLogin.Controls.Add(this.linkEsqueceuSenha);
             this.pnlLogin.Controls.Add(this.lnkCadastrar);
-            this.pnlLogin.Controls.Add(this.checkBox1);
+            this.pnlLogin.Controls.Add(this.ckbMostrarSenha);
             this.pnlLogin.Controls.Add(this.btnEntrar);
             this.pnlLogin.Controls.Add(this.picLogo);
             this.pnlLogin.Controls.Add(this.lblSenha);
@@ -65,19 +65,18 @@ namespace projetoetec
             this.pnlLogin.Size = new System.Drawing.Size(288, 358);
             this.pnlLogin.TabIndex = 0;
             // 
-            // linkLabel1
+            // linkEsqueceuSenha
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.linkLabel1.Location = new System.Drawing.Point(90, 294);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(102, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Esqueceu a senha?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.linkEsqueceuSenha.AutoSize = true;
+            this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(90, 294);
+            this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
+            this.linkEsqueceuSenha.Size = new System.Drawing.Size(102, 13);
+            this.linkEsqueceuSenha.TabIndex = 5;
+            this.linkEsqueceuSenha.Text = "Esqueceu a senha?";
+            this.linkEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEsqueceuSenha_LinkClicked);
             // 
             // lnkCadastrar
             // 
@@ -88,21 +87,21 @@ namespace projetoetec
             this.lnkCadastrar.Location = new System.Drawing.Point(115, 323);
             this.lnkCadastrar.Name = "lnkCadastrar";
             this.lnkCadastrar.Size = new System.Drawing.Size(52, 13);
-            this.lnkCadastrar.TabIndex = 5;
-            this.lnkCadastrar.TabStop = true;
+            this.lnkCadastrar.TabIndex = 6;
             this.lnkCadastrar.Text = "Cadastrar";
+            this.lnkCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastrar_LinkClicked);
             // 
-            // checkBox1
+            // ckbMostrarSenha
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Consolas", 7F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.checkBox1.Location = new System.Drawing.Point(78, 220);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 16);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Mostrar senha";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbMostrarSenha.AutoSize = true;
+            this.ckbMostrarSenha.Font = new System.Drawing.Font("Consolas", 7F, System.Drawing.FontStyle.Bold);
+            this.ckbMostrarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.ckbMostrarSenha.Location = new System.Drawing.Point(78, 220);
+            this.ckbMostrarSenha.Name = "ckbMostrarSenha";
+            this.ckbMostrarSenha.Size = new System.Drawing.Size(89, 16);
+            this.ckbMostrarSenha.TabIndex = 3;
+            this.ckbMostrarSenha.Text = "Mostrar senha";
+            this.ckbMostrarSenha.UseVisualStyleBackColor = true;
             // 
             // btnEntrar
             // 
@@ -112,7 +111,7 @@ namespace projetoetec
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(128, 29);
-            this.btnEntrar.TabIndex = 3;
+            this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -139,7 +138,6 @@ namespace projetoetec
             this.lblSenha.Size = new System.Drawing.Size(54, 19);
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha";
-            this.lblSenha.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblEmailUsuario
             // 
@@ -165,7 +163,6 @@ namespace projetoetec
             this.txtSenha.Size = new System.Drawing.Size(128, 20);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Tag = "";
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // txbDesti
             // 
@@ -177,21 +174,19 @@ namespace projetoetec
             this.txbDesti.Name = "txbDesti";
             this.txbDesti.Size = new System.Drawing.Size(128, 20);
             this.txbDesti.TabIndex = 1;
-            this.txbDesti.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblBemvindo
             // 
             this.lblBemvindo.AutoSize = true;
-            this.lblBemvindo.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBemvindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBemvindo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.lblBemvindo.Location = new System.Drawing.Point(40, 34);
             this.lblBemvindo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBemvindo.Name = "lblBemvindo";
-            this.lblBemvindo.Size = new System.Drawing.Size(656, 62);
+            this.lblBemvindo.Size = new System.Drawing.Size(597, 62);
             this.lblBemvindo.TabIndex = 1;
             this.lblBemvindo.Text = "Seja bem vindo(a) \r\nao Reserva de Laboratórios da Etec Jd. Ângela !";
             this.lblBemvindo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblBemvindo.Click += new System.EventHandler(this.lblBemvindo_Click);
             // 
             // picMudarTema
             // 
@@ -240,8 +235,8 @@ namespace projetoetec
         private System.Windows.Forms.Label lblBemvindo;
         private System.Windows.Forms.PictureBox picMudarTema;
         private System.Windows.Forms.LinkLabel lnkCadastrar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox ckbMostrarSenha;
+        private System.Windows.Forms.LinkLabel linkEsqueceuSenha;
     }
 }
 
