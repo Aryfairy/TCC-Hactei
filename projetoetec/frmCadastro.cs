@@ -17,7 +17,7 @@ namespace projetoetec
         public frmCadastro()
         {
             InitializeComponent();
-            dbManager = new dal_SQLiteDBManager(@"D:\etecja_reservas.db");
+            dbManager = new dal_SQLiteDBManager(@"C:\Users\Laboratorio-Info\source\repos\TCC-Hactei\etecja_reservas.db");
             dbManager.AbrirConexao();
         }
 
@@ -76,6 +76,10 @@ namespace projetoetec
                     txtLaboratorio.Clear();
                     txtDisciplinaLab.Clear();
                     txtSala.Clear();
+                    CarregarLaboratorios();
+                    cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
+                    
+                    
                 }
                 catch (Exception ex)
                 {
@@ -190,7 +194,9 @@ namespace projetoetec
                     txtProfessor.Clear();
                     maskedTxtCelular.Clear();
                     txtEmail.Clear();
-                    txtDisciplinaProf.Clear();                    
+                    txtDisciplinaProf.Clear();
+                    CarregarProfessores();
+                    cboProfessor.Text = "Selecione o professor que deseja deletar";
                 }
                 catch (Exception ex)
                 {

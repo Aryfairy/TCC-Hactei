@@ -31,11 +31,16 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
             this.pnlReserva = new System.Windows.Forms.Panel();
+            this.lblAs = new System.Windows.Forms.Label();
+            this.maskedTBFinal = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTBInicial = new System.Windows.Forms.MaskedTextBox();
+            this.lblData = new System.Windows.Forms.Label();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnReservar = new System.Windows.Forms.Button();
             this.cboProfessor = new System.Windows.Forms.ComboBox();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblProfessor = new System.Windows.Forms.Label();
-            this.lblHrrInicial = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.pnlOpc = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,17 +59,72 @@ namespace projetoetec
             // pnlReserva
             // 
             this.pnlReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
+            this.pnlReserva.Controls.Add(this.lblAs);
+            this.pnlReserva.Controls.Add(this.maskedTBFinal);
+            this.pnlReserva.Controls.Add(this.maskedTBInicial);
+            this.pnlReserva.Controls.Add(this.lblData);
+            this.pnlReserva.Controls.Add(this.dateTimePicker);
             this.pnlReserva.Controls.Add(this.btnReservar);
             this.pnlReserva.Controls.Add(this.cboProfessor);
             this.pnlReserva.Controls.Add(this.cboLaboratorio);
             this.pnlReserva.Controls.Add(this.lblProfessor);
-            this.pnlReserva.Controls.Add(this.lblHrrInicial);
+            this.pnlReserva.Controls.Add(this.lblHora);
             this.pnlReserva.Controls.Add(this.lblLaboratorio);
             this.pnlReserva.Location = new System.Drawing.Point(100, 108);
             this.pnlReserva.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReserva.Name = "pnlReserva";
             this.pnlReserva.Size = new System.Drawing.Size(906, 503);
             this.pnlReserva.TabIndex = 0;
+            // 
+            // lblAs
+            // 
+            this.lblAs.AutoSize = true;
+            this.lblAs.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblAs.Location = new System.Drawing.Point(372, 233);
+            this.lblAs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAs.Name = "lblAs";
+            this.lblAs.Size = new System.Drawing.Size(30, 22);
+            this.lblAs.TabIndex = 10;
+            this.lblAs.Text = "às";
+            // 
+            // maskedTBFinal
+            // 
+            this.maskedTBFinal.Location = new System.Drawing.Point(427, 233);
+            this.maskedTBFinal.Mask = "00:00";
+            this.maskedTBFinal.Name = "maskedTBFinal";
+            this.maskedTBFinal.Size = new System.Drawing.Size(100, 20);
+            this.maskedTBFinal.TabIndex = 9;
+            this.maskedTBFinal.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTBInicial
+            // 
+            this.maskedTBInicial.Location = new System.Drawing.Point(249, 233);
+            this.maskedTBInicial.Mask = "00:00";
+            this.maskedTBInicial.Name = "maskedTBInicial";
+            this.maskedTBInicial.Size = new System.Drawing.Size(100, 20);
+            this.maskedTBInicial.TabIndex = 8;
+            this.maskedTBInicial.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblData.Location = new System.Drawing.Point(183, 160);
+            this.lblData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(60, 22);
+            this.lblData.TabIndex = 7;
+            this.lblData.Text = "Data:";
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(248, 162);
+            this.dateTimePicker.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(514, 20);
+            this.dateTimePicker.TabIndex = 6;
             // 
             // btnReservar
             // 
@@ -77,30 +137,33 @@ namespace projetoetec
             this.btnReservar.TabIndex = 5;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = false;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // cboProfessor
             // 
             this.cboProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.cboProfessor.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.cboProfessor.ForeColor = System.Drawing.Color.Black;
             this.cboProfessor.FormattingEnabled = true;
             this.cboProfessor.Location = new System.Drawing.Point(248, 87);
             this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
             this.cboProfessor.Name = "cboProfessor";
             this.cboProfessor.Size = new System.Drawing.Size(514, 30);
             this.cboProfessor.TabIndex = 2;
+            this.cboProfessor.Text = "Selecione um professor para a reserva";
             // 
             // cboLaboratorio
             // 
             this.cboLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.cboLaboratorio.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.cboLaboratorio.ForeColor = System.Drawing.Color.Black;
             this.cboLaboratorio.FormattingEnabled = true;
             this.cboLaboratorio.Location = new System.Drawing.Point(248, 41);
             this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2);
             this.cboLaboratorio.Name = "cboLaboratorio";
             this.cboLaboratorio.Size = new System.Drawing.Size(514, 30);
             this.cboLaboratorio.TabIndex = 1;
+            this.cboLaboratorio.Text = "Selecione um laboratório para a reserva";
             // 
             // lblProfessor
             // 
@@ -114,17 +177,17 @@ namespace projetoetec
             this.lblProfessor.TabIndex = 3;
             this.lblProfessor.Text = "Professor:";
             // 
-            // lblHrrInicial
+            // lblHora
             // 
-            this.lblHrrInicial.AutoSize = true;
-            this.lblHrrInicial.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHrrInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblHrrInicial.Location = new System.Drawing.Point(74, 233);
-            this.lblHrrInicial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHrrInicial.Name = "lblHrrInicial";
-            this.lblHrrInicial.Size = new System.Drawing.Size(170, 22);
-            this.lblHrrInicial.TabIndex = 1;
-            this.lblHrrInicial.Text = "Horário Inicial:";
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblHora.Location = new System.Drawing.Point(74, 233);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(170, 22);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "Horário Inicial:";
             // 
             // lblLaboratorio
             // 
@@ -294,7 +357,7 @@ namespace projetoetec
         private System.Windows.Forms.ComboBox cboProfessor;
         private System.Windows.Forms.ComboBox cboLaboratorio;
         private System.Windows.Forms.Label lblProfessor;
-        private System.Windows.Forms.Label lblHrrInicial;
+        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblLaboratorio;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.LinkLabel lnkCadastro;
@@ -304,5 +367,10 @@ namespace projetoetec
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Label lblAs;
+        private System.Windows.Forms.MaskedTextBox maskedTBFinal;
+        private System.Windows.Forms.MaskedTextBox maskedTBInicial;
     }
 }

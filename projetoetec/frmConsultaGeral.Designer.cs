@@ -281,6 +281,7 @@ namespace projetoetec
             this.Name = "frmConsultaGeral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Geral";
+            this.Load += new System.EventHandler(this.frmConsultaGeral_Load);
             this.pnlConsultaGeral.ResumeLayout(false);
             this.pnlConsultaGeral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
