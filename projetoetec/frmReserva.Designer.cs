@@ -35,7 +35,7 @@ namespace projetoetec
             this.maskedTBFinal = new System.Windows.Forms.MaskedTextBox();
             this.maskedTBInicial = new System.Windows.Forms.MaskedTextBox();
             this.lblData = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dtpReserva = new System.Windows.Forms.DateTimePicker();
             this.btnReservar = new System.Windows.Forms.Button();
             this.cboProfessor = new System.Windows.Forms.ComboBox();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
@@ -63,7 +63,7 @@ namespace projetoetec
             this.pnlReserva.Controls.Add(this.maskedTBFinal);
             this.pnlReserva.Controls.Add(this.maskedTBInicial);
             this.pnlReserva.Controls.Add(this.lblData);
-            this.pnlReserva.Controls.Add(this.dateTimePicker);
+            this.pnlReserva.Controls.Add(this.dtpReserva);
             this.pnlReserva.Controls.Add(this.btnReservar);
             this.pnlReserva.Controls.Add(this.cboProfessor);
             this.pnlReserva.Controls.Add(this.cboLaboratorio);
@@ -94,7 +94,7 @@ namespace projetoetec
             this.maskedTBFinal.Mask = "00:00";
             this.maskedTBFinal.Name = "maskedTBFinal";
             this.maskedTBFinal.Size = new System.Drawing.Size(100, 20);
-            this.maskedTBFinal.TabIndex = 9;
+            this.maskedTBFinal.TabIndex = 5;
             this.maskedTBFinal.ValidatingType = typeof(System.DateTime);
             // 
             // maskedTBInicial
@@ -103,7 +103,7 @@ namespace projetoetec
             this.maskedTBInicial.Mask = "00:00";
             this.maskedTBInicial.Name = "maskedTBInicial";
             this.maskedTBInicial.Size = new System.Drawing.Size(100, 20);
-            this.maskedTBInicial.TabIndex = 8;
+            this.maskedTBInicial.TabIndex = 4;
             this.maskedTBInicial.ValidatingType = typeof(System.DateTime);
             // 
             // lblData
@@ -118,13 +118,13 @@ namespace projetoetec
             this.lblData.TabIndex = 7;
             this.lblData.Text = "Data:";
             // 
-            // dateTimePicker
+            // dtpReserva
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(248, 162);
-            this.dateTimePicker.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(514, 20);
-            this.dateTimePicker.TabIndex = 6;
+            this.dtpReserva.Location = new System.Drawing.Point(248, 162);
+            this.dtpReserva.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpReserva.Name = "dtpReserva";
+            this.dtpReserva.Size = new System.Drawing.Size(514, 20);
+            this.dtpReserva.TabIndex = 3;
             // 
             // btnReservar
             // 
@@ -134,7 +134,7 @@ namespace projetoetec
             this.btnReservar.Margin = new System.Windows.Forms.Padding(2);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(111, 36);
-            this.btnReservar.TabIndex = 5;
+            this.btnReservar.TabIndex = 6;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = false;
             this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
@@ -368,7 +368,7 @@ namespace projetoetec
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dtpReserva;
         private System.Windows.Forms.Label lblAs;
         private System.Windows.Forms.MaskedTextBox maskedTBFinal;
         private System.Windows.Forms.MaskedTextBox maskedTBInicial;

@@ -95,7 +95,7 @@ namespace projetoetec
                 return;
             }
 
-            DateTime dataReserva = dateTimePicker.Value.Date;
+            DateTime dataReserva = dtpReserva.Value.Date;
 
             if (dataReserva < DateTime.Today)
             {
@@ -189,7 +189,7 @@ namespace projetoetec
         private void LimparControlesReserva()
         {
             // Limpa os controles após a reserva
-            dateTimePicker.Value = DateTime.Now.Date;
+            dtpReserva.Value = DateTime.Now.Date;
             maskedTBInicial.Clear();
             maskedTBFinal.Clear();
             cboLaboratorio.SelectedIndex = -1;

@@ -41,14 +41,16 @@ namespace projetoetec
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlConsultaDia = new System.Windows.Forms.Panel();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.cboDisponibilidade = new System.Windows.Forms.ComboBox();
+            this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlConsultaDia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlOpc
@@ -65,7 +67,7 @@ namespace projetoetec
             this.pnlOpc.Location = new System.Drawing.Point(-3, -2);
             this.pnlOpc.Margin = new System.Windows.Forms.Padding(2);
             this.pnlOpc.Name = "pnlOpc";
-            this.pnlOpc.Size = new System.Drawing.Size(740, 51);
+            this.pnlOpc.Size = new System.Drawing.Size(1102, 51);
             this.pnlOpc.TabIndex = 0;
             // 
             // label5
@@ -185,14 +187,15 @@ namespace projetoetec
             // 
             this.pnlConsultaDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.pnlConsultaDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlConsultaDia.Controls.Add(this.dataGridView);
             this.pnlConsultaDia.Controls.Add(this.dtpData);
-            this.pnlConsultaDia.Controls.Add(this.cboDisponibilidade);
+            this.pnlConsultaDia.Controls.Add(this.cboLaboratorio);
             this.pnlConsultaDia.Controls.Add(this.lblLaboratorio);
             this.pnlConsultaDia.Controls.Add(this.lblData);
             this.pnlConsultaDia.Location = new System.Drawing.Point(89, 80);
             this.pnlConsultaDia.Margin = new System.Windows.Forms.Padding(2);
             this.pnlConsultaDia.Name = "pnlConsultaDia";
-            this.pnlConsultaDia.Size = new System.Drawing.Size(556, 325);
+            this.pnlConsultaDia.Size = new System.Drawing.Size(927, 549);
             this.pnlConsultaDia.TabIndex = 1;
             // 
             // dtpData
@@ -200,18 +203,20 @@ namespace projetoetec
             this.dtpData.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.dtpData.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(20, 37);
+            this.dtpData.Location = new System.Drawing.Point(91, 13);
+            this.dtpData.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(113, 25);
             this.dtpData.TabIndex = 1;
+            this.dtpData.UseWaitCursor = true;
             // 
-            // cboDisponibilidade
+            // cboLaboratorio
             // 
-            this.cboDisponibilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboDisponibilidade.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDisponibilidade.ForeColor = System.Drawing.Color.Black;
-            this.cboDisponibilidade.FormattingEnabled = true;
-            this.cboDisponibilidade.Items.AddRange(new object[] {
+            this.cboLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.cboLaboratorio.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLaboratorio.ForeColor = System.Drawing.Color.Black;
+            this.cboLaboratorio.FormattingEnabled = true;
+            this.cboLaboratorio.Items.AddRange(new object[] {
             "Laboratório 1   00:00  Disponível",
             "Laboratório 2   00:00  Reservado",
             "Laboratório 3   00:00  Reservado",
@@ -221,19 +226,19 @@ namespace projetoetec
             "Laboratório 1   00:00  Disponível",
             "Laboratório 2   00:00  Reservado",
             "Laboratório 3   00:00  Reservado"});
-            this.cboDisponibilidade.Location = new System.Drawing.Point(20, 94);
-            this.cboDisponibilidade.Margin = new System.Windows.Forms.Padding(2);
-            this.cboDisponibilidade.Name = "cboDisponibilidade";
-            this.cboDisponibilidade.Size = new System.Drawing.Size(518, 26);
-            this.cboDisponibilidade.TabIndex = 2;
-            this.cboDisponibilidade.Text = "disponibilidade dos laboratórios";
+            this.cboLaboratorio.Location = new System.Drawing.Point(174, 94);
+            this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2);
+            this.cboLaboratorio.Name = "cboLaboratorio";
+            this.cboLaboratorio.Size = new System.Drawing.Size(518, 26);
+            this.cboLaboratorio.TabIndex = 2;
+            this.cboLaboratorio.Text = "Selecione um laboratório";
             // 
             // lblLaboratorio
             // 
             this.lblLaboratorio.AutoSize = true;
             this.lblLaboratorio.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblLaboratorio.Location = new System.Drawing.Point(16, 68);
+            this.lblLaboratorio.Location = new System.Drawing.Point(16, 92);
             this.lblLaboratorio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaboratorio.Name = "lblLaboratorio";
             this.lblLaboratorio.Size = new System.Drawing.Size(154, 24);
@@ -262,6 +267,14 @@ namespace projetoetec
             this.picMudarTema.TabIndex = 3;
             this.picMudarTema.TabStop = false;
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(20, 136);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(882, 390);
+            this.dataGridView.TabIndex = 3;
+            // 
             // frmConsultaDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +298,7 @@ namespace projetoetec
             this.pnlConsultaDia.ResumeLayout(false);
             this.pnlConsultaDia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +309,7 @@ namespace projetoetec
         private System.Windows.Forms.Panel pnlOpc;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Panel pnlConsultaDia;
-        private System.Windows.Forms.ComboBox cboDisponibilidade;
+        private System.Windows.Forms.ComboBox cboLaboratorio;
         private System.Windows.Forms.Label lblLaboratorio;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.LinkLabel lnkConsultaDia;
@@ -307,5 +321,6 @@ namespace projetoetec
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.PictureBox picMudarTema;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
