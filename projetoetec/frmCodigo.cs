@@ -24,20 +24,20 @@ namespace projetoetec
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            frmRecuperaEmail ChamaCod=new frmRecuperaEmail();
+            //frmRecuperaEmail ChamaCod=new frmRecuperaEmail();
             
-            if (txtCodigo.Text == ChamaCod.cod)
+            if (txtCodigo.Text == frmRecuperaEmail.cod)
             {
                 frmNovaSenha Abrir = new frmNovaSenha();
                 Abrir.Show();
                 this.Hide();
-                ChamaCod.cod = "";
-
+                frmRecuperaEmail.cod = "";
+                MessageBox.Show(frmRecuperaEmail.cod);
 
             }
 
             else {
-                MessageBox.Show("codigo errado tente de novo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(frmRecuperaEmail.cod, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
