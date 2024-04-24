@@ -48,10 +48,9 @@ namespace projetoetec
             this.pnlCodigo.Controls.Add(this.picLogo);
             this.pnlCodigo.Controls.Add(this.lblCodigo);
             this.pnlCodigo.Controls.Add(this.txtCodigo);
-            this.pnlCodigo.Location = new System.Drawing.Point(180, 92);
-            this.pnlCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCodigo.Location = new System.Drawing.Point(270, 142);
             this.pnlCodigo.Name = "pnlCodigo";
-            this.pnlCodigo.Size = new System.Drawing.Size(437, 266);
+            this.pnlCodigo.Size = new System.Drawing.Size(656, 409);
             this.pnlCodigo.TabIndex = 12;
             // 
             // btnEnviar
@@ -59,21 +58,20 @@ namespace projetoetec
             this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEnviar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(147, 221);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnviar.Location = new System.Drawing.Point(220, 340);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(142, 29);
+            this.btnEnviar.Size = new System.Drawing.Size(213, 45);
             this.btnEnviar.TabIndex = 3;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(147, 19);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Location = new System.Drawing.Point(220, 29);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(142, 107);
+            this.picLogo.Size = new System.Drawing.Size(213, 165);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -83,10 +81,9 @@ namespace projetoetec
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblCodigo.Location = new System.Drawing.Point(7, 142);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(10, 218);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(423, 19);
+            this.lblCodigo.Size = new System.Drawing.Size(610, 28);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Insira o código que enviamos para o seu email:";
             // 
@@ -95,11 +92,10 @@ namespace projetoetec
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(94, 175);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Location = new System.Drawing.Point(141, 269);
             this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(245, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(366, 27);
             this.txtCodigo.TabIndex = 1;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
@@ -108,6 +104,7 @@ namespace projetoetec
             this.picMudarTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
             this.picMudarTema.Location = new System.Drawing.Point(0, 0);
+            this.picMudarTema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picMudarTema.Name = "picMudarTema";
             this.picMudarTema.Size = new System.Drawing.Size(32, 32);
             this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -116,14 +113,15 @@ namespace projetoetec
             // 
             // frmCodigo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(1097, 668);
+            this.ClientSize = new System.Drawing.Size(1646, 1028);
             this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimizeBox = false;
             this.Name = "frmCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

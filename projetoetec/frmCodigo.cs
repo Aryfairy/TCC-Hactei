@@ -21,5 +21,28 @@ namespace projetoetec
         {
 
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            frmRecuperaEmail ChamaCod=new frmRecuperaEmail();
+            
+            if (txtCodigo.Text == ChamaCod.cod)
+            {
+                frmNovaSenha Abrir = new frmNovaSenha();
+                Abrir.Show();
+                this.Hide();
+                ChamaCod.cod = "";
+
+
+            }
+
+            else {
+                MessageBox.Show("codigo errado tente de novo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
+            }
+        }
     }
 }

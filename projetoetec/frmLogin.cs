@@ -21,6 +21,10 @@ namespace projetoetec
         // Mudança de telas
         private void btnEntrar_Click(object sender, EventArgs e )
         {
+
+            
+            conectaEmail ConectaEmail = new conectaEmail();
+            ConectaEmail.EnviarEmail(txtEmail.Text.Trim(), "confirmação de login", "você acabou de ser cadastrado");
             frmConsultaDia abrir = new frmConsultaDia();
             abrir.Show();
             this.Hide();            
