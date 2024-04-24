@@ -11,6 +11,8 @@ namespace projetoetec
 {
     class conectaEmail
     {
+
+        public static bool valid;
         public void EnviarEmail(string destinatario, string titulo, string mensagem)
         {
             // Verificar se o endereço de e-mail é válido
@@ -20,11 +22,13 @@ namespace projetoetec
 
                 // Enviar e-mail apenas se o endereço de e-mail for válido
                 Email(destinatario, titulo, mensagem);
+                valid = true;
             }
             else
             {
                 // Mostrar mensagem de erro se o endereço de e-mail for inválido
                 MessageBox.Show("Por favor, insira um endereço de e-mail válido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                valid = false;
             }
 
 
