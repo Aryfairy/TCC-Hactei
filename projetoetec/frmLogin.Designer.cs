@@ -156,7 +156,7 @@ namespace projetoetec
             this.txtSenha.TabIndex = 12;
             this.txtSenha.Tag = "";
             // 
-            // txbDesti
+            // txtEmail
             // 
             this.txbDesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txbDesti.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +181,8 @@ namespace projetoetec
             // picMudarTema
             // 
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
-            this.picMudarTema.Location = new System.Drawing.Point(0, -2);
+            this.picMudarTema.Location = new System.Drawing.Point(0, -3);
+            this.picMudarTema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picMudarTema.Name = "picMudarTema";
             this.picMudarTema.Size = new System.Drawing.Size(32, 32);
             this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -203,7 +204,7 @@ namespace projetoetec
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.ClientSize = new System.Drawing.Size(1097, 668);
@@ -212,7 +213,6 @@ namespace projetoetec
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

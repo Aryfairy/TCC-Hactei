@@ -21,5 +21,24 @@ namespace projetoetec
         {
 
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {        
+            
+            //istancia
+            frmNovaSenha Abrir = new frmNovaSenha();
+
+            //comparando os codigos
+            if (txtCodigo.Text == frmRecuperaEmail.cod)
+            {
+                Abrir.Show();
+                this.Hide();
+                frmRecuperaEmail.cod = "";
+            }
+
+            else {
+                MessageBox.Show(frmRecuperaEmail.cod, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+        }
     }
 }

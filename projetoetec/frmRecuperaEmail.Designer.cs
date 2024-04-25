@@ -101,6 +101,7 @@ namespace projetoetec
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // picLogo
             // 
@@ -108,7 +109,7 @@ namespace projetoetec
             this.picLogo.Location = new System.Drawing.Point(168, 29);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(142, 107);
+            this.picLogo.Size = new System.Drawing.Size(213, 165);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -121,7 +122,7 @@ namespace projetoetec
             this.lblEmail.Location = new System.Drawing.Point(36, 177);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(396, 19);
+            this.lblEmail.Size = new System.Drawing.Size(571, 28);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Insira seu email para recuperação de senha:";
             // 
@@ -138,7 +139,7 @@ namespace projetoetec
             // 
             // frmRecuperaEmail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.ClientSize = new System.Drawing.Size(736, 449);
@@ -146,7 +147,6 @@ namespace projetoetec
             this.Controls.Add(this.picMudarTema);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmRecuperaEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
