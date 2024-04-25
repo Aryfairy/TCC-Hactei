@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGerar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADGSURBVDhPvdO9
+        DgFBFIbhESWtio7oRKdQK7kEjStRqlQavWtRC5b4i6CWuATv2ZnZHSRjNhJf8jhnt/iymx2K9LDHKcAc
+        Zbxkg5Jev6aPsV7THMwMSQszvaaxBXV0PArwFgww9ajBWxCSnwvkNUd6TWMLhnA/2QpFvCdnZpIsTyBZ
+        mJkka8HNzCR/K5AT2IQUyLmYIE5ogXzCIx7Yooo4IQVtMxtYoxJf6SdSEXx/pjzOev3IRX662ME9A9YS
+        chbuzj2Huj4B2Q89aLN5Ke4AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="picMudarTema.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
