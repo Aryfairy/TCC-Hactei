@@ -43,7 +43,6 @@ namespace projetoetec
             this.lblHora = new System.Windows.Forms.Label();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.pnlOpc = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lnkCadastro = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,9 +50,12 @@ namespace projetoetec
             this.label5 = new System.Windows.Forms.Label();
             this.lnkConsultaGeral = new System.Windows.Forms.LinkLabel();
             this.linkConsultaDia = new System.Windows.Forms.LinkLabel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlReserva.SuspendLayout();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlReserva
@@ -221,16 +223,6 @@ namespace projetoetec
             this.pnlOpc.Size = new System.Drawing.Size(1097, 51);
             this.pnlOpc.TabIndex = 1;
             // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(0, 9);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(70, 38);
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -256,6 +248,7 @@ namespace projetoetec
             this.lnkCadastro.TabIndex = 20;
             this.lnkCadastro.TabStop = true;
             this.lnkCadastro.Text = "CADASTRO";
+            this.lnkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastro_LinkClicked);
             // 
             // label6
             // 
@@ -309,6 +302,7 @@ namespace projetoetec
             this.lnkConsultaGeral.TabIndex = 18;
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
+            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked);
             // 
             // linkConsultaDia
             // 
@@ -323,6 +317,27 @@ namespace projetoetec
             this.linkConsultaDia.TabIndex = 17;
             this.linkConsultaDia.TabStop = true;
             this.linkConsultaDia.Text = "CONSULTA DO DIA";
+            this.linkConsultaDia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkConsultaDia_LinkClicked);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(0, 9);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(70, 38);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
+            // picMudarTema
+            // 
+            this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
+            this.picMudarTema.Location = new System.Drawing.Point(-1, 50);
+            this.picMudarTema.Name = "picMudarTema";
+            this.picMudarTema.Size = new System.Drawing.Size(32, 32);
+            this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMudarTema.TabIndex = 4;
+            this.picMudarTema.TabStop = false;
             // 
             // frmReserva
             // 
@@ -330,6 +345,7 @@ namespace projetoetec
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.ClientSize = new System.Drawing.Size(1097, 668);
+            this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlOpc);
             this.Controls.Add(this.pnlReserva);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -345,7 +361,9 @@ namespace projetoetec
             this.pnlOpc.ResumeLayout(false);
             this.pnlOpc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -372,5 +390,6 @@ namespace projetoetec
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel lnkConsultaGeral;
         private System.Windows.Forms.LinkLabel linkConsultaDia;
+        private System.Windows.Forms.PictureBox picMudarTema;
     }
 }

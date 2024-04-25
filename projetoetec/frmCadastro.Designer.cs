@@ -73,7 +73,7 @@ namespace projetoetec
             // picMudarTema
             // 
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
-            this.picMudarTema.Location = new System.Drawing.Point(0, 50);
+            this.picMudarTema.Location = new System.Drawing.Point(0, 51);
             this.picMudarTema.Name = "picMudarTema";
             this.picMudarTema.Size = new System.Drawing.Size(32, 32);
             this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -153,6 +153,7 @@ namespace projetoetec
             this.lnkConsultaDia.TabStop = true;
             this.lnkConsultaDia.Text = "CONSULTA DO DIA";
             this.lnkConsultaDia.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaDia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaDia_LinkClicked);
             // 
             // lnkConsultaGeral
             // 
@@ -169,6 +170,7 @@ namespace projetoetec
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
             this.lnkConsultaGeral.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked);
             // 
             // label1
             // 
@@ -197,6 +199,7 @@ namespace projetoetec
             this.lnkReserva.TabStop = true;
             this.lnkReserva.Text = "RESERVA";
             this.lnkReserva.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkReserva.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReserva_LinkClicked);
             // 
             // picLogo
             // 
@@ -377,6 +380,7 @@ namespace projetoetec
             this.btnDeletarprof.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarprof.UseCompatibleTextRendering = true;
             this.btnDeletarprof.UseVisualStyleBackColor = false;
+            this.btnDeletarprof.Click += new System.EventHandler(this.btnDeletarprof_Click);
             // 
             // btnCadastrarProf
             // 
@@ -393,6 +397,7 @@ namespace projetoetec
             this.btnCadastrarProf.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProf.UseCompatibleTextRendering = true;
             this.btnCadastrarProf.UseVisualStyleBackColor = false;
+            this.btnCadastrarProf.Click += new System.EventHandler(this.btnCadastrarProf_Click);
             // 
             // btnDeletarLab
             // 
@@ -409,6 +414,7 @@ namespace projetoetec
             this.btnDeletarLab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarLab.UseCompatibleTextRendering = true;
             this.btnDeletarLab.UseVisualStyleBackColor = false;
+            this.btnDeletarLab.Click += new System.EventHandler(this.btnDeletarLab_Click);
             // 
             // btnCadastrarLab
             // 
@@ -425,6 +431,7 @@ namespace projetoetec
             this.btnCadastrarLab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarLab.UseCompatibleTextRendering = true;
             this.btnCadastrarLab.UseVisualStyleBackColor = false;
+            this.btnCadastrarLab.Click += new System.EventHandler(this.btnCadastrarLab_Click);
             // 
             // cboProfessor
             // 

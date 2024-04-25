@@ -31,13 +31,13 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaGeral));
             this.pnlConsultaGeral = new System.Windows.Forms.Panel();
+            this.btnGerar = new System.Windows.Forms.Button();
             this.lblCalendario = new System.Windows.Forms.Label();
             this.dtpCalendario = new System.Windows.Forms.DateTimePicker();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlOpc = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lnkCadastro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace projetoetec
             this.lnkConsultaGeral = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lnkReserva = new System.Windows.Forms.LinkLabel();
-            this.btnGerar = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlConsultaGeral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.pnlOpc.SuspendLayout();
@@ -65,6 +65,22 @@ namespace projetoetec
             this.pnlConsultaGeral.Name = "pnlConsultaGeral";
             this.pnlConsultaGeral.Size = new System.Drawing.Size(906, 503);
             this.pnlConsultaGeral.TabIndex = 0;
+            // 
+            // btnGerar
+            // 
+            this.btnGerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGerar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGerar.Image")));
+            this.btnGerar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGerar.Location = new System.Drawing.Point(753, 430);
+            this.btnGerar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGerar.Name = "btnGerar";
+            this.btnGerar.Size = new System.Drawing.Size(113, 33);
+            this.btnGerar.TabIndex = 4;
+            this.btnGerar.Text = "Gerar PDF";
+            this.btnGerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerar.UseVisualStyleBackColor = false;
             // 
             // lblCalendario
             // 
@@ -140,16 +156,6 @@ namespace projetoetec
             this.pnlOpc.Size = new System.Drawing.Size(1103, 51);
             this.pnlOpc.TabIndex = 14;
             // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(2, 5);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(65, 36);
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -177,6 +183,7 @@ namespace projetoetec
             this.lnkCadastro.TabStop = true;
             this.lnkCadastro.Text = "CADASTRO";
             this.lnkCadastro.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastro_LinkClicked);
             // 
             // label2
             // 
@@ -205,6 +212,7 @@ namespace projetoetec
             this.lnkConsultaDia.TabStop = true;
             this.lnkConsultaDia.Text = "CONSULTA DO DIA";
             this.lnkConsultaDia.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaDia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaDia_LinkClicked);
             // 
             // lnkConsultaGeral
             // 
@@ -249,22 +257,17 @@ namespace projetoetec
             this.lnkReserva.TabStop = true;
             this.lnkReserva.Text = "RESERVA";
             this.lnkReserva.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkReserva.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReserva_LinkClicked);
             // 
-            // btnGerar
+            // picLogo
             // 
-            this.btnGerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGerar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGerar.Image")));
-            this.btnGerar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGerar.Location = new System.Drawing.Point(753, 430);
-            this.btnGerar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(113, 33);
-            this.btnGerar.TabIndex = 4;
-            this.btnGerar.Text = "Gerar PDF";
-            this.btnGerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerar.UseVisualStyleBackColor = false;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(2, 5);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(65, 36);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // frmConsultaGeral
             // 
@@ -282,6 +285,7 @@ namespace projetoetec
             this.Name = "frmConsultaGeral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Geral";
+            this.Load += new System.EventHandler(this.frmConsultaGeral_Load);
             this.pnlConsultaGeral.ResumeLayout(false);
             this.pnlConsultaGeral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();

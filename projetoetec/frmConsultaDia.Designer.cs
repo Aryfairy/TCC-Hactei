@@ -31,14 +31,6 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaDia));
             this.pnlOpc = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.pnlConsultaDia = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.cboLaboratorio = new System.Windows.Forms.ComboBox();
-            this.lblLaboratorio = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
-            this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lnkCadastro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,10 +38,23 @@ namespace projetoetec
             this.lnkConsultaGeral = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lnkReserva = new System.Windows.Forms.LinkLabel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pnlConsultaDia = new System.Windows.Forms.Panel();
+            this.dgvReservasDia = new System.Windows.Forms.DataGridView();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.cboLaboratorio = new System.Windows.Forms.ComboBox();
+            this.lblLaboratorio = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.picMudarTema = new System.Windows.Forms.PictureBox();
+            this.HORÁRIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROFESSOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlConsultaDia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +75,109 @@ namespace projetoetec
             this.pnlOpc.Size = new System.Drawing.Size(1102, 51);
             this.pnlOpc.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label3.Location = new System.Drawing.Point(890, 13);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 26);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "|";
+            // 
+            // lnkCadastro
+            // 
+            this.lnkCadastro.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkCadastro.AutoSize = true;
+            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkCadastro.Location = new System.Drawing.Point(940, 13);
+            this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkCadastro.Name = "lnkCadastro";
+            this.lnkCadastro.Size = new System.Drawing.Size(137, 24);
+            this.lnkCadastro.TabIndex = 31;
+            this.lnkCadastro.TabStop = true;
+            this.lnkCadastro.Text = "CADASTRO";
+            this.lnkCadastro.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCadastro_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label2.Location = new System.Drawing.Point(660, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 26);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "|";
+            // 
+            // lnkConsultaDia
+            // 
+            this.lnkConsultaDia.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaDia.AutoSize = true;
+            this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkConsultaDia.Location = new System.Drawing.Point(105, 13);
+            this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkConsultaDia.Name = "lnkConsultaDia";
+            this.lnkConsultaDia.Size = new System.Drawing.Size(220, 24);
+            this.lnkConsultaDia.TabIndex = 28;
+            this.lnkConsultaDia.TabStop = true;
+            this.lnkConsultaDia.Text = "CONSULTA DO DIA";
+            this.lnkConsultaDia.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            // 
+            // lnkConsultaGeral
+            // 
+            this.lnkConsultaGeral.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaGeral.AutoSize = true;
+            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkConsultaGeral.Location = new System.Drawing.Point(406, 13);
+            this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkConsultaGeral.Name = "lnkConsultaGeral";
+            this.lnkConsultaGeral.Size = new System.Drawing.Size(217, 24);
+            this.lnkConsultaGeral.TabIndex = 29;
+            this.lnkConsultaGeral.TabStop = true;
+            this.lnkConsultaGeral.Text = "CONSULTA GERAL";
+            this.lnkConsultaGeral.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.label1.Location = new System.Drawing.Point(353, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 26);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "|";
+            // 
+            // lnkReserva
+            // 
+            this.lnkReserva.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkReserva.AutoSize = true;
+            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
+            this.lnkReserva.Location = new System.Drawing.Point(723, 13);
+            this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkReserva.Name = "lnkReserva";
+            this.lnkReserva.Size = new System.Drawing.Size(120, 24);
+            this.lnkReserva.TabIndex = 30;
+            this.lnkReserva.TabStop = true;
+            this.lnkReserva.Text = "RESERVA";
+            this.lnkReserva.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.lnkReserva.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReserva_LinkClicked);
+            // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
@@ -84,7 +192,8 @@ namespace projetoetec
             // 
             this.pnlConsultaDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.pnlConsultaDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlConsultaDia.Controls.Add(this.dataGridView);
+            this.pnlConsultaDia.Controls.Add(this.btnConsultar);
+            this.pnlConsultaDia.Controls.Add(this.dgvReservasDia);
             this.pnlConsultaDia.Controls.Add(this.dtpData);
             this.pnlConsultaDia.Controls.Add(this.cboLaboratorio);
             this.pnlConsultaDia.Controls.Add(this.lblLaboratorio);
@@ -95,13 +204,24 @@ namespace projetoetec
             this.pnlConsultaDia.Size = new System.Drawing.Size(927, 549);
             this.pnlConsultaDia.TabIndex = 1;
             // 
-            // dataGridView
+            // dgvReservasDia
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(20, 136);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(882, 390);
-            this.dataGridView.TabIndex = 3;
+            this.dgvReservasDia.AllowUserToAddRows = false;
+            this.dgvReservasDia.AllowUserToDeleteRows = false;
+            this.dgvReservasDia.AllowUserToResizeColumns = false;
+            this.dgvReservasDia.AllowUserToResizeRows = false;
+            this.dgvReservasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReservasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservasDia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HORÁRIO,
+            this.SALA,
+            this.PROFESSOR,
+            this.STATUS});
+            this.dgvReservasDia.Location = new System.Drawing.Point(20, 136);
+            this.dgvReservasDia.Name = "dgvReservasDia";
+            this.dgvReservasDia.ReadOnly = true;
+            this.dgvReservasDia.Size = new System.Drawing.Size(882, 390);
+            this.dgvReservasDia.TabIndex = 3;
             // 
             // dtpData
             // 
@@ -172,105 +292,38 @@ namespace projetoetec
             this.picMudarTema.TabIndex = 3;
             this.picMudarTema.TabStop = false;
             // 
-            // label3
+            // HORÁRIO
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label3.Location = new System.Drawing.Point(890, 13);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 26);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "|";
+            this.HORÁRIO.HeaderText = "HORÁRIO";
+            this.HORÁRIO.Name = "HORÁRIO";
+            this.HORÁRIO.ReadOnly = true;
             // 
-            // lnkCadastro
+            // SALA
             // 
-            this.lnkCadastro.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.lnkCadastro.AutoSize = true;
-            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkCadastro.Location = new System.Drawing.Point(940, 13);
-            this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkCadastro.Name = "lnkCadastro";
-            this.lnkCadastro.Size = new System.Drawing.Size(137, 24);
-            this.lnkCadastro.TabIndex = 31;
-            this.lnkCadastro.TabStop = true;
-            this.lnkCadastro.Text = "CADASTRO";
-            this.lnkCadastro.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.SALA.HeaderText = "SALA";
+            this.SALA.Name = "SALA";
+            this.SALA.ReadOnly = true;
             // 
-            // label2
+            // PROFESSOR
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(660, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 26);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "|";
+            this.PROFESSOR.HeaderText = "PROFESSOR";
+            this.PROFESSOR.Name = "PROFESSOR";
+            this.PROFESSOR.ReadOnly = true;
             // 
-            // lnkConsultaDia
+            // STATUS
             // 
-            this.lnkConsultaDia.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.lnkConsultaDia.AutoSize = true;
-            this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkConsultaDia.Location = new System.Drawing.Point(105, 13);
-            this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkConsultaDia.Name = "lnkConsultaDia";
-            this.lnkConsultaDia.Size = new System.Drawing.Size(220, 24);
-            this.lnkConsultaDia.TabIndex = 28;
-            this.lnkConsultaDia.TabStop = true;
-            this.lnkConsultaDia.Text = "CONSULTA DO DIA";
-            this.lnkConsultaDia.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.STATUS.HeaderText = "STATUS";
+            this.STATUS.Name = "STATUS";
+            this.STATUS.ReadOnly = true;
             // 
-            // lnkConsultaGeral
+            // btnConsultar
             // 
-            this.lnkConsultaGeral.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.lnkConsultaGeral.AutoSize = true;
-            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkConsultaGeral.Location = new System.Drawing.Point(406, 13);
-            this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkConsultaGeral.Name = "lnkConsultaGeral";
-            this.lnkConsultaGeral.Size = new System.Drawing.Size(217, 24);
-            this.lnkConsultaGeral.TabIndex = 29;
-            this.lnkConsultaGeral.TabStop = true;
-            this.lnkConsultaGeral.Text = "CONSULTA GERAL";
-            this.lnkConsultaGeral.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(353, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 26);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "|";
-            // 
-            // lnkReserva
-            // 
-            this.lnkReserva.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.lnkReserva.AutoSize = true;
-            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkReserva.Location = new System.Drawing.Point(723, 13);
-            this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkReserva.Name = "lnkReserva";
-            this.lnkReserva.Size = new System.Drawing.Size(120, 24);
-            this.lnkReserva.TabIndex = 30;
-            this.lnkReserva.TabStop = true;
-            this.lnkReserva.Text = "RESERVA";
-            this.lnkReserva.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.btnConsultar.Location = new System.Drawing.Point(801, 16);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(101, 34);
+            this.btnConsultar.TabIndex = 4;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
             // 
             // frmConsultaDia
             // 
@@ -294,7 +347,7 @@ namespace projetoetec
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlConsultaDia.ResumeLayout(false);
             this.pnlConsultaDia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -311,7 +364,7 @@ namespace projetoetec
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.PictureBox picMudarTema;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dgvReservasDia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel lnkCadastro;
         private System.Windows.Forms.Label label2;
@@ -319,5 +372,10 @@ namespace projetoetec
         private System.Windows.Forms.LinkLabel lnkConsultaGeral;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lnkReserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HORÁRIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SALA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROFESSOR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

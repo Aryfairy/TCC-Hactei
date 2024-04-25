@@ -60,12 +60,7 @@ namespace projetoetec
         //
         //
         // Mudança de telas
-        private void lnkConsultaGeral_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmConsultaGeral abrir = new frmConsultaGeral();
-            abrir.Show();
-            this.Close();
-        }
+        
 
         private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -77,6 +72,13 @@ namespace projetoetec
         private void linkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCadastro abrir = new frmCadastro();
+            abrir.Show();
+            this.Close();
+        }
+
+        private void lnkConsultaGeral_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmConsultaGeral abrir = new frmConsultaGeral();
             abrir.Show();
             this.Close();
         }

@@ -17,6 +17,11 @@ namespace projetoetec
             InitializeComponent();
         }
 
+        private void frmConsultaGeral_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //
         //
         //
@@ -42,5 +47,6 @@ namespace projetoetec
             abrir.Show();
             this.Close();
         }
+                
     }
 }

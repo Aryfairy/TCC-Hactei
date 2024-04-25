@@ -31,16 +31,16 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.picMudarTema = new System.Windows.Forms.PictureBox();
+            this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
+            this.lnkCadastrar = new System.Windows.Forms.LinkLabel();
             this.ckbMostrarSenha = new System.Windows.Forms.CheckBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblEmailUsuario = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txbDesti = new System.Windows.Forms.TextBox();
-            this.linkEsqueceuSenha = new System.Windows.Forms.LinkLabel();
-            this.lnkCadastrar = new System.Windows.Forms.LinkLabel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.lblBemvindo = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -65,26 +65,34 @@ namespace projetoetec
             this.pnlLogin.Size = new System.Drawing.Size(461, 465);
             this.pnlLogin.TabIndex = 0;
             // 
-            // picLogo
+            // linkEsqueceuSenha
             // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(147, 24);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(142, 107);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 1;
-            this.picLogo.TabStop = false;
+            this.linkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.linkEsqueceuSenha.AutoSize = true;
+            this.linkEsqueceuSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(162, 400);
+            this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
+            this.linkEsqueceuSenha.Size = new System.Drawing.Size(126, 15);
+            this.linkEsqueceuSenha.TabIndex = 15;
+            this.linkEsqueceuSenha.TabStop = true;
+            this.linkEsqueceuSenha.Text = "Esqueceu a senha?";
+            this.linkEsqueceuSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEsqueceuSenha_LinkClicked);
             // 
-            // picMudarTema
+            // lnkCadastrar
             // 
-            this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
-            this.picMudarTema.Location = new System.Drawing.Point(0, -2);
-            this.picMudarTema.Name = "picMudarTema";
-            this.picMudarTema.Size = new System.Drawing.Size(32, 32);
-            this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picMudarTema.TabIndex = 3;
-            this.picMudarTema.TabStop = false;
+            this.lnkCadastrar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lnkCadastrar.AutoSize = true;
+            this.lnkCadastrar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.lnkCadastrar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.lnkCadastrar.Location = new System.Drawing.Point(187, 426);
+            this.lnkCadastrar.Name = "lnkCadastrar";
+            this.lnkCadastrar.Size = new System.Drawing.Size(70, 15);
+            this.lnkCadastrar.TabIndex = 16;
+            this.lnkCadastrar.TabStop = true;
+            this.lnkCadastrar.Text = "Cadastrar";
             // 
             // ckbMostrarSenha
             // 
@@ -109,6 +117,7 @@ namespace projetoetec
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblSenha
             // 
@@ -158,33 +167,26 @@ namespace projetoetec
             this.txbDesti.Size = new System.Drawing.Size(317, 32);
             this.txbDesti.TabIndex = 10;
             // 
-            // linkEsqueceuSenha
+            // picLogo
             // 
-            this.linkEsqueceuSenha.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.linkEsqueceuSenha.AutoSize = true;
-            this.linkEsqueceuSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.linkEsqueceuSenha.Location = new System.Drawing.Point(162, 400);
-            this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
-            this.linkEsqueceuSenha.Size = new System.Drawing.Size(126, 15);
-            this.linkEsqueceuSenha.TabIndex = 15;
-            this.linkEsqueceuSenha.TabStop = true;
-            this.linkEsqueceuSenha.Text = "Esqueceu a senha?";
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(147, 24);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(142, 107);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
             // 
-            // lnkCadastrar
+            // picMudarTema
             // 
-            this.lnkCadastrar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lnkCadastrar.AutoSize = true;
-            this.lnkCadastrar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.lnkCadastrar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.lnkCadastrar.Location = new System.Drawing.Point(187, 426);
-            this.lnkCadastrar.Name = "lnkCadastrar";
-            this.lnkCadastrar.Size = new System.Drawing.Size(70, 15);
-            this.lnkCadastrar.TabIndex = 16;
-            this.lnkCadastrar.TabStop = true;
-            this.lnkCadastrar.Text = "Cadastrar";
+            this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
+            this.picMudarTema.Location = new System.Drawing.Point(0, -2);
+            this.picMudarTema.Name = "picMudarTema";
+            this.picMudarTema.Size = new System.Drawing.Size(32, 32);
+            this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMudarTema.TabIndex = 3;
+            this.picMudarTema.TabStop = false;
             // 
             // lblBemvindo
             // 
