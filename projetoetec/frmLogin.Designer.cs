@@ -59,10 +59,10 @@ namespace projetoetec
             this.pnlLogin.Controls.Add(this.txtSenha);
             this.pnlLogin.Controls.Add(this.txtEmail);
             this.pnlLogin.Controls.Add(this.picLogo);
-            this.pnlLogin.Location = new System.Drawing.Point(205, 81);
-            this.pnlLogin.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pnlLogin.Location = new System.Drawing.Point(451, 169);
+            this.pnlLogin.Margin = new System.Windows.Forms.Padding(1);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(307, 302);
+            this.pnlLogin.Size = new System.Drawing.Size(511, 536);
             this.pnlLogin.TabIndex = 0;
             // 
             // linkEsqueceuSenha
@@ -72,10 +72,9 @@ namespace projetoetec
             this.linkEsqueceuSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.linkEsqueceuSenha.Location = new System.Drawing.Point(108, 260);
-            this.linkEsqueceuSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(181, 456);
             this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
-            this.linkEsqueceuSenha.Size = new System.Drawing.Size(126, 15);
+            this.linkEsqueceuSenha.Size = new System.Drawing.Size(162, 20);
             this.linkEsqueceuSenha.TabIndex = 15;
             this.linkEsqueceuSenha.TabStop = true;
             this.linkEsqueceuSenha.Text = "Esqueceu a senha?";
@@ -88,10 +87,9 @@ namespace projetoetec
             this.lnkCadastrar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.lnkCadastrar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.lnkCadastrar.Location = new System.Drawing.Point(125, 277);
-            this.lnkCadastrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkCadastrar.Location = new System.Drawing.Point(217, 487);
             this.lnkCadastrar.Name = "lnkCadastrar";
-            this.lnkCadastrar.Size = new System.Drawing.Size(70, 15);
+            this.lnkCadastrar.Size = new System.Drawing.Size(90, 20);
             this.lnkCadastrar.TabIndex = 16;
             this.lnkCadastrar.TabStop = true;
             this.lnkCadastrar.Text = "Cadastrar";
@@ -101,10 +99,10 @@ namespace projetoetec
             this.ckbMostrarSenha.AutoSize = true;
             this.ckbMostrarSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbMostrarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ckbMostrarSenha.Location = new System.Drawing.Point(47, 196);
-            this.ckbMostrarSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ckbMostrarSenha.Location = new System.Drawing.Point(63, 345);
+            this.ckbMostrarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbMostrarSenha.Name = "ckbMostrarSenha";
-            this.ckbMostrarSenha.Size = new System.Drawing.Size(117, 19);
+            this.ckbMostrarSenha.Size = new System.Drawing.Size(148, 24);
             this.ckbMostrarSenha.TabIndex = 13;
             this.ckbMostrarSenha.Text = "Mostrar senha";
             this.ckbMostrarSenha.UseVisualStyleBackColor = true;
@@ -113,10 +111,10 @@ namespace projetoetec
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnEntrar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(97, 224);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEntrar.Location = new System.Drawing.Point(191, 395);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(105, 22);
+            this.btnEntrar.Size = new System.Drawing.Size(140, 38);
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -127,10 +125,10 @@ namespace projetoetec
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblSenha.Location = new System.Drawing.Point(129, 155);
+            this.lblSenha.Location = new System.Drawing.Point(220, 271);
             this.lblSenha.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(70, 24);
+            this.lblSenha.Size = new System.Drawing.Size(90, 32);
             this.lblSenha.TabIndex = 11;
             this.lblSenha.Text = "Senha";
             // 
@@ -139,10 +137,10 @@ namespace projetoetec
             this.lblEmailUsuario.AutoSize = true;
             this.lblEmailUsuario.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblEmailUsuario.Location = new System.Drawing.Point(85, 101);
+            this.lblEmailUsuario.Location = new System.Drawing.Point(142, 185);
             this.lblEmailUsuario.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblEmailUsuario.Name = "lblEmailUsuario";
-            this.lblEmailUsuario.Size = new System.Drawing.Size(202, 24);
+            this.lblEmailUsuario.Size = new System.Drawing.Size(255, 32);
             this.lblEmailUsuario.TabIndex = 9;
             this.lblEmailUsuario.Text = "Email do Usuário";
             // 
@@ -150,12 +148,12 @@ namespace projetoetec
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtSenha.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(47, 172);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtSenha.Location = new System.Drawing.Point(63, 304);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(1);
             this.txtSenha.MaxLength = 25;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';
-            this.txtSenha.Size = new System.Drawing.Size(213, 32);
+            this.txtSenha.Size = new System.Drawing.Size(397, 38);
             this.txtSenha.TabIndex = 12;
             this.txtSenha.Tag = "";
             // 
@@ -163,20 +161,20 @@ namespace projetoetec
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtEmail.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(47, 118);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtEmail.Location = new System.Drawing.Point(63, 218);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(1);
             this.txtEmail.MaxLength = 25;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(213, 32);
+            this.txtEmail.Size = new System.Drawing.Size(397, 38);
             this.txtEmail.TabIndex = 10;
             // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(98, 16);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.picLogo.Location = new System.Drawing.Point(178, 28);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(1);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(95, 70);
+            this.picLogo.Size = new System.Drawing.Size(173, 128);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -185,6 +183,7 @@ namespace projetoetec
             // 
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
             this.picMudarTema.Location = new System.Drawing.Point(0, -2);
+            this.picMudarTema.Margin = new System.Windows.Forms.Padding(4);
             this.picMudarTema.Name = "picMudarTema";
             this.picMudarTema.Size = new System.Drawing.Size(32, 32);
             this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -196,30 +195,31 @@ namespace projetoetec
             this.lblBemvindo.AutoSize = true;
             this.lblBemvindo.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBemvindo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.lblBemvindo.Location = new System.Drawing.Point(135, 27);
+            this.lblBemvindo.Location = new System.Drawing.Point(295, 67);
             this.lblBemvindo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblBemvindo.Name = "lblBemvindo";
-            this.lblBemvindo.Size = new System.Drawing.Size(697, 68);
+            this.lblBemvindo.Size = new System.Drawing.Size(873, 84);
             this.lblBemvindo.TabIndex = 11;
-            this.lblBemvindo.Text = "Seja bem vindo(a) \r\nao Reserva de Laboratórios da Etec Jd. Ângela !";
+            this.lblBemvindo.Text = "Seja bem vindo(a) \r\nà Reserva de Laboratórios da Etec Jd. Ângela !";
             this.lblBemvindo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(731, 434);
+            this.ClientSize = new System.Drawing.Size(1463, 822);
             this.Controls.Add(this.lblBemvindo);
             this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

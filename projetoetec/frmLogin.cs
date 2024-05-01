@@ -41,5 +41,10 @@ namespace projetoetec
         {
             //está faltando a tela
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
