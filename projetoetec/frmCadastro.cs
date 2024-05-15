@@ -289,6 +289,10 @@ namespace projetoetec
             abrir.Show();
             this.Close();
         }
-                
+
+        private void pnlCadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
