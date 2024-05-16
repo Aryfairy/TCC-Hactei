@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Data;
-using System.Data.SQLite;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace projetoetec
 {
-    class dal_SQLiteDBManager
+    class dal_SQLServerDBManager
     {
-        private SQLiteConnection conexao;
+        private SqlConnection conexao;
 
-        public dal_SQLiteDBManager(string caminhoBanco)
+        public dal_SQLServerDBManager(string connectionString)
         {
-            conexao = new SQLiteConnection($"Data Source={caminhoBanco};Version=3;");
+            conexao = new SqlConnection(connectionString);
         }
 
         public void AbrirConexao()
@@ -31,7 +31,7 @@ namespace projetoetec
             try
             {
                 AbrirConexao();
-                using (SQLiteCommand comando = new SQLiteCommand(comandoSQL, conexao))
+                using (SqlCommand comando = new SqlCommand(comandoSQL, conexao)) // Alteração aqui
                 {
                     comando.ExecuteNonQuery();
                 }
@@ -48,7 +48,7 @@ namespace projetoetec
             try
             {
                 AbrirConexao();
-                using (SQLiteDataAdapter adaptador = new SQLiteDataAdapter(comandoSQL, conexao))
+                using (SqlDataAdapter adaptador = new SqlDataAdapter(comandoSQL, conexao)) // Alteração aqui
                 {
                     adaptador.Fill(dataTable);
                 }
@@ -66,9 +66,9 @@ namespace projetoetec
             {
                 AbrirConexao();
                 DataTable dataTable = new DataTable();
-                using (SQLiteCommand comando = new SQLiteCommand(comandoSQL, conexao))
+                using (SqlCommand comando = new SqlCommand(comandoSQL, conexao)) // Alteração aqui
                 {
-                    using (SQLiteDataReader reader = comando.ExecuteReader())
+                    using (SqlDataReader reader = comando.ExecuteReader())
                     {
                         dataTable.Load(reader);
                     }

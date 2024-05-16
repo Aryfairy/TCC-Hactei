@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace projetoetec
 {
     public partial class frmConsultaDia : Form
     {
-        private dal_SQLiteDBManager dbManager;
+        private dal_SQLServerDBManager dbManager;
+
         public frmConsultaDia()
         {
             InitializeComponent();
-            dbManager = new dal_SQLiteDBManager(@"C:\Users\Laboratorio-Info\source\repos\TCC-Hactei\etecja_reservas.db");
+            string connectionString = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=etecja_reservas;Integrated Security=True";
+            dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
         }
 
@@ -27,17 +24,13 @@ namespace projetoetec
             cboLaboratorio.Text = "Selecione um laboratório";
         }
 
-        //
-        //
-        //
-        //
         // Carrega comboBox do lab
         private void CarregarLaboratorios()
         {
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT lab_nome || ' - ' || lab_sala AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
 
                 // Chama o método para carregar o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");
@@ -48,20 +41,9 @@ namespace projetoetec
             }
         }
 
-        //
-        //
-        //
-        //
         // Funcionalidades GridView
 
-
-        //
-        //
-        //
-        //
         // Mudança de telas
-        
-
         private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmReserva abrir = new frmReserva();
