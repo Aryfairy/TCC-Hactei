@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Globalization;
 
@@ -13,11 +8,13 @@ namespace projetoetec
 {
     public partial class frmReserva : Form
     {
-        private dal_SQLiteDBManager dbManager;
+        private dal_SQLServerDBManager dbManager;
+
         public frmReserva()
         {
             InitializeComponent();
-            dbManager = new dal_SQLiteDBManager(@"C:\Users\Laboratorio-Info\source\repos\TCC-Hactei\etecja_reservas.db");
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
+            dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
         }
 
@@ -31,19 +28,15 @@ namespace projetoetec
             cboProfessor.Text = "Selecione um professor para a reserva";
         }
 
-        //
-        //
-        //
-        //
-        //CarregarCombobox Lab e Prof
+        // Carregar ComboBox de Laboratórios
         private void CarregarLaboratorios()
         {
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT lab_nome || ' - ' || lab_sala AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
 
-                // Chama o método para carregar o ComboBox
+                // Carrega o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");
             }
             catch (Exception ex)
@@ -52,14 +45,15 @@ namespace projetoetec
             }
         }
 
+        // Carregar ComboBox de Professores
         private void CarregarProfessores()
         {
             try
             {
                 // Consulta SQL para selecionar o nome do professor e a disciplina, concatenando-os
-                string comandoSQL = "SELECT prof_nome || ' - ' || prof_disciplina AS nome_disciplina FROM professor";
+                string comandoSQL = "SELECT CONCAT(prof_nome, ' - ', prof_disciplina) AS nome_disciplina FROM professor";
 
-                // Chama o método para carregar o ComboBox
+                // Carrega o ComboBox
                 dbManager.CarregarComboBox(cboProfessor, comandoSQL, "nome_disciplina");
             }
             catch (Exception ex)
@@ -68,26 +62,17 @@ namespace projetoetec
             }
         }
 
-
-        //
-        //
-        //
-        //
-        // Botão reserva
+        // Botão de Reserva
         private void btnReservar_Click(object sender, EventArgs e)
         {
-            if (cboLaboratorio.SelectedItem == null)
+            // Verifica se laboratório e professor foram selecionados
+            if (cboLaboratorio.SelectedItem == null || cboProfessor.SelectedItem == null)
             {
-                MessageBox.Show("Selecione um laboratório para a reserva.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um laboratório e um professor para a reserva.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (cboProfessor.SelectedItem == null)
-            {
-                MessageBox.Show("Selecione um professor para a reserva.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
+            // Verifica se as horas inseridas são válidas
             if (!DateTime.TryParseExact(maskedTBInicial.Text, "HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime horaInicial) ||
                 !DateTime.TryParseExact(maskedTBFinal.Text, "HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime horaFinal))
             {
@@ -95,34 +80,46 @@ namespace projetoetec
                 return;
             }
 
+            // Verifica se a data da reserva é válida
             DateTime dataReserva = dtpReserva.Value.Date;
-
             if (dataReserva < DateTime.Today)
             {
                 MessageBox.Show("Não é possível fazer reservas em datas passadas.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Verifica se a hora final é posterior à hora inicial
             if (horaInicial >= horaFinal)
             {
                 MessageBox.Show("A hora final deve ser posterior à hora inicial.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Obtém o nome do laboratório e do professor selecionados
             string nomeLab = cboLaboratorio.Text.Split('-')[0].Trim();
             string nomeProf = cboProfessor.Text.Split('-')[0].Trim();
 
+            // Verifica se já existe uma reserva para o mesmo laboratório na mesma data e horário
+            if (ReservaExistente(nomeLab, dataReserva, horaInicial, horaFinal))
+            {
+                MessageBox.Show("Este laboratório já está contém uma reserva nesse horário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Exibe uma mensagem de confirmação para a reserva
             DialogResult result = MessageBox.Show(
                 $"Deseja reservar o laboratório '{nomeLab}' para o professor '{nomeProf}' no dia {dataReserva:dd/MM/yyyy} das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
                 "Confirmar Reserva",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
+            // Se o usuário confirmar a reserva, executa a inserção no banco de dados
             if (result == DialogResult.Yes)
             {
                 int labCod = ObterCodigoLaboratorio(nomeLab);
                 int profCod = ObterCodigoProfessor(nomeProf);
 
+                // Monta o comando SQL para a inserção da reserva
                 string comandoSQL = $"INSERT INTO reserva (lab_cod, prof_cod, res_data, res_horainicial, res_horafinal, res_status) " +
                                     $"VALUES ({labCod}, {profCod}, '{dataReserva:yyyy-MM-dd}', '{horaInicial:HH:mm}', '{horaFinal:HH:mm}', 'reservado')";
                 try
@@ -144,6 +141,27 @@ namespace projetoetec
             }
         }
 
+        // Método para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
+        private bool ReservaExistente(string nomeLab, DateTime dataReserva, DateTime horaInicial, DateTime horaFinal)
+        {
+            // Monta a consulta SQL para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
+            string comandoSQL = $@"SELECT COUNT(*) 
+                           FROM reserva 
+                           INNER JOIN laboratorio ON reserva.lab_cod = laboratorio.lab_cod
+                           WHERE lab_nome = '{nomeLab}'
+                             AND res_data = '{dataReserva:yyyy-MM-dd}'
+                             AND ((res_horainicial BETWEEN '{horaInicial:HH:mm}' AND '{horaFinal:HH:mm}')
+                                 OR (res_horafinal BETWEEN '{horaInicial:HH:mm}' AND '{horaFinal:HH:mm}'))";
+
+            // Executa a consulta e verifica se o número de reservas existentes é maior que zero
+            DataTable resultado = dbManager.ConsultarDados(comandoSQL);
+            int numeroReservas = Convert.ToInt32(resultado.Rows[0][0]);
+
+            return numeroReservas > 0;
+        }
+
+
+        // Método para obter o código do laboratório com base no nome
         private int ObterCodigoLaboratorio(string nomeLaboratorio)
         {
             // Consulta SQL para obter o código do laboratório com base no nome
@@ -155,16 +173,17 @@ namespace projetoetec
             // Verifica se há algum resultado retornado
             if (resultado.Rows.Count > 0)
             {
-                // Acessa o valor retornado na primeira linha e primeira coluna
+                // Retorna o código do laboratório
                 return Convert.ToInt32(resultado.Rows[0][0]);
             }
             else
             {
-                // Se não houver resultados, retorna -1 (ou outro valor que indique erro)
+                // Se não houver resultados, retorna -1
                 return -1;
             }
         }
 
+        // Método para obter o código do professor com base no nome
         private int ObterCodigoProfessor(string nomeProfessor)
         {
             // Consulta SQL para obter o código do professor com base no nome
@@ -176,19 +195,19 @@ namespace projetoetec
             // Verifica se há algum resultado retornado
             if (resultado.Rows.Count > 0)
             {
-                // Acessa o valor retornado na primeira linha e primeira coluna
+                // Retorna o código do professor
                 return Convert.ToInt32(resultado.Rows[0][0]);
             }
             else
             {
-                // Se não houver resultados, retorna -1 (ou outro valor que indique erro)
+                // Se não houver resultados, retorna -1
                 return -1;
             }
         }
 
+        // Limpa os controles após a reserva
         private void LimparControlesReserva()
         {
-            // Limpa os controles após a reserva
             dtpReserva.Value = DateTime.Now.Date;
             maskedTBInicial.Clear();
             maskedTBFinal.Clear();
@@ -198,10 +217,6 @@ namespace projetoetec
             cboProfessor.Text = "Selecione um professor para a reserva";
         }
 
-        //
-        //
-        //
-        //
         // Mudança de telas
         private void linkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -222,6 +237,6 @@ namespace projetoetec
             frmCadastro abrir = new frmCadastro();
             abrir.Show();
             this.Close();
-        }        
+        }
     }
 }

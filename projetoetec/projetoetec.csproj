@@ -67,6 +67,11 @@
   <ItemGroup>
     <Compile Include="conectaEmail.cs" />
     <Compile Include="dal_SQLiteDBManager.cs" />
+    <Compile Include="etecja_reservasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>etecja_reservasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +164,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="etecja_reservasDataSet.xsc">
+      <DependentUpon>etecja_reservasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="etecja_reservasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>etecja_reservasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="etecja_reservasDataSet.xss">
+      <DependentUpon>etecja_reservasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
