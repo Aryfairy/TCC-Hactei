@@ -13,7 +13,7 @@ namespace projetoetec
         public frmReserva()
         {
             InitializeComponent();
-            string connectionString = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=etecja_reservas;Integrated Security=True";
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
         }
@@ -99,6 +99,13 @@ namespace projetoetec
             string nomeLab = cboLaboratorio.Text.Split('-')[0].Trim();
             string nomeProf = cboProfessor.Text.Split('-')[0].Trim();
 
+            // Verifica se já existe uma reserva para o mesmo laboratório na mesma data e horário
+            if (ReservaExistente(nomeLab, dataReserva, horaInicial, horaFinal))
+            {
+                MessageBox.Show("Este laboratório já está contém uma reserva nesse horário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Exibe uma mensagem de confirmação para a reserva
             DialogResult result = MessageBox.Show(
                 $"Deseja reservar o laboratório '{nomeLab}' para o professor '{nomeProf}' no dia {dataReserva:dd/MM/yyyy} das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
@@ -133,6 +140,26 @@ namespace projetoetec
                 }
             }
         }
+
+        // Método para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
+        private bool ReservaExistente(string nomeLab, DateTime dataReserva, DateTime horaInicial, DateTime horaFinal)
+        {
+            // Monta a consulta SQL para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
+            string comandoSQL = $@"SELECT COUNT(*) 
+                           FROM reserva 
+                           INNER JOIN laboratorio ON reserva.lab_cod = laboratorio.lab_cod
+                           WHERE lab_nome = '{nomeLab}'
+                             AND res_data = '{dataReserva:yyyy-MM-dd}'
+                             AND ((res_horainicial BETWEEN '{horaInicial:HH:mm}' AND '{horaFinal:HH:mm}')
+                                 OR (res_horafinal BETWEEN '{horaInicial:HH:mm}' AND '{horaFinal:HH:mm}'))";
+
+            // Executa a consulta e verifica se o número de reservas existentes é maior que zero
+            DataTable resultado = dbManager.ConsultarDados(comandoSQL);
+            int numeroReservas = Convert.ToInt32(resultado.Rows[0][0]);
+
+            return numeroReservas > 0;
+        }
+
 
         // Método para obter o código do laboratório com base no nome
         private int ObterCodigoLaboratorio(string nomeLaboratorio)

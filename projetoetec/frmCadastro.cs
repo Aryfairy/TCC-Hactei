@@ -12,7 +12,7 @@ namespace projetoetec
         public frmCadastro()
         {
             InitializeComponent();
-            string connectionString = @"Data Source=localhost\SQLEXPRESS01;Initial Catalog=etecja_reservas;Integrated Security=True";
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
         }

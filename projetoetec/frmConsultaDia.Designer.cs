@@ -47,20 +47,20 @@ namespace projetoetec
             this.SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROFESSOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
-            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
-            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlConsultaDia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlOpc
@@ -75,7 +75,7 @@ namespace projetoetec
             this.pnlOpc.Controls.Add(this.lnkReserva);
             this.pnlOpc.Controls.Add(this.picLogo);
             this.pnlOpc.Location = new System.Drawing.Point(-3, -2);
-            this.pnlOpc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlOpc.Margin = new System.Windows.Forms.Padding(2);
             this.pnlOpc.Name = "pnlOpc";
             this.pnlOpc.Size = new System.Drawing.Size(1102, 51);
             this.pnlOpc.TabIndex = 0;
@@ -152,7 +152,7 @@ namespace projetoetec
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
             this.lnkConsultaGeral.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked_1);
+            this.lnkConsultaGeral.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkConsultaGeral_LinkClicked);
             // 
             // label1
             // 
@@ -187,7 +187,7 @@ namespace projetoetec
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.Location = new System.Drawing.Point(3, 8);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(82, 37);
             this.picLogo.TabIndex = 0;
@@ -203,10 +203,10 @@ namespace projetoetec
             this.pnlConsultaDia.Controls.Add(this.cboLaboratorio);
             this.pnlConsultaDia.Controls.Add(this.lblLaboratorio);
             this.pnlConsultaDia.Controls.Add(this.lblData);
-            this.pnlConsultaDia.Location = new System.Drawing.Point(89, 80);
-            this.pnlConsultaDia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlConsultaDia.Location = new System.Drawing.Point(69, 85);
+            this.pnlConsultaDia.Margin = new System.Windows.Forms.Padding(2);
             this.pnlConsultaDia.Name = "pnlConsultaDia";
-            this.pnlConsultaDia.Size = new System.Drawing.Size(1115, 710);
+            this.pnlConsultaDia.Size = new System.Drawing.Size(1005, 572);
             this.pnlConsultaDia.TabIndex = 1;
             // 
             // btnConsultar
@@ -217,6 +217,7 @@ namespace projetoetec
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvReservasDia
             // 
@@ -224,7 +225,6 @@ namespace projetoetec
             this.dgvReservasDia.AllowUserToDeleteRows = false;
             this.dgvReservasDia.AllowUserToResizeColumns = false;
             this.dgvReservasDia.AllowUserToResizeRows = false;
-            this.dgvReservasDia.AutoGenerateColumns = false;
             this.dgvReservasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservasDia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -232,7 +232,6 @@ namespace projetoetec
             this.SALA,
             this.PROFESSOR,
             this.STATUS});
-            this.dgvReservasDia.DataSource = this.etecjareservasDataSetBindingSource;
             this.dgvReservasDia.Location = new System.Drawing.Point(64, 134);
             this.dgvReservasDia.Name = "dgvReservasDia";
             this.dgvReservasDia.ReadOnly = true;
@@ -268,6 +267,16 @@ namespace projetoetec
             this.STATUS.Name = "STATUS";
             this.STATUS.ReadOnly = true;
             // 
+            // etecjareservasDataSetBindingSource
+            // 
+            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
+            this.etecjareservasDataSetBindingSource.Position = 0;
+            // 
+            // etecja_reservasDataSet
+            // 
+            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
+            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dtpData
             // 
             this.dtpData.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
@@ -297,7 +306,7 @@ namespace projetoetec
             "Laboratório 2   00:00  Reservado",
             "Laboratório 3   00:00  Reservado"});
             this.cboLaboratorio.Location = new System.Drawing.Point(219, 93);
-            this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(2);
             this.cboLaboratorio.Name = "cboLaboratorio";
             this.cboLaboratorio.Size = new System.Drawing.Size(518, 25);
             this.cboLaboratorio.TabIndex = 2;
@@ -337,16 +346,6 @@ namespace projetoetec
             this.picMudarTema.TabIndex = 3;
             this.picMudarTema.TabStop = false;
             // 
-            // etecja_reservasDataSet
-            // 
-            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
-            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // etecjareservasDataSetBindingSource
-            // 
-            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
-            this.etecjareservasDataSetBindingSource.Position = 0;
-            // 
             // frmConsultaDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +357,7 @@ namespace projetoetec
             this.Controls.Add(this.pnlOpc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmConsultaDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -370,9 +369,9 @@ namespace projetoetec
             this.pnlConsultaDia.ResumeLayout(false);
             this.pnlConsultaDia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

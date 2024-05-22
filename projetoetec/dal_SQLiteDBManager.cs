@@ -42,15 +42,24 @@ namespace projetoetec
             }
         }
 
-        public DataTable ConsultarDados(string comandoSQL)
+        public DataTable ConsultarDados(string comandoSQL, params SqlParameter[] parametros)
         {
             DataTable dataTable = new DataTable();
             try
             {
                 AbrirConexao();
-                using (SqlDataAdapter adaptador = new SqlDataAdapter(comandoSQL, conexao)) // Alteração aqui
+                using (SqlCommand comando = new SqlCommand(comandoSQL, conexao))
                 {
-                    adaptador.Fill(dataTable);
+                    // Adiciona os parâmetros ao comando, se houver
+                    if (parametros != null)
+                    {
+                        comando.Parameters.AddRange(parametros);
+                    }
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                    {
+                        adaptador.Fill(dataTable);
+                    }
                 }
             }
             finally
