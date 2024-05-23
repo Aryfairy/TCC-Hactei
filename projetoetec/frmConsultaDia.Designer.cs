@@ -47,12 +47,12 @@ namespace projetoetec
             this.SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROFESSOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
+            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -211,12 +211,13 @@ namespace projetoetec
             // 
             // btnConsultar
             // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnConsultar.Location = new System.Drawing.Point(845, 92);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(101, 27);
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvReservasDia
@@ -266,16 +267,6 @@ namespace projetoetec
             this.STATUS.MinimumWidth = 6;
             this.STATUS.Name = "STATUS";
             this.STATUS.ReadOnly = true;
-            // 
-            // etecjareservasDataSetBindingSource
-            // 
-            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
-            this.etecjareservasDataSetBindingSource.Position = 0;
-            // 
-            // etecja_reservasDataSet
-            // 
-            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
-            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dtpData
             // 
@@ -335,6 +326,16 @@ namespace projetoetec
             this.lblData.Size = new System.Drawing.Size(67, 24);
             this.lblData.TabIndex = 1;
             this.lblData.Text = "Data:";
+            // 
+            // etecjareservasDataSetBindingSource
+            // 
+            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
+            this.etecjareservasDataSetBindingSource.Position = 0;
+            // 
+            // etecja_reservasDataSet
+            // 
+            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
+            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // picMudarTema
             // 

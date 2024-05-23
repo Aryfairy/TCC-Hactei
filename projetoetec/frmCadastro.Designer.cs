@@ -243,7 +243,6 @@ namespace projetoetec
             this.pnlCadastro.Name = "pnlCadastro";
             this.pnlCadastro.Size = new System.Drawing.Size(972, 550);
             this.pnlCadastro.TabIndex = 15;
-            this.pnlCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCadastro_Paint);
             // 
             // txtSala
             // 
@@ -368,7 +367,7 @@ namespace projetoetec
             // 
             // btnDeletarprof
             // 
-            this.btnDeletarprof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(165)))), ((int)(((byte)(172)))));
+            this.btnDeletarprof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnDeletarprof.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarprof.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarprof.Image")));
             this.btnDeletarprof.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -385,7 +384,7 @@ namespace projetoetec
             // 
             // btnCadastrarProf
             // 
-            this.btnCadastrarProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(165)))), ((int)(((byte)(172)))));
+            this.btnCadastrarProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnCadastrarProf.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarProf.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarProf.Image")));
             this.btnCadastrarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -402,7 +401,7 @@ namespace projetoetec
             // 
             // btnDeletarLab
             // 
-            this.btnDeletarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(165)))), ((int)(((byte)(172)))));
+            this.btnDeletarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnDeletarLab.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.btnDeletarLab.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarLab.Image")));
@@ -420,7 +419,7 @@ namespace projetoetec
             // 
             // btnCadastrarLab
             // 
-            this.btnCadastrarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(165)))), ((int)(((byte)(172)))));
+            this.btnCadastrarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnCadastrarLab.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarLab.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarLab.Image")));
             this.btnCadastrarLab.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
