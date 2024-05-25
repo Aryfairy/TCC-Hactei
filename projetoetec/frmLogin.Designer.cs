@@ -93,6 +93,7 @@ namespace projetoetec
             this.lnkCadastrar.TabIndex = 16;
             this.lnkCadastrar.TabStop = true;
             this.lnkCadastrar.Text = "Cadastrar";
+            this.lnkCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCadastrar_LinkClicked_1);
             // 
             // ckbMostrarSenha
             // 

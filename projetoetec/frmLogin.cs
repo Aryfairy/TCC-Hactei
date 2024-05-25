@@ -46,5 +46,12 @@ namespace projetoetec
         {
 
         }
+
+        private void lnkCadastrar_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCadastrarAdministrador cadastrar = new frmCadastrarAdministrador();
+            cadastrar.Show();
+            this.Hide();
+        }
     }
 }
