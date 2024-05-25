@@ -195,6 +195,9 @@ namespace projetoetec
             // 
             // pnlConsultaDia
             // 
+            this.pnlConsultaDia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlConsultaDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.pnlConsultaDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlConsultaDia.Controls.Add(this.btnConsultar);
@@ -211,6 +214,7 @@ namespace projetoetec
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnConsultar.Location = new System.Drawing.Point(845, 92);
             this.btnConsultar.Name = "btnConsultar";
@@ -226,6 +230,8 @@ namespace projetoetec
             this.dgvReservasDia.AllowUserToDeleteRows = false;
             this.dgvReservasDia.AllowUserToResizeColumns = false;
             this.dgvReservasDia.AllowUserToResizeRows = false;
+            this.dgvReservasDia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservasDia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -359,10 +365,12 @@ namespace projetoetec
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsultaDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta do Dia";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmConsultaDia_Load);
             this.pnlOpc.ResumeLayout(false);
             this.pnlOpc.PerformLayout();
