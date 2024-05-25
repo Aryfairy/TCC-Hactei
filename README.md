@@ -5,9 +5,9 @@ Sempre criamos uma branch para nossas modificações (features) com o título da
 /// Infos Gerais ///
 Usamos o Visual Studio 2019;
 
-Utilizamos a extensão SQLite and SQL Server Compact Toolbox;
+Utilizamos o SQL Server e seu instalador vem junto ao repositório quando clonado;
 
-O arquivo eteja_reservas.db deve ficar no disco local C:
+Temos um script SQL para rodar e o nome da db deve ser etecja_reservas.db;
 
 Tela de running app é a Splash Screen;
 

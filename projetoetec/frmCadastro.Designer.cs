@@ -117,7 +117,7 @@ namespace projetoetec
             this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkCadastro.Location = new System.Drawing.Point(921, 14);
+            this.lnkCadastro.Location = new System.Drawing.Point(921, 15);
             this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkCadastro.Name = "lnkCadastro";
             this.lnkCadastro.Size = new System.Drawing.Size(137, 24);
@@ -145,7 +145,7 @@ namespace projetoetec
             this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkConsultaDia.Location = new System.Drawing.Point(86, 14);
+            this.lnkConsultaDia.Location = new System.Drawing.Point(86, 15);
             this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaDia.Name = "lnkConsultaDia";
             this.lnkConsultaDia.Size = new System.Drawing.Size(220, 24);
@@ -162,7 +162,7 @@ namespace projetoetec
             this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkConsultaGeral.Location = new System.Drawing.Point(387, 14);
+            this.lnkConsultaGeral.Location = new System.Drawing.Point(387, 15);
             this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaGeral.Name = "lnkConsultaGeral";
             this.lnkConsultaGeral.Size = new System.Drawing.Size(217, 24);
@@ -191,7 +191,7 @@ namespace projetoetec
             this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
-            this.lnkReserva.Location = new System.Drawing.Point(704, 14);
+            this.lnkReserva.Location = new System.Drawing.Point(704, 15);
             this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkReserva.Name = "lnkReserva";
             this.lnkReserva.Size = new System.Drawing.Size(120, 24);
@@ -271,7 +271,7 @@ namespace projetoetec
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.label5.Location = new System.Drawing.Point(431, 273);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -283,7 +283,7 @@ namespace projetoetec
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.label4.Location = new System.Drawing.Point(420, 22);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -303,7 +303,7 @@ namespace projetoetec
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.panel3.Location = new System.Drawing.Point(35, 252);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -403,6 +403,7 @@ namespace projetoetec
             // 
             this.btnDeletarLab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnDeletarLab.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.btnDeletarLab.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarLab.Image")));
             this.btnDeletarLab.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeletarLab.Location = new System.Drawing.Point(832, 185);

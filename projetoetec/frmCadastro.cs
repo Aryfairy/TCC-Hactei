@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace projetoetec
 {
     public partial class frmCadastro : Form
     {
-        private dal_SQLiteDBManager dbManager;
+        private dal_SQLServerDBManager dbManager;
 
         public frmCadastro()
         {
             InitializeComponent();
-            dbManager = new dal_SQLiteDBManager(@"C:\Users\Laboratorio-Info\source\repos\TCC-Hactei\etecja_reservas.db");
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
+            dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
         }
 
         private void frmCadastro_Load(object sender, EventArgs e)
-        {            
+        {
             CarregarLaboratorios();
-            CarregarProfessores();            
+            CarregarProfessores();
             cboLaboratorio.SelectedIndex = -1;
             cboProfessor.SelectedIndex = -1;
             cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
@@ -41,7 +37,7 @@ namespace projetoetec
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT lab_nome || ' - ' || lab_sala AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
 
                 // Chama o método para carregar o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");
@@ -78,8 +74,8 @@ namespace projetoetec
                     txtSala.Clear();
                     CarregarLaboratorios();
                     cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
-                    
-                    
+
+
                 }
                 catch (Exception ex)
                 {
@@ -113,7 +109,7 @@ namespace projetoetec
                     if (result == DialogResult.Yes)
                     {
                         // Cria a string SQL para excluir o registro da tabela laboratorio com base no nome do laboratório
-                        string comandoSQL = $"DELETE FROM laboratorio WHERE lab_nome || ' - ' || lab_sala = '{nomeLab}'";
+                        string comandoSQL = $"DELETE FROM laboratorio WHERE lab_nome + ' - ' + lab_sala = '{nomeLab}'";
 
                         try
                         {
@@ -158,7 +154,7 @@ namespace projetoetec
             try
             {
                 // Consulta SQL para selecionar o nome do professor e a disciplina, concatenando-os
-                string comandoSQL = "SELECT prof_nome || ' - ' || prof_disciplina AS nome_disciplina FROM professor";
+                string comandoSQL = "SELECT CONCAT(prof_nome, ' - ', prof_disciplina) AS nome_disciplina FROM professor";
 
                 // Chama o método para carregar o ComboBox
                 dbManager.CarregarComboBox(cboProfessor, comandoSQL, "nome_disciplina");
@@ -179,8 +175,26 @@ namespace projetoetec
             // Verifica se os campos não estão vazios
             if (!string.IsNullOrEmpty(nomeProf) && !string.IsNullOrEmpty(disciplinaProf))
             {
+                // Verifica se o celular não está vazio e se é um número válido
+                long? celular = null; // Definido como nullable para permitir valor nulo
+                if (!string.IsNullOrEmpty(cel) && long.TryParse(cel, out long parsedCelular))
+                {
+                    celular = parsedCelular;
+                }
+
                 // Cria a string SQL para inserir os dados na tabela professor
-                string comandoSQL = $"INSERT INTO professor (prof_nome, prof_disciplina, prof_email, prof_celular) VALUES ('{nomeProf}', '{disciplinaProf}', '{email}', '{cel}')";
+                string comandoSQL = $"INSERT INTO professor (prof_nome, prof_disciplina, prof_email, prof_celular) VALUES ('{nomeProf}', '{disciplinaProf}', '{email}', ";
+
+                // Adiciona o valor do celular, se estiver presente
+                if (celular != null)
+                {
+                    comandoSQL += $"{celular}";
+                }
+                else
+                {
+                    comandoSQL += "NULL";
+                }
+                comandoSQL += ")";
 
                 try
                 {
@@ -209,8 +223,8 @@ namespace projetoetec
                 // Exibe uma mensagem de aviso se os campos estiverem vazios
                 MessageBox.Show("Por favor, preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
+
 
         private void btnDeletarprof_Click(object sender, EventArgs e)
         {
@@ -230,7 +244,7 @@ namespace projetoetec
                     if (result == DialogResult.Yes)
                     {
                         // Cria a string SQL para excluir o registro da tabela professor com base no nome do professor
-                        string comandoSQL = $"DELETE FROM professor WHERE prof_nome || ' - ' || prof_disciplina = '{nomeProf}'";
+                        string comandoSQL = $"DELETE FROM professor WHERE prof_nome + ' - ' + prof_disciplina = '{nomeProf}'";
 
                         try
                         {
@@ -289,6 +303,7 @@ namespace projetoetec
             abrir.Show();
             this.Close();
         }
-                
+
+        
     }
 }
