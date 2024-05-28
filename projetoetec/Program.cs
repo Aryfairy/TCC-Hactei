@@ -17,7 +17,7 @@ namespace projetoetec
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             /// não está abrindo outra tela sem ser o frmLogin
-            Application.Run(new frmConsultaDia());
+            Application.Run(new frmLogin());
         }
     }
 }

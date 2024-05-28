@@ -29,7 +29,6 @@ namespace projetoetec
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaDia));
             this.pnlOpc = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,15 +50,11 @@ namespace projetoetec
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
-            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlConsultaDia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
@@ -245,6 +240,7 @@ namespace projetoetec
             this.dgvReservasDia.RowHeadersWidth = 51;
             this.dgvReservasDia.Size = new System.Drawing.Size(882, 390);
             this.dgvReservasDia.TabIndex = 3;
+            this.dgvReservasDia.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReservasDia_CellFormatting);
             // 
             // HORÁRIO
             // 
@@ -333,16 +329,6 @@ namespace projetoetec
             this.lblData.TabIndex = 1;
             this.lblData.Text = "Data:";
             // 
-            // etecjareservasDataSetBindingSource
-            // 
-            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
-            this.etecjareservasDataSetBindingSource.Position = 0;
-            // 
-            // etecja_reservasDataSet
-            // 
-            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
-            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // picMudarTema
             // 
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
@@ -378,8 +364,6 @@ namespace projetoetec
             this.pnlConsultaDia.ResumeLayout(false);
             this.pnlConsultaDia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -409,7 +393,5 @@ namespace projetoetec
         private System.Windows.Forms.DataGridViewTextBoxColumn PROFESSOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.BindingSource etecjareservasDataSetBindingSource;
-        private etecja_reservasDataSet etecja_reservasDataSet;
     }
 }

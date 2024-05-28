@@ -166,6 +166,29 @@ namespace projetoetec
             }
         }
 
+        private void dgvReservasDia_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = dgvReservasDia.Rows[e.RowIndex];
+                string status = row.Cells["Status"].Value?.ToString() ?? "";
+
+                if (status == "DISPONÍVEL")
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen; ;
+                }
+                else if (status == "RESERVADO")
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.Tomato; ;
+                }
+            }
+        }
+
+        //
+        //
+        //
+        //combobox lab
+
         private void CarregarLaboratorios()
         {
             try
