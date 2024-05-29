@@ -63,10 +63,10 @@ namespace projetoetec
             this.pnlEmail.Controls.Add(this.picLogo);
             this.pnlEmail.Controls.Add(this.lblEmail);
             this.pnlEmail.Controls.Add(this.txtEmail);
-            this.pnlEmail.Location = new System.Drawing.Point(241, 60);
+            this.pnlEmail.Location = new System.Drawing.Point(271, 75);
             this.pnlEmail.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmail.Name = "pnlEmail";
-            this.pnlEmail.Size = new System.Drawing.Size(619, 450);
+            this.pnlEmail.Size = new System.Drawing.Size(696, 562);
             this.pnlEmail.TabIndex = 6;
             // 
             // btnVoltar
@@ -77,14 +77,15 @@ namespace projetoetec
             this.btnVoltar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoltar.Location = new System.Drawing.Point(75, 356);
+            this.btnVoltar.Location = new System.Drawing.Point(84, 445);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(101, 35);
+            this.btnVoltar.Size = new System.Drawing.Size(114, 44);
             this.btnVoltar.TabIndex = 4;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
             // btnEnviar
             // 
@@ -94,10 +95,10 @@ namespace projetoetec
             this.btnEnviar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.Image = ((System.Drawing.Image)(resources.GetObject("btnEnviar.Image")));
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(453, 356);
+            this.btnEnviar.Location = new System.Drawing.Point(510, 445);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(101, 35);
+            this.btnEnviar.Size = new System.Drawing.Size(114, 44);
             this.btnEnviar.TabIndex = 3;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,10 +108,10 @@ namespace projetoetec
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(211, 30);
+            this.picLogo.Location = new System.Drawing.Point(237, 38);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(189, 132);
+            this.picLogo.Size = new System.Drawing.Size(213, 165);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -120,10 +121,10 @@ namespace projetoetec
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblEmail.Location = new System.Drawing.Point(71, 213);
+            this.lblEmail.Location = new System.Drawing.Point(80, 266);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(483, 23);
+            this.lblEmail.Size = new System.Drawing.Size(571, 28);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Insira seu email para recuperação de senha:";
             // 
@@ -131,19 +132,19 @@ namespace projetoetec
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtEmail.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(75, 255);
+            this.txtEmail.Location = new System.Drawing.Point(84, 319);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(479, 34);
+            this.txtEmail.Size = new System.Drawing.Size(538, 40);
             this.txtEmail.TabIndex = 2;
             // 
             // frmRecuperaEmail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(1101, 638);
+            this.ClientSize = new System.Drawing.Size(1239, 798);
             this.Controls.Add(this.pnlEmail);
             this.Controls.Add(this.picMudarTema);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -153,7 +154,6 @@ namespace projetoetec
             this.Name = "frmRecuperaEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Email";
-            this.Load += new System.EventHandler(this.frmEmail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.pnlEmail.ResumeLayout(false);
             this.pnlEmail.PerformLayout();
