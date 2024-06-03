@@ -37,7 +37,7 @@ namespace projetoetec
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) AS nome_sala FROM laboratorio";
 
                 // Chama o método para carregar o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");
@@ -109,7 +109,7 @@ namespace projetoetec
                     if (result == DialogResult.Yes)
                     {
                         // Cria a string SQL para excluir o registro da tabela laboratorio com base no nome do laboratório
-                        string comandoSQL = $"DELETE FROM laboratorio WHERE lab_nome + ' - ' + lab_sala = '{nomeLab}'";
+                        string comandoSQL = $"DELETE FROM laboratorio WHERE lab_nome + ' - ' + lab_sala + ' - ' + lab_disc = '{nomeLab}'";
 
                         try
                         {

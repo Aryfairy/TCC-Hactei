@@ -29,7 +29,6 @@ namespace projetoetec
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaDia));
             this.pnlOpc = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,15 +50,11 @@ namespace projetoetec
             this.cboLaboratorio = new System.Windows.Forms.ComboBox();
             this.lblLaboratorio = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
-            this.etecjareservasDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.etecja_reservasDataSet = new projetoetec.etecja_reservasDataSet();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlConsultaDia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,13 +91,13 @@ namespace projetoetec
             // 
             this.lnkCadastro.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkCadastro.AutoSize = true;
-            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkCadastro.Location = new System.Drawing.Point(940, 13);
             this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkCadastro.Name = "lnkCadastro";
-            this.lnkCadastro.Size = new System.Drawing.Size(137, 24);
+            this.lnkCadastro.Size = new System.Drawing.Size(128, 25);
             this.lnkCadastro.TabIndex = 31;
             this.lnkCadastro.TabStop = true;
             this.lnkCadastro.Text = "CADASTRO";
@@ -125,13 +120,13 @@ namespace projetoetec
             // 
             this.lnkConsultaDia.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkConsultaDia.AutoSize = true;
-            this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkConsultaDia.Location = new System.Drawing.Point(105, 13);
             this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaDia.Name = "lnkConsultaDia";
-            this.lnkConsultaDia.Size = new System.Drawing.Size(220, 24);
+            this.lnkConsultaDia.Size = new System.Drawing.Size(203, 25);
             this.lnkConsultaDia.TabIndex = 28;
             this.lnkConsultaDia.TabStop = true;
             this.lnkConsultaDia.Text = "CONSULTA DO DIA";
@@ -141,13 +136,13 @@ namespace projetoetec
             // 
             this.lnkConsultaGeral.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkConsultaGeral.AutoSize = true;
-            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkConsultaGeral.Location = new System.Drawing.Point(406, 13);
             this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaGeral.Name = "lnkConsultaGeral";
-            this.lnkConsultaGeral.Size = new System.Drawing.Size(217, 24);
+            this.lnkConsultaGeral.Size = new System.Drawing.Size(203, 25);
             this.lnkConsultaGeral.TabIndex = 29;
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
@@ -170,13 +165,13 @@ namespace projetoetec
             // 
             this.lnkReserva.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkReserva.AutoSize = true;
-            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkReserva.Location = new System.Drawing.Point(723, 13);
             this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkReserva.Name = "lnkReserva";
-            this.lnkReserva.Size = new System.Drawing.Size(120, 24);
+            this.lnkReserva.Size = new System.Drawing.Size(112, 25);
             this.lnkReserva.TabIndex = 30;
             this.lnkReserva.TabStop = true;
             this.lnkReserva.Text = "RESERVA";
@@ -195,6 +190,9 @@ namespace projetoetec
             // 
             // pnlConsultaDia
             // 
+            this.pnlConsultaDia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlConsultaDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.pnlConsultaDia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlConsultaDia.Controls.Add(this.btnConsultar);
@@ -211,6 +209,7 @@ namespace projetoetec
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.btnConsultar.Location = new System.Drawing.Point(845, 92);
             this.btnConsultar.Name = "btnConsultar";
@@ -226,6 +225,8 @@ namespace projetoetec
             this.dgvReservasDia.AllowUserToDeleteRows = false;
             this.dgvReservasDia.AllowUserToResizeColumns = false;
             this.dgvReservasDia.AllowUserToResizeRows = false;
+            this.dgvReservasDia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservasDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservasDia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -239,6 +240,7 @@ namespace projetoetec
             this.dgvReservasDia.RowHeadersWidth = 51;
             this.dgvReservasDia.Size = new System.Drawing.Size(882, 390);
             this.dgvReservasDia.TabIndex = 3;
+            this.dgvReservasDia.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReservasDia_CellFormatting);
             // 
             // HORÁRIO
             // 
@@ -306,36 +308,26 @@ namespace projetoetec
             // lblLaboratorio
             // 
             this.lblLaboratorio.AutoSize = true;
-            this.lblLaboratorio.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaboratorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblLaboratorio.Location = new System.Drawing.Point(61, 91);
             this.lblLaboratorio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaboratorio.Name = "lblLaboratorio";
-            this.lblLaboratorio.Size = new System.Drawing.Size(144, 24);
+            this.lblLaboratorio.Size = new System.Drawing.Size(127, 25);
             this.lblLaboratorio.TabIndex = 2;
             this.lblLaboratorio.Text = "Laboratório:";
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblData.Location = new System.Drawing.Point(134, 28);
             this.lblData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(67, 24);
+            this.lblData.Size = new System.Drawing.Size(63, 25);
             this.lblData.TabIndex = 1;
             this.lblData.Text = "Data:";
-            // 
-            // etecjareservasDataSetBindingSource
-            // 
-            this.etecjareservasDataSetBindingSource.DataSource = this.etecja_reservasDataSet;
-            this.etecjareservasDataSetBindingSource.Position = 0;
-            // 
-            // etecja_reservasDataSet
-            // 
-            this.etecja_reservasDataSet.DataSetName = "etecja_reservasDataSet";
-            this.etecja_reservasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // picMudarTema
             // 
@@ -370,8 +362,6 @@ namespace projetoetec
             this.pnlConsultaDia.ResumeLayout(false);
             this.pnlConsultaDia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasDia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecjareservasDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etecja_reservasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,7 +391,5 @@ namespace projetoetec
         private System.Windows.Forms.DataGridViewTextBoxColumn PROFESSOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.BindingSource etecjareservasDataSetBindingSource;
-        private etecja_reservasDataSet etecja_reservasDataSet;
     }
 }

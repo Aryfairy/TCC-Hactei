@@ -97,42 +97,49 @@ namespace projetoetec
         private void AtualizarDataGridView(DataTable reservas)
         {
             // Obter o laboratório selecionado
-            string laboratorioSelecionado = cboLaboratorio.Text.Split('-')[0].Trim();
+            string laboratorioSelecionado = cboLaboratorio.Text.Trim();
+
 
             foreach (DataRow reserva in reservas.Rows)
             {
                 // Obter as informações da reserva
                 TimeSpan horaInicial = (TimeSpan)reserva["res_horainicial"];
                 TimeSpan horaFinal = (TimeSpan)reserva["res_horafinal"];
-                string professor = reserva.IsNull("prof_nome") ? "-" : (string)reserva["prof_nome"];
+                string professor = (string)reserva["prof_nome"];
                 string status = (string)reserva["res_status"];
 
                 // Preencher as linhas correspondentes no DataGridView
                 TimeSpan hora = horaInicial;
-                while (hora < horaFinal)
+                while (hora <= horaFinal)
                 {
                     DataGridViewRow row = EncontrarLinhaPorHora(hora);
                     if (row != null)
                     {
-                        // Preencher a coluna "Sala" com o nome do laboratório selecionado
-                        row.Cells[1].Value = laboratorioSelecionado;
-
-                        if (row.Cells[2].Value == null || string.IsNullOrEmpty(row.Cells[2].Value.ToString()))
-                            row.Cells[2].Value = professor;
+                        // Preencher a coluna "Professor" com o nome do professor selecionado
+                        row.Cells[2].Value = professor;
 
                         // Preencher a coluna "Status" com o status da reserva
-                        row.Cells[3].Value = status;
+                        row.Cells[3].Value = "RESERVADO";
                     }
                     hora = hora.Add(intervalo);
                 }
             }
 
-            // Preencher com "DISPONÍVEL" as linhas que não têm reserva
+            // Preencher as linhas que não têm reserva
             foreach (DataGridViewRow row in dgvReservasDia.Rows)
             {
+                // Preencher a coluna "Sala" com o nome do laboratório selecionado
+                row.Cells[1].Value = laboratorioSelecionado;
+
+                // Preencher com "DISPONÍVEL" as linhas que não têm reserv
                 if (string.IsNullOrEmpty(row.Cells[3].Value?.ToString()))
                 {
                     row.Cells[3].Value = "DISPONÍVEL";
+                }
+                // Preencher com "———", na coluna professor nas linhas que não têm reserva
+                if (string.IsNullOrEmpty(row.Cells[2].Value?.ToString()))
+                {
+                    row.Cells[2].Value = "———";
                 }
             }
         }
@@ -159,12 +166,35 @@ namespace projetoetec
             }
         }
 
+        private void dgvReservasDia_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = dgvReservasDia.Rows[e.RowIndex];
+                string status = row.Cells["Status"].Value?.ToString() ?? "";
+
+                if (status == "DISPONÍVEL")
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen; ;
+                }
+                else if (status == "RESERVADO")
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.Tomato; ;
+                }
+            }
+        }
+
+        //
+        //
+        //
+        //combobox lab
+
         private void CarregarLaboratorios()
         {
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) AS nome_sala FROM laboratorio";
 
                 // Chama o método para carregar o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");

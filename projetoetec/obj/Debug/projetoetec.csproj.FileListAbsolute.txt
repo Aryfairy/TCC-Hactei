@@ -25,58 +25,30 @@ C:\Users\Laboratorio-Info\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoe
 C:\Users\Laboratorio-Info\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
 C:\Users\Laboratorio-Info\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.exe
 C:\Users\Laboratorio-Info\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.pdb
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe.config
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.pdb
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.dll
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.dll
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.xml
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.xml
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmRecuperaEmail.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmLogin.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmReserva.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmSplash.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.exe
-C:\Users\JEFFERSON\source\repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.pdb
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe.config
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\projetoetec.pdb
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.dll
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.dll
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.xml
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.xml
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmRecuperaEmail.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmLogin.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmReserva.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmSplash.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.exe
-C:\Users\vinic\Source\Repos\Aryfairy\TCC-Hactei\projetoetec\obj\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\projetoetec.exe.config
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\projetoetec.exe
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\EntityFramework.dll
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\System.Data.SQLite.dll
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\EntityFramework.xml
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos Dev\TCC\repos\projetoetec\bin\Debug\System.Data.SQLite.xml
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmRecuperaEmail.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmLogin.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmReserva.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmSplash.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.exe
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.pdb
