@@ -102,14 +102,45 @@ namespace projetoetec
                     // Recupera o nome do laboratório selecionado
                     string nomeLab = rowView["nome_sala"].ToString();
 
+                    // Verifica se há reservas associadas ao laboratório
+                    string verificarReservasSQL = $"SELECT COUNT(*) FROM reserva " +
+                                                  $"INNER JOIN laboratorio ON reserva.lab_cod = laboratorio.lab_cod " +
+                                                  $"WHERE CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) = '{nomeLab}'";
+
+                    int reservaCount = (int)dbManager.ConsultarDados(verificarReservasSQL).Rows[0][0];
+
+                    if (reservaCount > 0)
+                    {
+                        DialogResult result = MessageBox.Show($"Existem {reservaCount} reservas associadas a este laboratório. Deseja continuar com a exclusão?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result != DialogResult.Yes)
+                        {
+                            return;
+                        }
+
+                        // Exclui as reservas associadas ao laboratório
+                        string deletarReservasSQL = $"DELETE reserva FROM reserva " +
+                                                    $"INNER JOIN laboratorio ON reserva.lab_cod = laboratorio.lab_cod " +
+                                                    $"WHERE CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) = '{nomeLab}'";
+
+                        try
+                        {
+                            dbManager.InserirDados(deletarReservasSQL);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Erro ao excluir as reservas: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     // Pede confirmação ao usuário antes de excluir o laboratório
-                    DialogResult result = MessageBox.Show($"Tem certeza que deseja excluir o laboratório '{nomeLab}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult confirmResult = MessageBox.Show($"Tem certeza que deseja excluir o laboratório '{nomeLab}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Verifica se o usuário confirmou a exclusão
-                    if (result == DialogResult.Yes)
+                    if (confirmResult == DialogResult.Yes)
                     {
                         // Cria a string SQL para excluir o registro da tabela laboratorio com base no nome do laboratório
-                        string comandoSQL = $"DELETE FROM laboratorio WHERE lab_nome + ' - ' + lab_sala + ' - ' + lab_disc = '{nomeLab}'";
+                        string comandoSQL = $"DELETE FROM laboratorio WHERE CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) = '{nomeLab}'";
 
                         try
                         {
@@ -237,14 +268,45 @@ namespace projetoetec
                     // Recupera o nome do professor selecionado
                     string nomeProf = rowView["nome_disciplina"].ToString();
 
+                    // Verifica se há reservas associadas ao professor
+                    string verificarReservasSQL = $"SELECT COUNT(*) FROM reserva " +
+                                                  $"INNER JOIN professor ON reserva.prof_cod = professor.prof_cod " +
+                                                  $"WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = '{nomeProf}'";
+
+                    int reservaCount = (int)dbManager.ConsultarDados(verificarReservasSQL).Rows[0][0];
+
+                    if (reservaCount > 0)
+                    {
+                        DialogResult result = MessageBox.Show($"Existem {reservaCount} reservas associadas a este professor. Deseja continuar com a exclusão?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result != DialogResult.Yes)
+                        {
+                            return;
+                        }
+
+                        // Exclui as reservas associadas ao professor
+                        string deletarReservasSQL = $"DELETE reserva FROM reserva " +
+                                                    $"INNER JOIN professor ON reserva.prof_cod = professor.prof_cod " +
+                                                    $"WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = '{nomeProf}'";
+
+                        try
+                        {
+                            dbManager.InserirDados(deletarReservasSQL);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Erro ao excluir as reservas: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     // Pede confirmação ao usuário antes de excluir o professor
-                    DialogResult result = MessageBox.Show($"Tem certeza que deseja excluir o professor '{nomeProf}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult confirmResult = MessageBox.Show($"Tem certeza que deseja excluir o professor '{nomeProf}'?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Verifica se o usuário confirmou a exclusão
-                    if (result == DialogResult.Yes)
+                    if (confirmResult == DialogResult.Yes)
                     {
                         // Cria a string SQL para excluir o registro da tabela professor com base no nome do professor
-                        string comandoSQL = $"DELETE FROM professor WHERE prof_nome + ' - ' + prof_disciplina = '{nomeProf}'";
+                        string comandoSQL = $"DELETE FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = '{nomeProf}'";
 
                         try
                         {
