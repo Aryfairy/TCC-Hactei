@@ -52,3 +52,4 @@ D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileIn
 D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
 D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.exe
 D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.pdb
+D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
