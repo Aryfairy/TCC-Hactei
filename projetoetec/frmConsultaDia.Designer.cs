@@ -240,6 +240,7 @@ namespace projetoetec
             this.dgvReservasDia.RowHeadersWidth = 51;
             this.dgvReservasDia.Size = new System.Drawing.Size(882, 390);
             this.dgvReservasDia.TabIndex = 3;
+            this.dgvReservasDia.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservasDia_CellDoubleClick);
             this.dgvReservasDia.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReservasDia_CellFormatting);
             // 
             // HORÁRIO
