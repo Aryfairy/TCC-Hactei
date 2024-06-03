@@ -42,6 +42,8 @@ namespace projetoetec
             }
         }
 
+
+
         public DataTable ConsultarDados(string comandoSQL, params SqlParameter[] parametros)
         {
             DataTable dataTable = new DataTable();
@@ -68,6 +70,28 @@ namespace projetoetec
             }
             return dataTable;
         }
+
+        public bool AutenticarAdmin(string email, string senha)
+        {
+            string comandoSQL = "SELECT COUNT(*) FROM administrador WHERE admin_email = @Email AND admin_senha = @Senha";
+            SqlParameter[] parametros = { new SqlParameter("@Email", email), new SqlParameter("@Senha", senha) };
+            DataTable resultado = ConsultarDados(comandoSQL, parametros);
+            int count = Convert.ToInt32(resultado.Rows[0][0]);
+            return count > 0;
+        }
+
+        public bool AutenticarEmail(string email)
+        {
+            string comandoSQL = "SELECT COUNT(*) FROM administrador WHERE admin_email = @Email";
+            SqlParameter[] parametros = { new SqlParameter("@Email", email) };
+            DataTable resultado = ConsultarDados(comandoSQL, parametros);
+            int count = Convert.ToInt32(resultado.Rows[0][0]);
+            return count > 0;
+        }
+
+
+
+
 
         public void CarregarComboBox(ComboBox comboBox, string comandoSQL, string displayMember)
         {

@@ -42,7 +42,7 @@ namespace projetoetec
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
         // Método para validar endereço de e-mail usando expressão regular
-        private bool IsValidEmail(string email)
+        public bool IsValidEmail(string email)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace projetoetec
             try
             {
                 smtpClient.Send(mailMensagem);
-                MessageBox.Show("E-mail enviado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {

@@ -14,24 +14,23 @@ namespace projetoetec
 
     public partial class frmRecuperaEmail : Form
     {
-        //variaveis globais 
-        string _cod;
-        public static string cod;
-
-
-
+        //istancias 
+        conectaEmail ConectEmail = new conectaEmail();
+        dal_SQLServerDBManager dbManager;
+        string cod, email;
+        frmCodigo abrir;
+        frmLogin abrirLog;
         public frmRecuperaEmail()
         {
             InitializeComponent();
+            // Instância do gerenciador do banco de dados
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
+            dbManager = new dal_SQLServerDBManager(connectionString);
 
+            abrirLog = new frmLogin();
         }
 
-        private void frmEmail_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             frmLogin abrir = new frmLogin();
             abrir.Show();
@@ -40,24 +39,51 @@ namespace projetoetec
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //istancias 
-            conectaEmail ConectEmail = new conectaEmail();
-            frmCodigo Abrir = new frmCodigo();
 
-            //gerando o codigo e passando para variavel cod
-            _cod = ConectEmail.CodigoEmail();
-            cod = _cod;
 
-            //madando o email
-            ConectEmail.EnviarEmail(txtEmail.Text.Trim(), "confirmação de troca de senha", "o seu codigo é " + cod);
+            // Autenticar usuário com base no email
+            bool autenticado = dbManager.AutenticarEmail(txtEmail.Text);
 
-            //valindando se a pesso realmente escreveu um email valido antes dela ir para a proxima pagina
-            if (conectaEmail.valid){
-                Abrir.Show();
-                this.Hide();}
+            {
+                try
+                {
+                    // Verificar se o campo txtEmail não está vazio
+                    if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+                    {
 
-                txtEmail.Clear();
-                txtEmail.Focus();
+                        if (autenticado)
+                        {
+                            // Gerar o código e passar para a variável cod
+                            cod = ConectEmail.CodigoEmail();
+                            //variavel para o email
+                            email = txtEmail.Text.Trim();
+                            // Enviar o email com o código de confirmação
+                            ConectEmail.EnviarEmail(email, "confirmação de troca de senha", "O seu código é: " + cod);
+                            abrir = new frmCodigo(cod, email); // Passando o código e o email para o próximo formulário
+                            // Ocultar a tela atual e abrir a próxima etapa (exemplo: abrir um formulário para inserir o código de confirmação)
+                            abrir.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            // Exibir mensagem de erro e limpar o campo de email
+                            MessageBox.Show("Email não encontrado.");
+                            txtEmail.Clear();
+                            txtEmail.Focus();
+                        }
+                    }
+                    else
+                    {
+                        // Exibir mensagem solicitando preenchimento do campo
+                        MessageBox.Show("Por favor, preencha o campo de email.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Tratar qualquer exceção que possa ocorrer e exibir uma mensagem de erro
+                    MessageBox.Show("Ocorreu um erro: " + ex.Message);
+                }
+            }
         }
     }
 }

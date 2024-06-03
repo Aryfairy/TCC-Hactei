@@ -12,33 +12,32 @@ namespace projetoetec
 {
     public partial class frmCodigo : Form
     {
-        public frmCodigo()
+        string cod;
+        string Email;
+        public frmCodigo(string codigo, string email)
         {
             InitializeComponent();
+            cod = codigo;
+            Email = email;
         }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
-        {        
-            
             //istancia
-            frmNovaSenha Abrir = new frmNovaSenha();
+            frmNovaSenha Abrir = new frmNovaSenha(Email);
 
             //comparando os codigos
-            if (txtCodigo.Text == frmRecuperaEmail.cod)
+            if (txtCodigo.Text == cod)
             {
                 Abrir.Show();
                 this.Hide();
-                frmRecuperaEmail.cod = "";
+
             }
 
-            else {
-                MessageBox.Show(frmRecuperaEmail.cod, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+            else
+            {
+                MessageBox.Show("codigo errado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

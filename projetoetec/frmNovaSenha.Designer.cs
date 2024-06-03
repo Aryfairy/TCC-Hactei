@@ -47,7 +47,8 @@ namespace projetoetec
             // 
             this.picMudarTema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.picMudarTema.Image = ((System.Drawing.Image)(resources.GetObject("picMudarTema.Image")));
-            this.picMudarTema.Location = new System.Drawing.Point(0, -2);
+            this.picMudarTema.Location = new System.Drawing.Point(0, -3);
+            this.picMudarTema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picMudarTema.Name = "picMudarTema";
             this.picMudarTema.Size = new System.Drawing.Size(32, 32);
             this.picMudarTema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -64,10 +65,9 @@ namespace projetoetec
             this.pnlNovaSennha.Controls.Add(this.lblNovaSenha);
             this.pnlNovaSennha.Controls.Add(this.txtConfirmar);
             this.pnlNovaSennha.Controls.Add(this.txtNovaSenha);
-            this.pnlNovaSennha.Location = new System.Drawing.Point(222, 71);
-            this.pnlNovaSennha.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlNovaSennha.Location = new System.Drawing.Point(333, 109);
             this.pnlNovaSennha.Name = "pnlNovaSennha";
-            this.pnlNovaSennha.Size = new System.Drawing.Size(382, 377);
+            this.pnlNovaSennha.Size = new System.Drawing.Size(571, 578);
             this.pnlNovaSennha.TabIndex = 7;
             // 
             // btnConfirmar
@@ -78,22 +78,21 @@ namespace projetoetec
             this.btnConfirmar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConfirmar.Location = new System.Drawing.Point(131, 317);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmar.Location = new System.Drawing.Point(196, 488);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(111, 29);
+            this.btnConfirmar.Size = new System.Drawing.Size(166, 45);
             this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(116, 18);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Location = new System.Drawing.Point(174, 28);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(142, 107);
+            this.picLogo.Size = new System.Drawing.Size(213, 165);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -103,10 +102,9 @@ namespace projetoetec
             this.lblConfirmar.AutoSize = true;
             this.lblConfirmar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblConfirmar.Location = new System.Drawing.Point(105, 226);
-            this.lblConfirmar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmar.Location = new System.Drawing.Point(158, 348);
             this.lblConfirmar.Name = "lblConfirmar";
-            this.lblConfirmar.Size = new System.Drawing.Size(162, 19);
+            this.lblConfirmar.Size = new System.Drawing.Size(233, 28);
             this.lblConfirmar.TabIndex = 3;
             this.lblConfirmar.Text = "Confirme a senha:";
             // 
@@ -115,10 +113,9 @@ namespace projetoetec
             this.lblNovaSenha.AutoSize = true;
             this.lblNovaSenha.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNovaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblNovaSenha.Location = new System.Drawing.Point(130, 141);
-            this.lblNovaSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNovaSenha.Location = new System.Drawing.Point(195, 217);
             this.lblNovaSenha.Name = "lblNovaSenha";
-            this.lblNovaSenha.Size = new System.Drawing.Size(108, 19);
+            this.lblNovaSenha.Size = new System.Drawing.Size(155, 28);
             this.lblNovaSenha.TabIndex = 1;
             this.lblNovaSenha.Text = "Nova senha:";
             // 
@@ -126,12 +123,11 @@ namespace projetoetec
             // 
             this.txtConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtConfirmar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmar.Location = new System.Drawing.Point(100, 256);
-            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmar.Location = new System.Drawing.Point(150, 394);
             this.txtConfirmar.MaxLength = 25;
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.PasswordChar = 'l';
-            this.txtConfirmar.Size = new System.Drawing.Size(171, 26);
+            this.txtConfirmar.Size = new System.Drawing.Size(254, 36);
             this.txtConfirmar.TabIndex = 4;
             this.txtConfirmar.Tag = "";
             // 
@@ -140,24 +136,22 @@ namespace projetoetec
             this.txtNovaSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.txtNovaSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNovaSenha.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNovaSenha.Location = new System.Drawing.Point(100, 171);
-            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNovaSenha.Location = new System.Drawing.Point(150, 263);
             this.txtNovaSenha.MaxLength = 25;
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.Size = new System.Drawing.Size(171, 26);
+            this.txtNovaSenha.Size = new System.Drawing.Size(254, 36);
             this.txtNovaSenha.TabIndex = 2;
             // 
             // frmNovaSenha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ClientSize = new System.Drawing.Size(826, 518);
+            this.ClientSize = new System.Drawing.Size(1239, 797);
             this.Controls.Add(this.pnlNovaSennha);
             this.Controls.Add(this.picMudarTema);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmNovaSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
