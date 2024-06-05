@@ -400,6 +400,7 @@ namespace projetoetec
             this.Name = "frmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserva";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReserva_FormClosing);
             this.Load += new System.EventHandler(this.frmReserva_Load);
             this.pnlReserva.ResumeLayout(false);
             this.pnlReserva.PerformLayout();

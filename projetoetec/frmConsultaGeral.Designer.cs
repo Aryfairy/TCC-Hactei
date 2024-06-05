@@ -36,6 +36,7 @@ namespace projetoetec
             this.tbpProfessores = new System.Windows.Forms.TabPage();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.panelProfessores = new System.Windows.Forms.Panel();
+            this.btnExcluirReserva = new System.Windows.Forms.Button();
             this.cboReservas = new System.Windows.Forms.ComboBox();
             this.lblReservasSelected = new System.Windows.Forms.Label();
             this.lblReservas = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@ namespace projetoetec
             this.label1 = new System.Windows.Forms.Label();
             this.lnkReserva = new System.Windows.Forms.LinkLabel();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnExcluirReserva = new System.Windows.Forms.Button();
             this.pnlConsultaGeral.SuspendLayout();
             this.tbcConsultaGeral.SuspendLayout();
             this.tbpProfessores.SuspendLayout();
@@ -145,6 +145,18 @@ namespace projetoetec
             this.panelProfessores.Size = new System.Drawing.Size(874, 423);
             this.panelProfessores.TabIndex = 14;
             // 
+            // btnExcluirReserva
+            // 
+            this.btnExcluirReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluirReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnExcluirReserva.Location = new System.Drawing.Point(616, 305);
+            this.btnExcluirReserva.Name = "btnExcluirReserva";
+            this.btnExcluirReserva.Size = new System.Drawing.Size(101, 27);
+            this.btnExcluirReserva.TabIndex = 24;
+            this.btnExcluirReserva.Text = "Excluir Reserva";
+            this.btnExcluirReserva.UseVisualStyleBackColor = false;
+            this.btnExcluirReserva.Click += new System.EventHandler(this.btnExcluirReserva_Click);
+            // 
             // cboReservas
             // 
             this.cboReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
@@ -162,120 +174,120 @@ namespace projetoetec
             // lblReservasSelected
             // 
             this.lblReservasSelected.AutoSize = true;
-            this.lblReservasSelected.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservasSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReservasSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblReservasSelected.Location = new System.Drawing.Point(171, 254);
             this.lblReservasSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReservasSelected.Name = "lblReservasSelected";
-            this.lblReservasSelected.Size = new System.Drawing.Size(28, 24);
+            this.lblReservasSelected.Size = new System.Drawing.Size(24, 25);
             this.lblReservasSelected.TabIndex = 22;
             this.lblReservasSelected.Text = "—";
             // 
             // lblReservas
             // 
             this.lblReservas.AutoSize = true;
-            this.lblReservas.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReservas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblReservas.Location = new System.Drawing.Point(22, 254);
             this.lblReservas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReservas.Name = "lblReservas";
-            this.lblReservas.Size = new System.Drawing.Size(110, 24);
+            this.lblReservas.Size = new System.Drawing.Size(109, 25);
             this.lblReservas.TabIndex = 21;
             this.lblReservas.Text = "Reservas:";
             // 
             // lblCelularSelected
             // 
             this.lblCelularSelected.AutoSize = true;
-            this.lblCelularSelected.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelularSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelularSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblCelularSelected.Location = new System.Drawing.Point(169, 191);
             this.lblCelularSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCelularSelected.Name = "lblCelularSelected";
-            this.lblCelularSelected.Size = new System.Drawing.Size(28, 24);
+            this.lblCelularSelected.Size = new System.Drawing.Size(24, 25);
             this.lblCelularSelected.TabIndex = 20;
             this.lblCelularSelected.Text = "—";
             // 
             // lblDisciplinaProfSelected
             // 
             this.lblDisciplinaProfSelected.AutoSize = true;
-            this.lblDisciplinaProfSelected.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinaProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisciplinaProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblDisciplinaProfSelected.Location = new System.Drawing.Point(171, 73);
             this.lblDisciplinaProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDisciplinaProfSelected.Name = "lblDisciplinaProfSelected";
-            this.lblDisciplinaProfSelected.Size = new System.Drawing.Size(28, 24);
+            this.lblDisciplinaProfSelected.Size = new System.Drawing.Size(24, 25);
             this.lblDisciplinaProfSelected.TabIndex = 19;
             this.lblDisciplinaProfSelected.Text = "—";
             // 
             // lblEmailSelected
             // 
             this.lblEmailSelected.AutoSize = true;
-            this.lblEmailSelected.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblEmailSelected.Location = new System.Drawing.Point(171, 133);
             this.lblEmailSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmailSelected.Name = "lblEmailSelected";
-            this.lblEmailSelected.Size = new System.Drawing.Size(28, 24);
+            this.lblEmailSelected.Size = new System.Drawing.Size(24, 25);
             this.lblEmailSelected.TabIndex = 18;
             this.lblEmailSelected.Text = "—";
             // 
             // lblNomeProfSelected
             // 
             this.lblNomeProfSelected.AutoSize = true;
-            this.lblNomeProfSelected.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblNomeProfSelected.Location = new System.Drawing.Point(169, 17);
             this.lblNomeProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeProfSelected.Name = "lblNomeProfSelected";
-            this.lblNomeProfSelected.Size = new System.Drawing.Size(28, 24);
+            this.lblNomeProfSelected.Size = new System.Drawing.Size(24, 25);
             this.lblNomeProfSelected.TabIndex = 17;
             this.lblNomeProfSelected.Text = "—";
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblCelular.Location = new System.Drawing.Point(39, 191);
             this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(93, 24);
+            this.lblCelular.Size = new System.Drawing.Size(86, 25);
             this.lblCelular.TabIndex = 15;
             this.lblCelular.Text = "Celular:";
             // 
             // lblDisciplinaProf
             // 
             this.lblDisciplinaProf.AutoSize = true;
-            this.lblDisciplinaProf.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinaProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisciplinaProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblDisciplinaProf.Location = new System.Drawing.Point(10, 73);
             this.lblDisciplinaProf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDisciplinaProf.Name = "lblDisciplinaProf";
-            this.lblDisciplinaProf.Size = new System.Drawing.Size(122, 24);
+            this.lblDisciplinaProf.Size = new System.Drawing.Size(111, 25);
             this.lblDisciplinaProf.TabIndex = 14;
             this.lblDisciplinaProf.Text = "Disciplina:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblEmail.Location = new System.Drawing.Point(49, 133);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(83, 24);
+            this.lblEmail.Size = new System.Drawing.Size(78, 25);
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "E-mail:";
             // 
             // lblProfessor
             // 
             this.lblProfessor.AutoSize = true;
-            this.lblProfessor.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.lblProfessor.Location = new System.Drawing.Point(55, 17);
             this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(77, 24);
+            this.lblProfessor.Size = new System.Drawing.Size(74, 25);
             this.lblProfessor.TabIndex = 16;
             this.lblProfessor.Text = "Nome:";
             // 
@@ -352,13 +364,13 @@ namespace projetoetec
             // 
             this.lnkCadastro.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkCadastro.AutoSize = true;
-            this.lnkCadastro.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastro.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkCadastro.Location = new System.Drawing.Point(927, 12);
             this.lnkCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkCadastro.Name = "lnkCadastro";
-            this.lnkCadastro.Size = new System.Drawing.Size(137, 24);
+            this.lnkCadastro.Size = new System.Drawing.Size(128, 25);
             this.lnkCadastro.TabIndex = 24;
             this.lnkCadastro.TabStop = true;
             this.lnkCadastro.Text = "CADASTRO";
@@ -381,13 +393,13 @@ namespace projetoetec
             // 
             this.lnkConsultaDia.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkConsultaDia.AutoSize = true;
-            this.lnkConsultaDia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaDia.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaDia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkConsultaDia.Location = new System.Drawing.Point(92, 12);
             this.lnkConsultaDia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaDia.Name = "lnkConsultaDia";
-            this.lnkConsultaDia.Size = new System.Drawing.Size(220, 24);
+            this.lnkConsultaDia.Size = new System.Drawing.Size(203, 25);
             this.lnkConsultaDia.TabIndex = 21;
             this.lnkConsultaDia.TabStop = true;
             this.lnkConsultaDia.Text = "CONSULTA DO DIA";
@@ -398,13 +410,13 @@ namespace projetoetec
             // 
             this.lnkConsultaGeral.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkConsultaGeral.AutoSize = true;
-            this.lnkConsultaGeral.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkConsultaGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkConsultaGeral.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkConsultaGeral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkConsultaGeral.Location = new System.Drawing.Point(393, 12);
             this.lnkConsultaGeral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkConsultaGeral.Name = "lnkConsultaGeral";
-            this.lnkConsultaGeral.Size = new System.Drawing.Size(217, 24);
+            this.lnkConsultaGeral.Size = new System.Drawing.Size(203, 25);
             this.lnkConsultaGeral.TabIndex = 22;
             this.lnkConsultaGeral.TabStop = true;
             this.lnkConsultaGeral.Text = "CONSULTA GERAL";
@@ -426,13 +438,13 @@ namespace projetoetec
             // 
             this.lnkReserva.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.lnkReserva.AutoSize = true;
-            this.lnkReserva.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkReserva.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkReserva.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(23)))));
             this.lnkReserva.Location = new System.Drawing.Point(710, 12);
             this.lnkReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkReserva.Name = "lnkReserva";
-            this.lnkReserva.Size = new System.Drawing.Size(120, 24);
+            this.lnkReserva.Size = new System.Drawing.Size(112, 25);
             this.lnkReserva.TabIndex = 23;
             this.lnkReserva.TabStop = true;
             this.lnkReserva.Text = "RESERVA";
@@ -448,18 +460,6 @@ namespace projetoetec
             this.picLogo.Size = new System.Drawing.Size(65, 36);
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
-            // 
-            // btnExcluirReserva
-            // 
-            this.btnExcluirReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluirReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnExcluirReserva.Location = new System.Drawing.Point(616, 305);
-            this.btnExcluirReserva.Name = "btnExcluirReserva";
-            this.btnExcluirReserva.Size = new System.Drawing.Size(101, 27);
-            this.btnExcluirReserva.TabIndex = 24;
-            this.btnExcluirReserva.Text = "Excluir Reserva";
-            this.btnExcluirReserva.UseVisualStyleBackColor = false;
-            this.btnExcluirReserva.Click += new System.EventHandler(this.btnExcluirReserva_Click);
             // 
             // frmConsultaGeral
             // 
@@ -478,6 +478,7 @@ namespace projetoetec
             this.Name = "frmConsultaGeral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Geral";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConsultaGeral_FormClosing);
             this.Load += new System.EventHandler(this.frmConsultaGeral_Load);
             this.pnlConsultaGeral.ResumeLayout(false);
             this.tbcConsultaGeral.ResumeLayout(false);
