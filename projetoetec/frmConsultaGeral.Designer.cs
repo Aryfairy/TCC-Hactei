@@ -31,25 +31,6 @@ namespace projetoetec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaGeral));
             this.pnlConsultaGeral = new System.Windows.Forms.Panel();
-            this.tbcConsultaGeral = new System.Windows.Forms.TabControl();
-            this.tbpReservas = new System.Windows.Forms.TabPage();
-            this.tbpProfessores = new System.Windows.Forms.TabPage();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.panelProfessores = new System.Windows.Forms.Panel();
-            this.btnExcluirReserva = new System.Windows.Forms.Button();
-            this.cboReservas = new System.Windows.Forms.ComboBox();
-            this.lblReservasSelected = new System.Windows.Forms.Label();
-            this.lblReservas = new System.Windows.Forms.Label();
-            this.lblCelularSelected = new System.Windows.Forms.Label();
-            this.lblDisciplinaProfSelected = new System.Windows.Forms.Label();
-            this.lblEmailSelected = new System.Windows.Forms.Label();
-            this.lblNomeProfSelected = new System.Windows.Forms.Label();
-            this.lblCelular = new System.Windows.Forms.Label();
-            this.lblDisciplinaProf = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblProfessor = new System.Windows.Forms.Label();
-            this.cboProfessor = new System.Windows.Forms.ComboBox();
-            this.btnGerar = new System.Windows.Forms.Button();
             this.picMudarTema = new System.Windows.Forms.PictureBox();
             this.pnlOpc = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,13 +41,33 @@ namespace projetoetec
             this.label1 = new System.Windows.Forms.Label();
             this.lnkReserva = new System.Windows.Forms.LinkLabel();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.tbpProfessores = new System.Windows.Forms.TabPage();
+            this.cboProfessor = new System.Windows.Forms.ComboBox();
+            this.panelProfessores = new System.Windows.Forms.Panel();
+            this.lblProfessor = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblDisciplinaProf = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblNomeProfSelected = new System.Windows.Forms.Label();
+            this.lblEmailSelected = new System.Windows.Forms.Label();
+            this.lblDisciplinaProfSelected = new System.Windows.Forms.Label();
+            this.lblCelularSelected = new System.Windows.Forms.Label();
+            this.lblReservasSelected = new System.Windows.Forms.Label();
+            this.btnExcluirReserva = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.tbpReservas = new System.Windows.Forms.TabPage();
+            this.tbcConsultaGeral = new System.Windows.Forms.TabControl();
+            this.lbxAtuais = new System.Windows.Forms.ListBox();
+            this.lbxExcluir = new System.Windows.Forms.ListBox();
+            this.lblReservasAtuais = new System.Windows.Forms.Label();
+            this.lblReservasParaExcluir = new System.Windows.Forms.Label();
             this.pnlConsultaGeral.SuspendLayout();
-            this.tbcConsultaGeral.SuspendLayout();
-            this.tbpProfessores.SuspendLayout();
-            this.panelProfessores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).BeginInit();
             this.pnlOpc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.tbpProfessores.SuspendLayout();
+            this.panelProfessores.SuspendLayout();
+            this.tbcConsultaGeral.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConsultaGeral
@@ -78,247 +79,6 @@ namespace projetoetec
             this.pnlConsultaGeral.Name = "pnlConsultaGeral";
             this.pnlConsultaGeral.Size = new System.Drawing.Size(906, 503);
             this.pnlConsultaGeral.TabIndex = 0;
-            // 
-            // tbcConsultaGeral
-            // 
-            this.tbcConsultaGeral.Controls.Add(this.tbpReservas);
-            this.tbcConsultaGeral.Controls.Add(this.tbpProfessores);
-            this.tbcConsultaGeral.Location = new System.Drawing.Point(4, 4);
-            this.tbcConsultaGeral.Name = "tbcConsultaGeral";
-            this.tbcConsultaGeral.SelectedIndex = 0;
-            this.tbcConsultaGeral.Size = new System.Drawing.Size(899, 496);
-            this.tbcConsultaGeral.TabIndex = 5;
-            // 
-            // tbpReservas
-            // 
-            this.tbpReservas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tbpReservas.Location = new System.Drawing.Point(4, 22);
-            this.tbpReservas.Name = "tbpReservas";
-            this.tbpReservas.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpReservas.Size = new System.Drawing.Size(891, 470);
-            this.tbpReservas.TabIndex = 0;
-            this.tbpReservas.Text = "RESERVAS";
-            this.tbpReservas.UseVisualStyleBackColor = true;
-            // 
-            // tbpProfessores
-            // 
-            this.tbpProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.tbpProfessores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tbpProfessores.Controls.Add(this.btnConsultar);
-            this.tbpProfessores.Controls.Add(this.panelProfessores);
-            this.tbpProfessores.Controls.Add(this.cboProfessor);
-            this.tbpProfessores.Location = new System.Drawing.Point(4, 22);
-            this.tbpProfessores.Name = "tbpProfessores";
-            this.tbpProfessores.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpProfessores.Size = new System.Drawing.Size(891, 470);
-            this.tbpProfessores.TabIndex = 1;
-            this.tbpProfessores.Text = "PROFESSORES(AS)";
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnConsultar.Location = new System.Drawing.Point(776, 4);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(101, 27);
-            this.btnConsultar.TabIndex = 23;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // panelProfessores
-            // 
-            this.panelProfessores.Controls.Add(this.btnExcluirReserva);
-            this.panelProfessores.Controls.Add(this.cboReservas);
-            this.panelProfessores.Controls.Add(this.lblReservasSelected);
-            this.panelProfessores.Controls.Add(this.lblReservas);
-            this.panelProfessores.Controls.Add(this.lblCelularSelected);
-            this.panelProfessores.Controls.Add(this.lblDisciplinaProfSelected);
-            this.panelProfessores.Controls.Add(this.lblEmailSelected);
-            this.panelProfessores.Controls.Add(this.lblNomeProfSelected);
-            this.panelProfessores.Controls.Add(this.lblCelular);
-            this.panelProfessores.Controls.Add(this.lblDisciplinaProf);
-            this.panelProfessores.Controls.Add(this.lblEmail);
-            this.panelProfessores.Controls.Add(this.lblProfessor);
-            this.panelProfessores.Location = new System.Drawing.Point(7, 37);
-            this.panelProfessores.Name = "panelProfessores";
-            this.panelProfessores.Size = new System.Drawing.Size(874, 423);
-            this.panelProfessores.TabIndex = 14;
-            // 
-            // btnExcluirReserva
-            // 
-            this.btnExcluirReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluirReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnExcluirReserva.Location = new System.Drawing.Point(616, 305);
-            this.btnExcluirReserva.Name = "btnExcluirReserva";
-            this.btnExcluirReserva.Size = new System.Drawing.Size(101, 27);
-            this.btnExcluirReserva.TabIndex = 24;
-            this.btnExcluirReserva.Text = "Excluir Reserva";
-            this.btnExcluirReserva.UseVisualStyleBackColor = false;
-            this.btnExcluirReserva.Click += new System.EventHandler(this.btnExcluirReserva_Click);
-            // 
-            // cboReservas
-            // 
-            this.cboReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboReservas.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboReservas.ForeColor = System.Drawing.Color.Black;
-            this.cboReservas.FormattingEnabled = true;
-            this.cboReservas.Location = new System.Drawing.Point(284, 256);
-            this.cboReservas.Margin = new System.Windows.Forms.Padding(2);
-            this.cboReservas.Name = "cboReservas";
-            this.cboReservas.Size = new System.Drawing.Size(571, 26);
-            this.cboReservas.TabIndex = 15;
-            this.cboReservas.Text = "—";
-            this.cboReservas.Click += new System.EventHandler(this.cboReservas_Click);
-            // 
-            // lblReservasSelected
-            // 
-            this.lblReservasSelected.AutoSize = true;
-            this.lblReservasSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservasSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblReservasSelected.Location = new System.Drawing.Point(171, 254);
-            this.lblReservasSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblReservasSelected.Name = "lblReservasSelected";
-            this.lblReservasSelected.Size = new System.Drawing.Size(24, 25);
-            this.lblReservasSelected.TabIndex = 22;
-            this.lblReservasSelected.Text = "—";
-            // 
-            // lblReservas
-            // 
-            this.lblReservas.AutoSize = true;
-            this.lblReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblReservas.Location = new System.Drawing.Point(22, 254);
-            this.lblReservas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblReservas.Name = "lblReservas";
-            this.lblReservas.Size = new System.Drawing.Size(109, 25);
-            this.lblReservas.TabIndex = 21;
-            this.lblReservas.Text = "Reservas:";
-            // 
-            // lblCelularSelected
-            // 
-            this.lblCelularSelected.AutoSize = true;
-            this.lblCelularSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelularSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblCelularSelected.Location = new System.Drawing.Point(169, 191);
-            this.lblCelularSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCelularSelected.Name = "lblCelularSelected";
-            this.lblCelularSelected.Size = new System.Drawing.Size(24, 25);
-            this.lblCelularSelected.TabIndex = 20;
-            this.lblCelularSelected.Text = "—";
-            // 
-            // lblDisciplinaProfSelected
-            // 
-            this.lblDisciplinaProfSelected.AutoSize = true;
-            this.lblDisciplinaProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisciplinaProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblDisciplinaProfSelected.Location = new System.Drawing.Point(171, 73);
-            this.lblDisciplinaProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDisciplinaProfSelected.Name = "lblDisciplinaProfSelected";
-            this.lblDisciplinaProfSelected.Size = new System.Drawing.Size(24, 25);
-            this.lblDisciplinaProfSelected.TabIndex = 19;
-            this.lblDisciplinaProfSelected.Text = "—";
-            // 
-            // lblEmailSelected
-            // 
-            this.lblEmailSelected.AutoSize = true;
-            this.lblEmailSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblEmailSelected.Location = new System.Drawing.Point(171, 133);
-            this.lblEmailSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmailSelected.Name = "lblEmailSelected";
-            this.lblEmailSelected.Size = new System.Drawing.Size(24, 25);
-            this.lblEmailSelected.TabIndex = 18;
-            this.lblEmailSelected.Text = "—";
-            // 
-            // lblNomeProfSelected
-            // 
-            this.lblNomeProfSelected.AutoSize = true;
-            this.lblNomeProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblNomeProfSelected.Location = new System.Drawing.Point(169, 17);
-            this.lblNomeProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNomeProfSelected.Name = "lblNomeProfSelected";
-            this.lblNomeProfSelected.Size = new System.Drawing.Size(24, 25);
-            this.lblNomeProfSelected.TabIndex = 17;
-            this.lblNomeProfSelected.Text = "—";
-            // 
-            // lblCelular
-            // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblCelular.Location = new System.Drawing.Point(39, 191);
-            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(86, 25);
-            this.lblCelular.TabIndex = 15;
-            this.lblCelular.Text = "Celular:";
-            // 
-            // lblDisciplinaProf
-            // 
-            this.lblDisciplinaProf.AutoSize = true;
-            this.lblDisciplinaProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisciplinaProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblDisciplinaProf.Location = new System.Drawing.Point(10, 73);
-            this.lblDisciplinaProf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDisciplinaProf.Name = "lblDisciplinaProf";
-            this.lblDisciplinaProf.Size = new System.Drawing.Size(111, 25);
-            this.lblDisciplinaProf.TabIndex = 14;
-            this.lblDisciplinaProf.Text = "Disciplina:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblEmail.Location = new System.Drawing.Point(49, 133);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(78, 25);
-            this.lblEmail.TabIndex = 13;
-            this.lblEmail.Text = "E-mail:";
-            // 
-            // lblProfessor
-            // 
-            this.lblProfessor.AutoSize = true;
-            this.lblProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.lblProfessor.Location = new System.Drawing.Point(55, 17);
-            this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(74, 25);
-            this.lblProfessor.TabIndex = 16;
-            this.lblProfessor.Text = "Nome:";
-            // 
-            // cboProfessor
-            // 
-            this.cboProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.cboProfessor.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboProfessor.ForeColor = System.Drawing.Color.Black;
-            this.cboProfessor.FormattingEnabled = true;
-            this.cboProfessor.Location = new System.Drawing.Point(7, 5);
-            this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
-            this.cboProfessor.Name = "cboProfessor";
-            this.cboProfessor.Size = new System.Drawing.Size(357, 26);
-            this.cboProfessor.TabIndex = 13;
-            this.cboProfessor.Text = "Selecione um(a) professor(a)";
-            // 
-            // btnGerar
-            // 
-            this.btnGerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
-            this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGerar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGerar.Image")));
-            this.btnGerar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGerar.Location = new System.Drawing.Point(960, 628);
-            this.btnGerar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(113, 29);
-            this.btnGerar.TabIndex = 4;
-            this.btnGerar.Text = "Gerar PDF";
-            this.btnGerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerar.UseVisualStyleBackColor = false;
             // 
             // picMudarTema
             // 
@@ -461,6 +221,247 @@ namespace projetoetec
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
+            // tbpProfessores
+            // 
+            this.tbpProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.tbpProfessores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tbpProfessores.Controls.Add(this.btnConsultar);
+            this.tbpProfessores.Controls.Add(this.panelProfessores);
+            this.tbpProfessores.Controls.Add(this.cboProfessor);
+            this.tbpProfessores.Location = new System.Drawing.Point(4, 22);
+            this.tbpProfessores.Name = "tbpProfessores";
+            this.tbpProfessores.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpProfessores.Size = new System.Drawing.Size(891, 470);
+            this.tbpProfessores.TabIndex = 1;
+            this.tbpProfessores.Text = "PROFESSORES(AS)";
+            // 
+            // cboProfessor
+            // 
+            this.cboProfessor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.cboProfessor.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProfessor.ForeColor = System.Drawing.Color.Black;
+            this.cboProfessor.FormattingEnabled = true;
+            this.cboProfessor.Location = new System.Drawing.Point(7, 5);
+            this.cboProfessor.Margin = new System.Windows.Forms.Padding(2);
+            this.cboProfessor.Name = "cboProfessor";
+            this.cboProfessor.Size = new System.Drawing.Size(357, 26);
+            this.cboProfessor.TabIndex = 13;
+            this.cboProfessor.Text = "Selecione um(a) professor(a)";
+            // 
+            // panelProfessores
+            // 
+            this.panelProfessores.Controls.Add(this.lblReservasParaExcluir);
+            this.panelProfessores.Controls.Add(this.lblReservasAtuais);
+            this.panelProfessores.Controls.Add(this.lbxExcluir);
+            this.panelProfessores.Controls.Add(this.lbxAtuais);
+            this.panelProfessores.Controls.Add(this.btnExcluirReserva);
+            this.panelProfessores.Controls.Add(this.lblReservasSelected);
+            this.panelProfessores.Controls.Add(this.lblCelularSelected);
+            this.panelProfessores.Controls.Add(this.lblDisciplinaProfSelected);
+            this.panelProfessores.Controls.Add(this.lblEmailSelected);
+            this.panelProfessores.Controls.Add(this.lblNomeProfSelected);
+            this.panelProfessores.Controls.Add(this.lblCelular);
+            this.panelProfessores.Controls.Add(this.lblDisciplinaProf);
+            this.panelProfessores.Controls.Add(this.lblEmail);
+            this.panelProfessores.Controls.Add(this.lblProfessor);
+            this.panelProfessores.Location = new System.Drawing.Point(7, 37);
+            this.panelProfessores.Name = "panelProfessores";
+            this.panelProfessores.Size = new System.Drawing.Size(874, 423);
+            this.panelProfessores.TabIndex = 14;
+            // 
+            // lblProfessor
+            // 
+            this.lblProfessor.AutoSize = true;
+            this.lblProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblProfessor.Location = new System.Drawing.Point(55, 17);
+            this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(74, 25);
+            this.lblProfessor.TabIndex = 16;
+            this.lblProfessor.Text = "Nome:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblEmail.Location = new System.Drawing.Point(401, 17);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(78, 25);
+            this.lblEmail.TabIndex = 13;
+            this.lblEmail.Text = "E-mail:";
+            // 
+            // lblDisciplinaProf
+            // 
+            this.lblDisciplinaProf.AutoSize = true;
+            this.lblDisciplinaProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinaProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblDisciplinaProf.Location = new System.Drawing.Point(18, 51);
+            this.lblDisciplinaProf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDisciplinaProf.Name = "lblDisciplinaProf";
+            this.lblDisciplinaProf.Size = new System.Drawing.Size(111, 25);
+            this.lblDisciplinaProf.TabIndex = 14;
+            this.lblDisciplinaProf.Text = "Disciplina:";
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblCelular.Location = new System.Drawing.Point(393, 51);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(86, 25);
+            this.lblCelular.TabIndex = 15;
+            this.lblCelular.Text = "Celular:";
+            // 
+            // lblNomeProfSelected
+            // 
+            this.lblNomeProfSelected.AutoSize = true;
+            this.lblNomeProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblNomeProfSelected.Location = new System.Drawing.Point(169, 17);
+            this.lblNomeProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNomeProfSelected.Name = "lblNomeProfSelected";
+            this.lblNomeProfSelected.Size = new System.Drawing.Size(24, 25);
+            this.lblNomeProfSelected.TabIndex = 17;
+            this.lblNomeProfSelected.Text = "—";
+            // 
+            // lblEmailSelected
+            // 
+            this.lblEmailSelected.AutoSize = true;
+            this.lblEmailSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblEmailSelected.Location = new System.Drawing.Point(529, 17);
+            this.lblEmailSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailSelected.Name = "lblEmailSelected";
+            this.lblEmailSelected.Size = new System.Drawing.Size(24, 25);
+            this.lblEmailSelected.TabIndex = 18;
+            this.lblEmailSelected.Text = "—";
+            // 
+            // lblDisciplinaProfSelected
+            // 
+            this.lblDisciplinaProfSelected.AutoSize = true;
+            this.lblDisciplinaProfSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinaProfSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblDisciplinaProfSelected.Location = new System.Drawing.Point(169, 51);
+            this.lblDisciplinaProfSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDisciplinaProfSelected.Name = "lblDisciplinaProfSelected";
+            this.lblDisciplinaProfSelected.Size = new System.Drawing.Size(24, 25);
+            this.lblDisciplinaProfSelected.TabIndex = 19;
+            this.lblDisciplinaProfSelected.Text = "—";
+            // 
+            // lblCelularSelected
+            // 
+            this.lblCelularSelected.AutoSize = true;
+            this.lblCelularSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelularSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblCelularSelected.Location = new System.Drawing.Point(529, 51);
+            this.lblCelularSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCelularSelected.Name = "lblCelularSelected";
+            this.lblCelularSelected.Size = new System.Drawing.Size(24, 25);
+            this.lblCelularSelected.TabIndex = 20;
+            this.lblCelularSelected.Text = "—";
+            // 
+            // lblReservasSelected
+            // 
+            this.lblReservasSelected.AutoSize = true;
+            this.lblReservasSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservasSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblReservasSelected.Location = new System.Drawing.Point(199, 143);
+            this.lblReservasSelected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReservasSelected.Name = "lblReservasSelected";
+            this.lblReservasSelected.Size = new System.Drawing.Size(24, 25);
+            this.lblReservasSelected.TabIndex = 22;
+            this.lblReservasSelected.Text = "—";
+            // 
+            // btnExcluirReserva
+            // 
+            this.btnExcluirReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluirReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnExcluirReserva.Location = new System.Drawing.Point(732, 369);
+            this.btnExcluirReserva.Name = "btnExcluirReserva";
+            this.btnExcluirReserva.Size = new System.Drawing.Size(101, 27);
+            this.btnExcluirReserva.TabIndex = 24;
+            this.btnExcluirReserva.Text = "Excluir Reserva";
+            this.btnExcluirReserva.UseVisualStyleBackColor = false;
+            this.btnExcluirReserva.Click += new System.EventHandler(this.btnExcluirReserva_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
+            this.btnConsultar.Location = new System.Drawing.Point(776, 4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(101, 27);
+            this.btnConsultar.TabIndex = 23;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // tbpReservas
+            // 
+            this.tbpReservas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tbpReservas.Location = new System.Drawing.Point(4, 22);
+            this.tbpReservas.Name = "tbpReservas";
+            this.tbpReservas.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpReservas.Size = new System.Drawing.Size(891, 470);
+            this.tbpReservas.TabIndex = 0;
+            this.tbpReservas.Text = "RESERVAS";
+            this.tbpReservas.UseVisualStyleBackColor = true;
+            // 
+            // tbcConsultaGeral
+            // 
+            this.tbcConsultaGeral.Controls.Add(this.tbpReservas);
+            this.tbcConsultaGeral.Controls.Add(this.tbpProfessores);
+            this.tbcConsultaGeral.Location = new System.Drawing.Point(4, 4);
+            this.tbcConsultaGeral.Name = "tbcConsultaGeral";
+            this.tbcConsultaGeral.SelectedIndex = 0;
+            this.tbcConsultaGeral.Size = new System.Drawing.Size(899, 496);
+            this.tbcConsultaGeral.TabIndex = 5;
+            // 
+            // lbxAtuais
+            // 
+            this.lbxAtuais.FormattingEnabled = true;
+            this.lbxAtuais.Location = new System.Drawing.Point(25, 171);
+            this.lbxAtuais.Name = "lbxAtuais";
+            this.lbxAtuais.Size = new System.Drawing.Size(284, 225);
+            this.lbxAtuais.TabIndex = 25;
+            // 
+            // lbxExcluir
+            // 
+            this.lbxExcluir.FormattingEnabled = true;
+            this.lbxExcluir.Location = new System.Drawing.Point(398, 171);
+            this.lbxExcluir.Name = "lbxExcluir";
+            this.lbxExcluir.Size = new System.Drawing.Size(284, 225);
+            this.lbxExcluir.TabIndex = 26;
+            // 
+            // lblReservasAtuais
+            // 
+            this.lblReservasAtuais.AutoSize = true;
+            this.lblReservasAtuais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservasAtuais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblReservasAtuais.Location = new System.Drawing.Point(20, 143);
+            this.lblReservasAtuais.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReservasAtuais.Name = "lblReservasAtuais";
+            this.lblReservasAtuais.Size = new System.Drawing.Size(175, 25);
+            this.lblReservasAtuais.TabIndex = 27;
+            this.lblReservasAtuais.Text = "Reservas Atuais:";
+            // 
+            // lblReservasParaExcluir
+            // 
+            this.lblReservasParaExcluir.AutoSize = true;
+            this.lblReservasParaExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReservasParaExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
+            this.lblReservasParaExcluir.Location = new System.Drawing.Point(393, 143);
+            this.lblReservasParaExcluir.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReservasParaExcluir.Name = "lblReservasParaExcluir";
+            this.lblReservasParaExcluir.Size = new System.Drawing.Size(231, 25);
+            this.lblReservasParaExcluir.TabIndex = 28;
+            this.lblReservasParaExcluir.Text = "Reservas Para Excluir:";
+            // 
             // frmConsultaGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,7 +469,6 @@ namespace projetoetec
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
             this.ClientSize = new System.Drawing.Size(1097, 668);
             this.Controls.Add(this.pnlOpc);
-            this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.picMudarTema);
             this.Controls.Add(this.pnlConsultaGeral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -481,14 +481,14 @@ namespace projetoetec
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConsultaGeral_FormClosing);
             this.Load += new System.EventHandler(this.frmConsultaGeral_Load);
             this.pnlConsultaGeral.ResumeLayout(false);
-            this.tbcConsultaGeral.ResumeLayout(false);
-            this.tbpProfessores.ResumeLayout(false);
-            this.panelProfessores.ResumeLayout(false);
-            this.panelProfessores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMudarTema)).EndInit();
             this.pnlOpc.ResumeLayout(false);
             this.pnlOpc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.tbpProfessores.ResumeLayout(false);
+            this.panelProfessores.ResumeLayout(false);
+            this.panelProfessores.PerformLayout();
+            this.tbcConsultaGeral.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,7 +500,6 @@ namespace projetoetec
         private System.Windows.Forms.PictureBox picMudarTema;
         private System.Windows.Forms.Panel pnlOpc;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel lnkCadastro;
         private System.Windows.Forms.Label label2;
@@ -511,20 +510,22 @@ namespace projetoetec
         private System.Windows.Forms.TabControl tbcConsultaGeral;
         private System.Windows.Forms.TabPage tbpReservas;
         private System.Windows.Forms.TabPage tbpProfessores;
-        private System.Windows.Forms.ComboBox cboProfessor;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel panelProfessores;
-        private System.Windows.Forms.Label lblCelular;
-        private System.Windows.Forms.Label lblDisciplinaProf;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblProfessor;
-        private System.Windows.Forms.Label lblReservas;
+        private System.Windows.Forms.Button btnExcluirReserva;
+        private System.Windows.Forms.Label lblReservasSelected;
         private System.Windows.Forms.Label lblCelularSelected;
         private System.Windows.Forms.Label lblDisciplinaProfSelected;
         private System.Windows.Forms.Label lblEmailSelected;
         private System.Windows.Forms.Label lblNomeProfSelected;
-        private System.Windows.Forms.ComboBox cboReservas;
-        private System.Windows.Forms.Label lblReservasSelected;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Button btnExcluirReserva;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.Label lblDisciplinaProf;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblProfessor;
+        private System.Windows.Forms.ComboBox cboProfessor;
+        private System.Windows.Forms.Label lblReservasParaExcluir;
+        private System.Windows.Forms.Label lblReservasAtuais;
+        private System.Windows.Forms.ListBox lbxExcluir;
+        private System.Windows.Forms.ListBox lbxAtuais;
     }
 }

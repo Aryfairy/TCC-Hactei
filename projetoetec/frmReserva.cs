@@ -444,6 +444,11 @@ namespace projetoetec
             this.Close();
         }
 
+        //
+        //
+        //
+        //
+        // Encerrando o programa
         private void frmReserva_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Verifica se o motivo do fechamento é clicar no botão de fechar da janela

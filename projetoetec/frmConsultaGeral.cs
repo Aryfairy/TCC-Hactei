@@ -132,65 +132,18 @@ namespace projetoetec
             DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
             return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
         }
-
-        private void cboReservas_Click(object sender, EventArgs e)
-        {
-            string professorSelecionado = cboProfessor.Text;
-            if (!string.IsNullOrEmpty(professorSelecionado))
-            {
-                int numeroReservas = ConsultarNumeroReservasPosteriores(professorSelecionado);
-                if (numeroReservas == 0)
-                {
-                    MessageBox.Show("Não há reservas para esse(a) professor(a).", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
-                    List<string> reservasFormatadas = new List<string>();
-                    foreach (DataRow row in reservas.Rows)
-                    {
-                        string descricaoReserva = $"{row["res_data"]} {row["res_horainicial"]} às {row["res_horafinal"]} - {row["lab_nome"]} - {row["lab_sala"]} - {row["lab_disc"]}";
-                        reservasFormatadas.Add(descricaoReserva);
-                    }
-                    cboReservas.DataSource = reservasFormatadas;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecione um professor antes de consultar suas reservas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+           
 
         private void btnExcluirReserva_Click(object sender, EventArgs e)
         {
-            int reservaSelecionada = cboReservas.SelectedIndex;
-            if (reservaSelecionada != -1)
-            {
-                DialogResult result = MessageBox.Show($"Você realmente deseja excluir a reserva selecionada?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    ExcluirReserva(reservaSelecionada);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecione uma reserva para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
-        private void ExcluirReserva(int index)
-        {
-            string professorSelecionado = cboProfessor.Text;
-            DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
-            if (index >= 0 && index < reservas.Rows.Count)
-            {
-                int reservaSelecionada = Convert.ToInt32(reservas.Rows[index]["res_cod"]);
-                string comandoSQL = "DELETE FROM reserva WHERE res_cod = @Reserva";
-                SqlParameter[] parametros = { new SqlParameter("@Reserva", reservaSelecionada) };
-                dbManager.InserirDados(comandoSQL, parametros);
-                MessageBox.Show("Reserva excluída com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        //
+        //
+        //
+        //
+        // Mudança de telas
 
         private void lnkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -213,6 +166,11 @@ namespace projetoetec
             this.Close();
         }
 
+        //
+        //
+        //
+        //
+        // Encerrando o programa
         private void frmConsultaGeral_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Verifica se o motivo do fechamento é clicar no botão de fechar da janela

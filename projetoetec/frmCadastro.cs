@@ -375,6 +375,11 @@ namespace projetoetec
             this.Close();
         }
 
+        //
+        //
+        //
+        //
+        // Encerrando o programa
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Verifica se o motivo do fechamento é clicar no botão de fechar da janela
