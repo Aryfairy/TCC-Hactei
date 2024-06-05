@@ -76,6 +76,31 @@ namespace projetoetec
             return dataTable;
         }
 
+        public bool VerificarLaboratorioDuplicado(string nome, string disciplina, string sala)
+        {
+            string comandoSQL = "SELECT COUNT(*) FROM laboratorio WHERE lab_nome = @Nome AND lab_disc = @Disciplina AND lab_sala = @Sala";
+            SqlParameter[] parametros = {
+                new SqlParameter("@Nome", nome),
+                new SqlParameter("@Disciplina", disciplina),
+                new SqlParameter("@Sala", sala)
+            };
+            DataTable resultado = ConsultarDados(comandoSQL, parametros);
+            int count = Convert.ToInt32(resultado.Rows[0][0]);
+            return count > 0;
+        }
+
+        public bool VerificarProfessorDuplicado(string nome, string disciplina)
+        {
+            string comandoSQL = "SELECT COUNT(*) FROM professor WHERE prof_nome = @Nome AND prof_disciplina = @Disciplina";
+            SqlParameter[] parametros = {
+                new SqlParameter("@Nome", nome),
+                new SqlParameter("@Disciplina", disciplina)
+            };
+            DataTable resultado = ConsultarDados(comandoSQL, parametros);
+            int count = Convert.ToInt32(resultado.Rows[0][0]);
+            return count > 0;
+        }
+
         public bool AutenticarAdmin(string email, string senha)
         {
             string comandoSQL = "SELECT COUNT(*) FROM administrador WHERE admin_email = @Email AND admin_senha = @Senha";
