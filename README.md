@@ -1,3 +1,5 @@
+Master v.0.8.21
+
 Usamos a branch "dev" como se fosse a principal. Só enviamos para a dev "master" quando garantimos que tudo está funcional na branch "dev".
 
 Sempre criamos uma branch para nossas modificações (features) com o título da modificação nela, e fazemos um pull request para a dev branch.
