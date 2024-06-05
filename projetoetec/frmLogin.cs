@@ -78,11 +78,6 @@ namespace projetoetec
 
       
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lnkCadastrar_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pag = true;

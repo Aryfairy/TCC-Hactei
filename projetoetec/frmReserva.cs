@@ -34,7 +34,7 @@ namespace projetoetec
             try
             {
                 // Consulta SQL para selecionar o nome do laboratório e a sala, concatenando-os
-                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala) AS nome_sala FROM laboratorio";
+                string comandoSQL = "SELECT CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) AS nome_sala FROM laboratorio";
 
                 // Carrega o ComboBox
                 dbManager.CarregarComboBox(cboLaboratorio, comandoSQL, "nome_sala");
