@@ -101,6 +101,8 @@ namespace projetoetec
 
             // Obtém o nome do laboratório e do professor selecionados
             string nomeLab = cboLaboratorio.Text.Split('-')[0].Trim();
+            string numLab = cboLaboratorio.Text.Split('-')[1].Trim();
+            string discLab = cboLaboratorio.Text.Split('-')[2].Trim();
             string nomeProf = cboProfessor.Text.Split('-')[0].Trim();
 
             // Verifica se já existe uma reserva para o mesmo laboratório na mesma data e horário
@@ -112,7 +114,7 @@ namespace projetoetec
 
             // Exibe uma mensagem de confirmação para a reserva
             DialogResult result = MessageBox.Show(
-                $"Deseja reservar o laboratório '{nomeLab}' para o professor '{nomeProf}' no dia {dataReserva:dd/MM/yyyy} das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
+                $"Deseja reservar o laboratório '{nomeLab} {numLab} — {discLab}' para o professor '{nomeProf}' no dia {dataReserva:dd/MM/yyyy} das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
                 "Confirmar Reserva",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);

@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Data.SqlClient;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projetoetec
@@ -26,8 +21,12 @@ namespace projetoetec
         private void frmConsultaGeral_Load(object sender, EventArgs e)
         {
             CarregarProfessores();
+            cboProfessor.SelectedIndex = -1;
             cboProfessor.Text = "Selecione um(a) professor(a)";
-            cboProfessor.SelectedIndexChanged += cboProfessor_SelectedIndexChanged;
+
+            // Desabilitar o ComboBox de Reservas e definir texto padrão
+            cboReservas.Enabled = false;
+            cboReservas.Text = "Selecione um(a) professor(a) para ver suas reservas";
         }
 
         // Carregar ComboBox de Professores
@@ -47,68 +46,151 @@ namespace projetoetec
             }
         }
 
-        private void cboProfessor_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (cboProfessor.SelectedIndex >= 0)
+            string professorSelecionado = cboProfessor.Text;
+            if (string.IsNullOrEmpty(professorSelecionado))
             {
-                // Obter o professor selecionado do ComboBox
-                string professorSelecionado = cboProfessor.SelectedItem.ToString().Split('-')[0].Trim();
+                MessageBox.Show("Por favor, selecione um professor antes de consultar suas reservas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                // Consultar o banco de dados para obter informações do professor selecionado
-                string comandoSQL = $"SELECT prof_disciplina, prof_email, prof_celular FROM professor WHERE prof_nome = '{professorSelecionado}'";
+            DataTable dtProfessor = ConsultarDadosProfessor(professorSelecionado);
+            if (dtProfessor != null && dtProfessor.Rows.Count > 0)
+            {
+                DataRow professorRow = dtProfessor.Rows[0];
+                lblNomeProfSelected.Text = professorRow["prof_nome"] != DBNull.Value ? professorRow["prof_nome"].ToString() : "—";
+                lblDisciplinaProfSelected.Text = professorRow["prof_disciplina"] != DBNull.Value ? professorRow["prof_disciplina"].ToString() : "—";
+                lblEmailSelected.Text = professorRow["prof_email"] != DBNull.Value ? professorRow["prof_email"].ToString() : "—";
+                lblCelularSelected.Text = professorRow["prof_celular"] != DBNull.Value ? FormatCellPhoneNumber(professorRow["prof_celular"].ToString()) : "—";
+                int numeroReservas = ConsultarNumeroReservasPosteriores(professorSelecionado);
+                lblReservasSelected.Text = numeroReservas.ToString();
 
-                DataTable dtProfessor = dbManager.ConsultarDados(comandoSQL);
-
-                // Verificar se há informações do professor
-                if (dtProfessor.Rows.Count > 0)
+                if (numeroReservas == 0)
                 {
-                    // Obter as informações do professor a partir do DataTable
-                    string disciplina = dtProfessor.Rows[0]["prof_disciplina"].ToString();
-                    string email = dtProfessor.Rows[0]["prof_email"].ToString();
-                    string celular = dtProfessor.Rows[0]["prof_celular"].ToString();
+                    MessageBox.Show("Não há reservas para esse professor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboReservas.DataSource = null;
+                    cboReservas.Enabled = false;
+                    cboReservas.Text = "Nenhuma reserva disponível";
+                }
+                else
+                {
+                    DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
+                    List<string> reservasFormatadas = new List<string>();
+                    foreach (DataRow row in reservas.Rows)
+                    {
+                        string descricaoReserva = $"{((DateTime)row["res_data"]).ToString("dd/MM/yyyy")} - {row["lab_nome"]} - {row["lab_sala"]} - {row["lab_disc"]}";
+                        reservasFormatadas.Add(descricaoReserva);
+                    }
 
-                    // Atualizar os rótulos com as informações do professor
-                    lblNomeSelected.Text = professorSelecionado;
-                    lblDisciplinaProfSelected.Text = disciplina != "" ? disciplina : "—";
-                    lblEmailSelected.Text = email != "" ? email : "—";
-                    lblCelularSelected.Text = celular != "" ? celular : "—";
-
-                    // Contar e exibir o número de reservas do professor
-                    int profCod = Convert.ToInt32(dtProfessor.Rows[0]["prof_cod"]);
-                    lblReservasSelected.Text = ContarReservas(profCod).ToString();
+                    cboReservas.DataSource = reservasFormatadas;
+                    cboReservas.Enabled = true;
                 }
             }
+            else
+            {
+                // Caso não haja professor selecionado, preencha as labels com "-"
+                lblNomeProfSelected.Text = "—";
+                lblDisciplinaProfSelected.Text = "—";
+                lblEmailSelected.Text = "—";
+                lblCelularSelected.Text = "—";
+                lblReservasSelected.Text = "0";
 
-
+                // Desabilitar e definir texto padrão para o ComboBox de Reservas
+                cboReservas.DataSource = null;
+                cboReservas.Enabled = false;
+                cboReservas.Text = "Selecione um(a) professor(a) para ver suas reservas";
+            }
         }
 
-
-
-        // Função para contar as reservas do professor
-        private int ContarReservas(int profCod)
+        private DataTable ConsultarDadosProfessor(string professor)
         {
-            int numReservas = 0;
-            try
-            {
-                string comandoSQL = $"SELECT COUNT(*) FROM reserva WHERE prof_cod = {profCod}";
-                DataTable dtReservas = dbManager.ConsultarDados(comandoSQL);
-
-                if (dtReservas.Rows.Count > 0)
-                    numReservas = Convert.ToInt32(dtReservas.Rows[0][0]);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao contar as reservas do professor: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return numReservas;
+            string comandoSQL = "SELECT prof_nome, prof_disciplina, prof_email, prof_celular FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @Professor";
+            SqlParameter[] parametros = { new SqlParameter("@Professor", professor) };
+            return dbManager.ConsultarDados(comandoSQL, parametros);
         }
 
+        private string FormatCellPhoneNumber(string phoneNumber)
+        {
+            if (phoneNumber.Length == 11) // Verifica se o número de celular tem 11 dígitos (incluindo o DDD)
+            {
+                return string.Format("({0}) {1}-{2}", phoneNumber.Substring(0, 2), phoneNumber.Substring(2, 5), phoneNumber.Substring(7, 4));
+            }
+            else
+            {
+                // Se o número de celular não tiver o formato esperado, retorna o número original
+                return phoneNumber;
+            }
+        }
 
-        //
-        //
-        //
-        //
-        // Mudança de telas
+        private int ConsultarNumeroReservasPosteriores(string professor)
+        {
+            DateTime dataHoraAtual = DateTime.Now;
+            string comandoSQL = "SELECT COUNT(*) FROM reserva WHERE prof_cod = (SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @Professor) AND res_data > @DataHoraAtual";
+            SqlParameter[] parametros = { new SqlParameter("@Professor", professor), new SqlParameter("@DataHoraAtual", dataHoraAtual) };
+            DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
+            return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
+        }
+
+        private void cboReservas_Click(object sender, EventArgs e)
+        {
+            string professorSelecionado = cboProfessor.Text;
+            if (!string.IsNullOrEmpty(professorSelecionado))
+            {
+                int numeroReservas = ConsultarNumeroReservasPosteriores(professorSelecionado);
+                if (numeroReservas == 0)
+                {
+                    MessageBox.Show("Não há reservas para esse(a) professor(a).", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
+                    List<string> reservasFormatadas = new List<string>();
+                    foreach (DataRow row in reservas.Rows)
+                    {
+                        string descricaoReserva = $"{row["res_data"]} {row["res_horainicial"]} às {row["res_horafinal"]} - {row["lab_nome"]} - {row["lab_sala"]} - {row["lab_disc"]}";
+                        reservasFormatadas.Add(descricaoReserva);
+                    }
+                    cboReservas.DataSource = reservasFormatadas;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione um professor antes de consultar suas reservas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnExcluirReserva_Click(object sender, EventArgs e)
+        {
+            int reservaSelecionada = cboReservas.SelectedIndex;
+            if (reservaSelecionada != -1)
+            {
+                DialogResult result = MessageBox.Show($"Você realmente deseja excluir a reserva selecionada?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    ExcluirReserva(reservaSelecionada);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma reserva para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ExcluirReserva(int index)
+        {
+            string professorSelecionado = cboProfessor.Text;
+            DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
+            if (index >= 0 && index < reservas.Rows.Count)
+            {
+                int reservaSelecionada = Convert.ToInt32(reservas.Rows[index]["res_cod"]);
+                string comandoSQL = "DELETE FROM reserva WHERE res_cod = @Reserva";
+                SqlParameter[] parametros = { new SqlParameter("@Reserva", reservaSelecionada) };
+                dbManager.InserirDados(comandoSQL, parametros);
+                MessageBox.Show("Reserva excluída com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void lnkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmConsultaDia abrir = new frmConsultaDia();
@@ -129,6 +211,5 @@ namespace projetoetec
             abrir.Show();
             this.Close();
         }
-                
     }
 }

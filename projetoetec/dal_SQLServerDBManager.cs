@@ -26,13 +26,19 @@ namespace projetoetec
                 conexao.Close();
         }
 
-        public void InserirDados(string comandoSQL)
+        public void InserirDados(string comandoSQL, params SqlParameter[] parametros)
         {
             try
             {
                 AbrirConexao();
-                using (SqlCommand comando = new SqlCommand(comandoSQL, conexao)) // Alteração aqui
+                using (SqlCommand comando = new SqlCommand(comandoSQL, conexao))
                 {
+                    // Adiciona os parâmetros ao comando, se houver
+                    if (parametros != null)
+                    {
+                        comando.Parameters.AddRange(parametros);
+                    }
+
                     comando.ExecuteNonQuery();
                 }
             }
@@ -41,7 +47,6 @@ namespace projetoetec
                 FecharConexao();
             }
         }
-
 
 
         public DataTable ConsultarDados(string comandoSQL, params SqlParameter[] parametros)
@@ -89,6 +94,17 @@ namespace projetoetec
             return count > 0;
         }
 
+        public DataTable CarregarReservasPosteriores(string professor)
+        {
+            DateTime dataHoraAtual = DateTime.Now.Date; // Ajuste para pegar apenas a data atual sem a hora
+            string comandoSQL = "SELECT res_data, res_horainicial, res_horafinal, lab_nome, lab_sala, lab_disc " +
+                                "FROM reserva " +
+                                "INNER JOIN laboratorio ON reserva.lab_cod = laboratorio.lab_cod " +
+                                "WHERE reserva.prof_cod = (SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @Professor) " +
+                                "AND res_data > @DataHoraAtual";
+            SqlParameter[] parametros = { new SqlParameter("@Professor", professor), new SqlParameter("@DataHoraAtual", dataHoraAtual) };
+            return ConsultarDados(comandoSQL, parametros);
+        }
 
 
 
