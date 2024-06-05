@@ -10,6 +10,7 @@ namespace projetoetec
     {
         conectaEmail ConectaEmail;
         dal_SQLServerDBManager dbManager;
+        bool pag;
         public frmLogin()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace projetoetec
         {
             // Autenticar usuário com email e senha
             bool autenticado = dbManager.AutenticarAdmin(txtEmail.Text, txtSenha.Text);
-
+            
             try
             {
                 // Verificar se os campos txtEmail e txtSenha não estão vazios
@@ -69,7 +70,8 @@ namespace projetoetec
 
         private void linkEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmRecuperaEmail abrir = new frmRecuperaEmail();
+            pag =false;
+            frmRecuperaEmail abrir = new frmRecuperaEmail(pag);
             abrir.Show();
             this.Hide();
         }
@@ -83,7 +85,8 @@ namespace projetoetec
 
         private void lnkCadastrar_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCadastrarAdministrador cadastrar = new frmCadastrarAdministrador();
+            pag = true;
+            frmRecuperaEmail cadastrar = new frmRecuperaEmail(pag);
             cadastrar.Show();
             this.Hide();
         }

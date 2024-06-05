@@ -14,23 +14,37 @@ namespace projetoetec
     {
         string cod;
         string Email;
-        public frmCodigo(string codigo, string email)
+        bool pag;
+        public frmCodigo(string codigo, string email,bool Pag)
         {
             InitializeComponent();
             cod = codigo;
             Email = email;
+            pag = Pag;
+
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
 
-            //istancia
-            frmNovaSenha Abrir = new frmNovaSenha(Email);
+            
+           
 
             //comparando os codigos
             if (txtCodigo.Text == cod)
             {
-                Abrir.Show();
-                this.Hide();
+                if (pag) {
+                    //istancia
+                    frmCadastrarAdministrador AbrirAdm = new frmCadastrarAdministrador(Email);
+                    AbrirAdm.Show();
+                    this.Hide();
+                }
+                else
+                { 
+                    //istancia
+                    frmNovaSenha Abrir = new frmNovaSenha(Email);
+                    Abrir.Show();
+                    this.Hide();
+                }
 
             }
 

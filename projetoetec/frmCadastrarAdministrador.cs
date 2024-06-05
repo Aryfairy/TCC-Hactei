@@ -18,22 +18,25 @@ namespace projetoetec
         conectaEmail ConectaEmail;
         dal_SQLServerDBManager dbManager;
         string nome, email, usuario, senha;
-        public frmCadastrarAdministrador()
+        public frmCadastrarAdministrador(string Email)
         {
             InitializeComponent();
             ConectaEmail = new conectaEmail();
             // Instância do gerenciador do banco de dados
             string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
+            email = Email;
+            txtEmail.Enabled = false;
+            // Atribui o valor do email ao campo txtEmail
+            txtEmail.Text = email;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             nome = txtNome.Text.Trim();
-            email = txtEmail.Text.Trim();
             usuario = txtUsuario.Text.Trim();
             senha = txtSenha.Text.Trim();
-
+            
             if (ConectaEmail.IsValidEmail(email))
             {
                 try
@@ -63,12 +66,8 @@ namespace projetoetec
             }
         }
 
-        
-
-        private void lnkCadastrarNovoAdm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-
-
-
+        private void lnkCadastrarNovoAdm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) 
+        {
             frmLogin loguin = new frmLogin();
             loguin.Show();
             this.Hide(); 
