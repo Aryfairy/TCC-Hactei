@@ -323,8 +323,6 @@ namespace projetoetec
         // Método para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
         private bool ReservaExistente(int labCod, DateTime dataInicio, DateTime dataFim, DateTime horaInicial, DateTime horaFinal)
         {
-            bool conflito = false;
-
             // Monta a consulta SQL para verificar se já existe uma reserva para o mesmo laboratório na mesma data e horário
             string comandoSQL = $@"SELECT res_data 
        FROM reserva 
@@ -386,8 +384,6 @@ namespace projetoetec
             }
         }
 
-        private TextBox textBoxToolTip; // Declaração do TextBox para exibir a mensagem temporária
-
 
         //
         //
@@ -427,21 +423,21 @@ namespace projetoetec
         {
             frmConsultaDia abrir = new frmConsultaDia();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkConsultaGeral_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmConsultaGeral abrir = new frmConsultaGeral();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCadastro abrir = new frmCadastro();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         //

@@ -156,6 +156,9 @@ namespace projetoetec
                 cboLaboratorio.DataSource = laboratorios;
                 cboLaboratorio.DisplayMember = "nome_sala";
                 cboLaboratorio.ValueMember = "lab_cod";
+
+                // Configurar ComboBox para não permitir escrita
+                cboLaboratorio.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             catch (Exception ex)
             {

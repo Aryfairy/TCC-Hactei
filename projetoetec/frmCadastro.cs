@@ -358,21 +358,21 @@ namespace projetoetec
         {
             frmConsultaDia abrir = new frmConsultaDia();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkConsultaGeral_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmConsultaGeral abrir = new frmConsultaGeral();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmReserva abrir = new frmReserva();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         //
