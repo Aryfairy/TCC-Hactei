@@ -19,6 +19,8 @@ namespace projetoetec
             string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
+            // Associa o evento FormClosing ao método frmConsultaDia_FormClosing
+            this.FormClosing += new FormClosingEventHandler(frmReserva_FormClosing);
         }
 
         private void frmReserva_Load(object sender, EventArgs e)
@@ -442,6 +444,28 @@ namespace projetoetec
             this.Close();
         }
 
-        
+        private void frmReserva_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Verifica se o motivo do fechamento é clicar no botão de fechar da janela
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Exibe uma caixa de diálogo de confirmação
+                DialogResult result = MessageBox.Show("Tem certeza que deseja sair?", "Confirmação de saída", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Se o usuário confirmar a saída, fecha a conexão com o banco e encerra o programa
+                if (result == DialogResult.Yes)
+                {
+                    // Fecha a conexão com o banco
+                    // Encerra a aplicação
+                    Application.Exit();
+                }
+                else
+                {
+                    // Cancela o fechamento da janela
+                    e.Cancel = true;
+                }
+            }
+
+        }
     }
 }
