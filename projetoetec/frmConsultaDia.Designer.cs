@@ -356,6 +356,7 @@ namespace projetoetec
             this.Name = "frmConsultaDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta do Dia";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConsultaDia_FormClosing);
             this.Load += new System.EventHandler(this.frmConsultaDia_Load);
             this.pnlOpc.ResumeLayout(false);
             this.pnlOpc.PerformLayout();

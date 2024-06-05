@@ -33,8 +33,7 @@ namespace projetoetec
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.picLogoA = new System.Windows.Forms.PictureBox();
             this.prgSplash = new System.Windows.Forms.ProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.timerBar = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,23 +50,16 @@ namespace projetoetec
             // prgSplash
             // 
             this.prgSplash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.prgSplash.Location = new System.Drawing.Point(409, 431);
+            this.prgSplash.Location = new System.Drawing.Point(409, 433);
             this.prgSplash.Name = "prgSplash";
             this.prgSplash.Size = new System.Drawing.Size(310, 23);
-            this.prgSplash.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.prgSplash.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prgSplash.TabIndex = 1;
-            this.prgSplash.Value = 100;
             // 
-            // label1
+            // timerBar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(548, 410);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "0%";
+            this.timerBar.Enabled = true;
+            this.timerBar.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmSplash
             // 
@@ -75,7 +67,6 @@ namespace projetoetec
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1097, 668);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.prgSplash);
             this.Controls.Add(this.picLogoA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -84,10 +75,8 @@ namespace projetoetec
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";
-            this.Load += new System.EventHandler(this.frmSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoA)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -95,7 +84,7 @@ namespace projetoetec
 
         private System.Windows.Forms.PictureBox picLogoA;
         private System.Windows.Forms.ProgressBar prgSplash;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer timerBar;
     }
 }

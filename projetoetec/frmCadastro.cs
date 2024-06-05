@@ -15,6 +15,7 @@ namespace projetoetec
             string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
             dbManager.AbrirConexao();
+            this.FormClosing += new FormClosingEventHandler(frmCadastro_FormClosing);
         }
 
         private void frmCadastro_Load(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace projetoetec
                 MessageBox.Show($"Erro ao carregar os laboratórios: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnCadastrarLab_Click(object sender, EventArgs e)
         {
             // Captura os valores das TextBoxes
@@ -59,6 +61,13 @@ namespace projetoetec
             {
                 try
                 {
+                    // Verifica se já existe um laboratório com as mesmas informações
+                    if (dbManager.VerificarLaboratorioDuplicado(nomeLaboratorio, disciplina, sala))
+                    {
+                        MessageBox.Show("Já existe um laboratório cadastrado com essas informações.");
+                        return;
+                    }
+
                     // Constrói o comando SQL de inserção
                     string comandoSQL = $"INSERT INTO laboratorio (lab_nome, lab_disc, lab_sala) VALUES ('{nomeLaboratorio}', '{disciplina}', '{sala}')";
 
@@ -74,8 +83,6 @@ namespace projetoetec
                     txtSala.Clear();
                     CarregarLaboratorios();
                     cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
-
-
                 }
                 catch (Exception ex)
                 {
@@ -88,7 +95,6 @@ namespace projetoetec
                 // Exibe uma mensagem de aviso se os campos estiverem vazios
                 MessageBox.Show("Por favor, preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void btnDeletarLab_Click(object sender, EventArgs e)
@@ -173,8 +179,6 @@ namespace projetoetec
             }
         }
 
-
-
         //
         //
         //
@@ -213,22 +217,29 @@ namespace projetoetec
                     celular = parsedCelular;
                 }
 
-                // Cria a string SQL para inserir os dados na tabela professor
-                string comandoSQL = $"INSERT INTO professor (prof_nome, prof_disciplina, prof_email, prof_celular) VALUES ('{nomeProf}', '{disciplinaProf}', '{email}', ";
-
-                // Adiciona o valor do celular, se estiver presente
-                if (celular != null)
-                {
-                    comandoSQL += $"{celular}";
-                }
-                else
-                {
-                    comandoSQL += "NULL";
-                }
-                comandoSQL += ")";
-
                 try
                 {
+                    // Verifica se já existe um professor com as mesmas informações
+                    if (dbManager.VerificarProfessorDuplicado(nomeProf, disciplinaProf))
+                    {
+                        MessageBox.Show("Já existe um professor cadastrado com essas informações.");
+                        return;
+                    }
+
+                    // Cria a string SQL para inserir os dados na tabela professor
+                    string comandoSQL = $"INSERT INTO professor (prof_nome, prof_disciplina, prof_email, prof_celular) VALUES ('{nomeProf}', '{disciplinaProf}', '{email}', ";
+
+                    // Adiciona o valor do celular, se estiver presente
+                    if (celular != null)
+                    {
+                        comandoSQL += $"{celular}";
+                    }
+                    else
+                    {
+                        comandoSQL += "NULL";
+                    }
+                    comandoSQL += ")";
+
                     // Chama o método para inserir dados no banco de dados
                     dbManager.InserirDados(comandoSQL);
 
@@ -255,7 +266,6 @@ namespace projetoetec
                 MessageBox.Show("Por favor, preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
 
         private void btnDeletarprof_Click(object sender, EventArgs e)
         {
@@ -339,7 +349,6 @@ namespace projetoetec
             }
         }
 
-
         //
         //
         //
@@ -366,6 +375,27 @@ namespace projetoetec
             this.Close();
         }
 
-        
+        private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Verifica se o motivo do fechamento é clicar no botão de fechar da janela
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Exibe uma caixa de diálogo de confirmação
+                DialogResult result = MessageBox.Show("Tem certeza que deseja sair?", "Confirmação de saída", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Se o usuário confirmar a saída, fecha a conexão com o banco e encerra o programa
+                if (result == DialogResult.Yes)
+                {
+                    // Fecha a conexão com o banco
+                    // Encerra a aplicação
+                    Application.Exit();
+                }
+                else
+                {
+                    // Cancela o fechamento da janela
+                    e.Cancel = true;
+                }
+            }
+        }
     }
 }

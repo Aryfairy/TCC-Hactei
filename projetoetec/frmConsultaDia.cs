@@ -17,7 +17,9 @@ namespace projetoetec
             InitializeComponent();
             string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=etecja_reservas;Integrated Security=True";
             dbManager = new dal_SQLServerDBManager(connectionString);
-            dbManager.AbrirConexao();            
+            dbManager.AbrirConexao();
+            // Associa o evento FormClosing ao método frmConsultaDia_FormClosing
+            this.FormClosing += new FormClosingEventHandler(frmConsultaDia_FormClosing);
         }
 
         private void frmConsultaDia_Load(object sender, EventArgs e)
@@ -195,7 +197,7 @@ namespace projetoetec
                         TimeSpan horaFinal = (TimeSpan)reserva["res_horafinal"];
                         string nomeProfessor = (string)reserva["prof_nome"];
 
-                        string mensagem = $"Essa reserva foi feita na data {dataReserva.ToShortDateString()}, das {horaInicial.ToString(@"hh\:mm")} até {horaFinal.ToString(@"hh\:mm")}, pelo professor {nomeProfessor}. \n\nGostaria de deletar essa reserva?";
+                        string mensagem = $"Essa reserva foi feita para a data {dataReserva.ToShortDateString()}, das {horaInicial.ToString(@"hh\:mm")} até {horaFinal.ToString(@"hh\:mm")}, pelo professor {nomeProfessor}. \n\nGostaria de deletar essa reserva?";
                         DialogResult result = MessageBox.Show(mensagem, "Detalhes da Reserva", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
@@ -248,6 +250,34 @@ namespace projetoetec
             frmConsultaGeral abrir = new frmConsultaGeral();
             abrir.Show();
             this.Hide();
+        }
+
+        //
+        //
+        //
+        //
+        // Encerrando o programa
+        private void frmConsultaDia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Verifica se o motivo do fechamento é clicar no botão de fechar da janela
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Exibe uma caixa de diálogo de confirmação
+                DialogResult result = MessageBox.Show("Tem certeza que deseja sair?", "Confirmação de saída", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Se o usuário confirmar a saída, fecha a conexão com o banco e encerra o programa
+                if (result == DialogResult.Yes)
+                {
+                    // Fecha a conexão com o banco
+                    // Encerra a aplicação
+                    Application.Exit();
+                }
+                else
+                {
+                    // Cancela o fechamento da janela
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

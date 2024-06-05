@@ -34,3 +34,22 @@ CREATE TABLE administrador (
     UNIQUE(admin_email),
     UNIQUE(admin_usuario)
 );
+
+
+INSERT INTO laboratorio (lab_nome, lab_disc, lab_sala) VALUES
+('SALA', 'INFORMÁTICA', '01'),
+('SALA', 'INFORMÁTICA', '02'),
+('SALA', 'INFORMÁTICA', '03'),
+('MULTI', 'GERAL', '01'),
+('MULTI', 'GERAL', '02'),
+('SALA', 'NUTRIÇÃO', '01'),
+('SALA', 'NUTRIÇÃO', '02'),
+('SALA', 'QUÍMICA', '01'),
+('SALA', 'QUÍMICA', '02');
+
+INSERT INTO professor (prof_nome, prof_disciplina, prof_email, prof_celular) VALUES
+('NICOLAS', 'INFORMÁTICA', NULL, 11123456789),
+('RYLLARY', 'INFORMÁTICA', 'RYLLARY@EXAMPLE.COM', NULL),
+('JEFFERSON', 'ADM', 'JEFFERSON@EXAMPLE.COM', 11987654321),
+('VINICIUS', 'NUTRIÇÃO', NULL, NULL),
+('LEONARDO', 'QUÍMICA', 'LEONARDO@EXAMPLE.COM', 11555555555);
