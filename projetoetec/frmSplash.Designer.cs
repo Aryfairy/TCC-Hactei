@@ -84,7 +84,6 @@ namespace projetoetec
 
         private System.Windows.Forms.PictureBox picLogoA;
         private System.Windows.Forms.ProgressBar prgSplash;
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer timerBar;
     }
 }

@@ -358,23 +358,28 @@ namespace projetoetec
         {
             frmConsultaDia abrir = new frmConsultaDia();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkConsultaGeral_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmConsultaGeral abrir = new frmConsultaGeral();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmReserva abrir = new frmReserva();
             abrir.Show();
-            this.Close();
+            this.Hide();
         }
 
+        //
+        //
+        //
+        //
+        // Encerrando o programa
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Verifica se o motivo do fechamento é clicar no botão de fechar da janela
