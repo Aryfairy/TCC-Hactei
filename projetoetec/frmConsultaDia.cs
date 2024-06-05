@@ -195,7 +195,7 @@ namespace projetoetec
                         TimeSpan horaFinal = (TimeSpan)reserva["res_horafinal"];
                         string nomeProfessor = (string)reserva["prof_nome"];
 
-                        string mensagem = $"Essa reserva foi feita na data {dataReserva.ToShortDateString()}, das {horaInicial.ToString(@"hh\:mm")} até {horaFinal.ToString(@"hh\:mm")}, pelo professor {nomeProfessor}. \n\nGostaria de deletar essa reserva?";
+                        string mensagem = $"Essa reserva foi feita para a data {dataReserva.ToShortDateString()}, das {horaInicial.ToString(@"hh\:mm")} até {horaFinal.ToString(@"hh\:mm")}, pelo professor {nomeProfessor}. \n\nGostaria de deletar essa reserva?";
                         DialogResult result = MessageBox.Show(mensagem, "Detalhes da Reserva", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
