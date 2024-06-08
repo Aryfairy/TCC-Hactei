@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace projetoetec
 {
     public partial class frmConsultaGeral : Form
     {
         private dal_SQLServerDBManager dbManager;
-        private bool isChangingForm = false; // Variável de controle
+        private string professorSelecionado;
+        private bool isChangingForm = false; // Variável de membro para controle de mudança de formulário
 
         public frmConsultaGeral()
         {
@@ -25,6 +27,9 @@ namespace projetoetec
             CarregarProfessores();
             cboProfessor.SelectedIndex = -1;
             cboProfessor.Text = "Selecione um(a) professor(a)";
+
+            // Associar o evento SelectedIndexChanged da combobox cboProfessor
+            cboProfessor.SelectedIndexChanged += cboProfessor_SelectedIndexChanged;
 
             // Inicializar ListBoxes
             lbxAtuais.Items.Add("Selecione um(a) professor(a)");
@@ -52,8 +57,14 @@ namespace projetoetec
             }
         }
 
+        private void cboProfessor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            professorSelecionado = cboProfessor.SelectedItem as string;
+        }
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            // Verifica se um professor foi selecionado
             string professorSelecionado = cboProfessor.Text;
             if (string.IsNullOrEmpty(professorSelecionado) || professorSelecionado == "Selecione um(a) professor(a)")
             {
@@ -61,6 +72,7 @@ namespace projetoetec
                 return;
             }
 
+            // Se um professor foi selecionado, prosseguir com a consulta
             DataTable dtProfessor = ConsultarDadosProfessor(professorSelecionado);
             if (dtProfessor != null && dtProfessor.Rows.Count > 0)
             {
@@ -74,7 +86,7 @@ namespace projetoetec
 
                 if (numeroReservas == 0)
                 {
-                    // Se não houver reservas para o professor, exiba a mensagem e desabilite a ListBox lbxAtuais
+                    // Se não houver reservas para o professor, exibir a mensagem e desabilitar a ListBox lbxAtuais
                     lbxAtuais.Items.Clear();
                     lbxAtuais.Items.Add("Não há reservas para esse professor");
                     lbxAtuais.Enabled = false;
@@ -111,7 +123,7 @@ namespace projetoetec
             }
             else
             {
-                // Se não houver dados do professor, limpe os campos e desabilite as ListBoxes e botões
+                // Se não houver dados do professor, limpar os campos e desabilitar as ListBoxes e botões
                 lblNomeProfSelected.Text = "—";
                 lblDisciplinaProfSelected.Text = "—";
                 lblEmailSelected.Text = "—";
@@ -127,10 +139,25 @@ namespace projetoetec
             }
         }
 
+        private int ObterCodigoLaboratorio(string labNome, string labSala, string labDisc)
+        {
+            string comandoSQL = "SELECT lab_cod FROM laboratorio WHERE lab_nome = @Nome AND lab_disc = @Disciplina AND lab_sala = @Sala";
+            SqlParameter[] parametros = {
+                new SqlParameter("@Nome", labNome),
+                new SqlParameter("@Disciplina", labDisc),
+                new SqlParameter("@Sala", labSala)
+            };
+            DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
+            return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
+        }
 
-
-
-
+        private int ObterCodigoProfessor(string nomeDisciplina)
+        {
+            string comandoSQL = "SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @NomeDisciplina";
+            SqlParameter[] parametros = { new SqlParameter("@NomeDisciplina", nomeDisciplina) };
+            DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
+            return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
+        }
 
         private DataTable ConsultarDadosProfessor(string professor)
         {
@@ -190,6 +217,32 @@ namespace projetoetec
             }
         }
 
+        private void ExcluirReserva(int labCod, int profCod, DateTime resData, TimeSpan resHoraInicial)
+        {
+            try
+            {
+                // Comando SQL para exclusão da reserva
+                string comandoSQL = "DELETE FROM reserva WHERE lab_cod = @LabCod AND prof_cod = @ProfCod AND res_data = @ResData AND res_horainicial = @ResHoraInicial";
+
+                // Parâmetros para o comando SQL
+                SqlParameter[] parametros = {
+            new SqlParameter("@LabCod", labCod),
+            new SqlParameter("@ProfCod", profCod),
+            new SqlParameter("@ResData", resData),
+            new SqlParameter("@ResHoraInicial", resHoraInicial)
+        };
+
+                // Execução do comando SQL
+                dbManager.InserirDados(comandoSQL, parametros);
+            }
+            catch (Exception ex)
+            {
+                // Mensagem de erro, caso ocorra uma exceção
+                MessageBox.Show($"Erro ao excluir a reserva: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void btnExcluirReserva_Click(object sender, EventArgs e)
         {
             if (lbxExcluir.SelectedItems.Count > 0)
@@ -200,17 +253,40 @@ namespace projetoetec
                 {
                     try
                     {
-                        foreach (string reserva in lbxExcluir.SelectedItems)
+                        foreach (var selectedItem in lbxExcluir.SelectedItems)
                         {
-                            // Chamada do método ExcluirReserva
-                            ExcluirReserva(reserva);
+                            string reserva = selectedItem.ToString();
+                            string[] detalhes = reserva.Split(new string[] { " - " }, StringSplitOptions.None);
 
-                            // Aqui você também pode adicionar uma mensagem informando que a reserva foi excluída
-                            MessageBox.Show($"Reserva excluída: {reserva}", "Reserva Excluída", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Depuração: Imprimir detalhes da reserva
+                            Console.WriteLine("Detalhes da reserva:");
+                            foreach (var detalhe in detalhes)
+                            {
+                                Console.WriteLine(detalhe);
+                            }
+
+                            // Verificar se o array de detalhes tem o tamanho correto
+                            if (detalhes.Length <= 6)
+                            {
+                                string labNome = detalhes[3];
+                                string labSala = detalhes[4];
+                                string labDisc = detalhes[5];
+                                DateTime resData = DateTime.ParseExact(detalhes[0], "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                                TimeSpan resHoraInicial = TimeSpan.ParseExact(detalhes[1], @"hh\:mm", CultureInfo.InvariantCulture);
+
+                                int labCod = ObterCodigoLaboratorio(labNome, labSala, labDisc);
+                                int profCod = ObterCodigoProfessor(professorSelecionado);
+
+                                ExcluirReserva(labCod, profCod, resData, resHoraInicial);
+                            }
+                            else
+                            {
+                                throw new Exception("Formato de reserva inválido.");
+                            }
                         }
 
+
                         // Após excluir todas as reservas selecionadas, você pode atualizar a interface ou fazer qualquer outra ação necessária
-                        // Por exemplo, você pode chamar novamente o método btnConsultar_Click para recarregar os dados
                         btnConsultar_Click(sender, e);
                     }
                     catch (Exception ex)
@@ -225,72 +301,14 @@ namespace projetoetec
             }
         }
 
-        private void ExcluirReserva(string reserva)
-        {
-            try
-            {
-                // Parse dos detalhes da reserva
-                string[] detalhes = reserva.Split(new string[] { " - " }, StringSplitOptions.None);
-
-                // Verificar se há detalhes suficientes
-                if (detalhes.Length >= 6) // Alterado para 6 para lidar com o novo formato da descrição da reserva
-                {
-                    DateTime resData;
-                    TimeSpan resHoraInicial;
-                    string labNome = detalhes[3];
-                    string labSala = detalhes[4];
-                    string labDisc = detalhes[5];
-
-                    // Verificar e converter os detalhes da reserva
-                    if (DateTime.TryParseExact(detalhes[0], "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out resData) &&
-                        TimeSpan.TryParseExact(detalhes[1], @"hh\:mm", null, out resHoraInicial))
-                    {
-                        // Comando SQL para exclusão da reserva
-                        string comandoSQL = "DELETE FROM reserva WHERE res_data = @ResData AND res_horainicial = @ResHoraInicial AND lab_cod IN (SELECT lab_cod FROM laboratorio WHERE lab_nome = @LabNome AND lab_sala = @LabSala AND lab_disc = @LabDisc)";
-
-                        // Parâmetros para o comando SQL
-                        SqlParameter[] parametros = {
-                    new SqlParameter("@ResData", resData),
-                    new SqlParameter("@ResHoraInicial", resHoraInicial),
-                    new SqlParameter("@LabNome", labNome),
-                    new SqlParameter("@LabSala", labSala),
-                    new SqlParameter("@LabDisc", labDisc)
-                };
-
-                        // Execução do comando SQL
-                        dbManager.InserirDados(comandoSQL, parametros);
-
-                        // Mensagem de sucesso
-                        MessageBox.Show($"Reserva excluída: {reserva}", "Reserva Excluída", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Formato da reserva inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Formato da reserva inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Mensagem de erro, caso ocorra uma exceção
-                MessageBox.Show($"Erro ao excluir a reserva: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
 
 
 
 
-
-
-
-
-
-        // Restante do código permanece inalterado
-
+        //
+        //
+        //
         // Mudança de telas
         private void lnkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -313,6 +331,10 @@ namespace projetoetec
             this.Hide();
         }
 
+        //
+        //
+        //
+        //
         // Encerrando o programa
         private void frmConsultaGeral_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -329,6 +351,8 @@ namespace projetoetec
                 }
             }
         }
+
+
     }
 }
 
