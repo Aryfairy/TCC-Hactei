@@ -17,7 +17,7 @@ namespace projetoetec
         public void AbrirConexao()
         {
             if (conexao.State != ConnectionState.Open)
-                conexao.Open();
+               // conexao.Open();
         }
 
         public void FecharConexao()

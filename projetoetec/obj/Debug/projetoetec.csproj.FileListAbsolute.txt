@@ -54,3 +54,31 @@ D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.exe
 D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.pdb
 D:\Projetos Dev\TCC\repos\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
 C:\Users\Laboratorio-Info\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe.config
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.exe
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\projetoetec.pdb
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.dll
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.dll
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.xml
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\bin\Debug\System.Data.SQLite.xml
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.AssemblyReference.cache
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastrarAdministrador.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCadastro.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaGeral.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmCodigo.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmConsultaDia.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmRecuperaEmail.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmLogin.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmNovaSenha.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmReserva.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.frmSplash.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.Properties.Resources.resources
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.GenerateResource.cache
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CoreCompileInputs.cache
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.csproj.CopyComplete
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.exe
+C:\Users\JEFFERSON\Source\Repos\TCC-Hactei\projetoetec\obj\Debug\projetoetec.pdb

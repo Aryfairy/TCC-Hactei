@@ -31,28 +31,18 @@ namespace projetoetec
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
-            this.picLogoA = new System.Windows.Forms.PictureBox();
             this.prgSplash = new System.Windows.Forms.ProgressBar();
             this.timerBar = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoA)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picLogoA
-            // 
-            this.picLogoA.Image = ((System.Drawing.Image)(resources.GetObject("picLogoA.Image")));
-            this.picLogoA.Location = new System.Drawing.Point(409, 106);
-            this.picLogoA.Name = "picLogoA";
-            this.picLogoA.Size = new System.Drawing.Size(310, 301);
-            this.picLogoA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogoA.TabIndex = 0;
-            this.picLogoA.TabStop = false;
             // 
             // prgSplash
             // 
+            this.prgSplash.BackColor = System.Drawing.Color.White;
             this.prgSplash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.prgSplash.Location = new System.Drawing.Point(409, 433);
+            this.prgSplash.Location = new System.Drawing.Point(630, 406);
+            this.prgSplash.Margin = new System.Windows.Forms.Padding(4);
             this.prgSplash.Name = "prgSplash";
-            this.prgSplash.Size = new System.Drawing.Size(310, 23);
+            this.prgSplash.Size = new System.Drawing.Size(240, 31);
             this.prgSplash.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prgSplash.TabIndex = 1;
             // 
@@ -63,26 +53,26 @@ namespace projetoetec
             // 
             // frmSplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1097, 668);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1463, 822);
             this.Controls.Add(this.prgSplash);
-            this.Controls.Add(this.picLogoA);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoA)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picLogoA;
         private System.Windows.Forms.ProgressBar prgSplash;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer timerBar;

@@ -39,5 +39,10 @@ namespace projetoetec
                 MessageBox.Show("codigo errado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmCodigo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
