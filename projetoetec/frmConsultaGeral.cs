@@ -11,7 +11,7 @@ namespace projetoetec
     {
         private dal_SQLServerDBManager dbManager;
         private string professorSelecionado;
-        private bool isChangingForm = false; // Variável de membro para controle de mudança de formulário
+        private bool isChangingForm = false;
 
         public frmConsultaGeral()
         {
@@ -27,15 +27,9 @@ namespace projetoetec
             CarregarProfessores();
             cboProfessor.SelectedIndex = -1;
             cboProfessor.Text = "Selecione um(a) professor(a)";
-
-            // Associar o evento SelectedIndexChanged da combobox cboProfessor
             cboProfessor.SelectedIndexChanged += cboProfessor_SelectedIndexChanged;
-
-            // Inicializar ListBoxes
             lbxAtuais.Items.Add("Selecione um(a) professor(a)");
             lbxExcluir.Items.Add("Selecione um(a) professor(a)");
-
-            // Desabilitar botões e ListBoxes
             lbxAtuais.Enabled = false;
             lbxExcluir.Enabled = false;
             btnMoverDireita.Enabled = false;
@@ -43,7 +37,6 @@ namespace projetoetec
             btnExcluirReserva.Enabled = false;
         }
 
-        // Carregar ComboBox de Professores
         private void CarregarProfessores()
         {
             try
@@ -64,15 +57,15 @@ namespace projetoetec
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            // Verifica se um professor foi selecionado
-            string professorSelecionado = cboProfessor.Text;
-            if (string.IsNullOrEmpty(professorSelecionado) || professorSelecionado == "Selecione um(a) professor(a)")
+            professorSelecionado = cboProfessor.Text;
+
+            // Verifica se o item selecionado é um professor válido
+            if (cboProfessor.SelectedItem == null || cboProfessor.SelectedIndex == -1 || cboProfessor.SelectedItem.ToString() == "Selecione um(a) professor(a)")
             {
-                MessageBox.Show("Por favor, selecione um professor antes de consultar suas reservas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, selecione um professor válido antes de consultar suas reservas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Se um professor foi selecionado, prosseguir com a consulta
             DataTable dtProfessor = ConsultarDadosProfessor(professorSelecionado);
             if (dtProfessor != null && dtProfessor.Rows.Count > 0)
             {
@@ -86,44 +79,23 @@ namespace projetoetec
 
                 if (numeroReservas == 0)
                 {
-                    // Se não houver reservas para o professor, exibir a mensagem e desabilitar a ListBox lbxAtuais
                     lbxAtuais.Items.Clear();
                     lbxAtuais.Items.Add("Não há reservas para esse professor");
                     lbxAtuais.Enabled = false;
-
-                    // Limpar a ListBox lbxExcluir
                     lbxExcluir.Items.Clear();
                     lbxExcluir.Enabled = false;
                 }
                 else
                 {
-                    DataTable reservas = dbManager.CarregarReservasPosteriores(professorSelecionado);
-                    List<string> reservasFormatadas = new List<string>();
-                    foreach (DataRow row in reservas.Rows)
-                    {
-                        string descricaoReserva = $"{((DateTime)row["res_data"]).ToString("dd/MM/yyyy")} - {((TimeSpan)row["res_horainicial"]).ToString(@"hh\:mm")} às {((TimeSpan)row["res_horafinal"]).ToString(@"hh\:mm")} - {row["lab_nome"]} - {row["lab_sala"]} - {row["lab_disc"]}";
-                        reservasFormatadas.Add(descricaoReserva);
-                    }
-
-                    lbxAtuais.Items.Clear();
-                    lbxAtuais.Items.AddRange(reservasFormatadas.ToArray());
-
-                    // Habilitar a ListBox lbxAtuais
-                    lbxAtuais.Enabled = true;
-
-                    // Limpar a ListBox lbxExcluir
-                    lbxExcluir.Items.Clear();
-                    lbxExcluir.Enabled = true;
+                    CarregarReservasAtuais(professorSelecionado);
                 }
 
-                // Habilitar botões
                 btnMoverDireita.Enabled = true;
                 btnMoverEsquerda.Enabled = true;
                 btnExcluirReserva.Enabled = true;
             }
             else
             {
-                // Se não houver dados do professor, limpar os campos e desabilitar as ListBoxes e botões
                 lblNomeProfSelected.Text = "—";
                 lblDisciplinaProfSelected.Text = "—";
                 lblEmailSelected.Text = "—";
@@ -139,25 +111,27 @@ namespace projetoetec
             }
         }
 
-        private int ObterCodigoLaboratorio(string labNome, string labSala, string labDisc)
+        private void CarregarReservasAtuais(string professor)
         {
-            string comandoSQL = "SELECT lab_cod FROM laboratorio WHERE lab_nome = @Nome AND lab_disc = @Disciplina AND lab_sala = @Sala";
-            SqlParameter[] parametros = {
-                new SqlParameter("@Nome", labNome),
-                new SqlParameter("@Disciplina", labDisc),
-                new SqlParameter("@Sala", labSala)
-            };
-            DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
-            return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
+            lbxAtuais.Items.Clear();
+            lbxAtuais.Enabled = true;
+            lbxExcluir.Items.Clear();
+            lbxExcluir.Enabled = true;
+
+            DataTable reservas = dbManager.CarregarReservasPosteriores(professor);
+
+            // Ordenar o DataTable pelo campo res_data
+            reservas.DefaultView.Sort = "res_data ASC";
+            reservas = reservas.DefaultView.ToTable();
+
+            foreach (DataRow row in reservas.Rows)
+            {
+                DateTime dataReserva = Convert.ToDateTime(row["res_data"]);
+                string reserva = $"{dataReserva:dd/MM/yyyy} - {row["res_horainicial"]:hh\\:mm} até {row["res_horafinal"]:hh\\:mm} ({row["lab_nome"]} - {row["lab_sala"]})";
+                lbxAtuais.Items.Add(reserva);
+            }
         }
 
-        private int ObterCodigoProfessor(string nomeDisciplina)
-        {
-            string comandoSQL = "SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @NomeDisciplina";
-            SqlParameter[] parametros = { new SqlParameter("@NomeDisciplina", nomeDisciplina) };
-            DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
-            return resultado.Rows.Count > 0 ? Convert.ToInt32(resultado.Rows[0][0]) : 0;
-        }
 
         private DataTable ConsultarDadosProfessor(string professor)
         {
@@ -180,7 +154,7 @@ namespace projetoetec
 
         private int ConsultarNumeroReservasPosteriores(string professor)
         {
-            DateTime dataHoraAtual = DateTime.Now.Date; // Ajuste para pegar apenas a data atual sem a hora
+            DateTime dataHoraAtual = DateTime.Now.Date;
             string comandoSQL = "SELECT COUNT(*) FROM reserva WHERE prof_cod = (SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @Professor) AND res_data > @DataHoraAtual";
             SqlParameter[] parametros = { new SqlParameter("@Professor", professor), new SqlParameter("@DataHoraAtual", dataHoraAtual) };
             DataTable resultado = dbManager.ConsultarDados(comandoSQL, parametros);
@@ -189,127 +163,154 @@ namespace projetoetec
 
         private void btnMoverDireita_Click(object sender, EventArgs e)
         {
-            List<string> itensSelecionados = new List<string>();
-            foreach (var item in lbxAtuais.SelectedItems)
+            List<int> indicesSelecionados = new List<int>();
+            foreach (int index in lbxAtuais.SelectedIndices)
             {
-                itensSelecionados.Add(item.ToString());
+                indicesSelecionados.Add(index);
             }
 
+            // Armazenar os itens selecionados em uma lista para manter a seleção após o movimento
+            List<string> itensSelecionados = new List<string>();
+            foreach (int index in indicesSelecionados)
+            {
+                itensSelecionados.Add(lbxAtuais.Items[index].ToString());
+            }
+
+            // Remover os itens selecionados da lista lbxAtuais e adicionar na lista lbxExcluir
             foreach (string item in itensSelecionados)
             {
                 lbxAtuais.Items.Remove(item);
                 lbxExcluir.Items.Add(item);
             }
+
+            // Reorganizar lbxExcluir por data
+            ReorganizarListaPorData(lbxExcluir);
+
+            // Selecionar os itens movidos na lista lbxExcluir
+            foreach (string item in itensSelecionados)
+            {
+                lbxExcluir.SetSelected(lbxExcluir.Items.IndexOf(item), true);
+            }
         }
 
         private void btnMoverEsquerda_Click(object sender, EventArgs e)
         {
-            List<string> itensSelecionados = new List<string>();
-            foreach (var item in lbxExcluir.SelectedItems)
+            List<int> indicesSelecionados = new List<int>();
+            foreach (int index in lbxExcluir.SelectedIndices)
             {
-                itensSelecionados.Add(item.ToString());
+                indicesSelecionados.Add(index);
             }
 
+            // Armazenar os itens selecionados em uma lista para manter a seleção após o movimento
+            List<string> itensSelecionados = new List<string>();
+            foreach (int index in indicesSelecionados)
+            {
+                itensSelecionados.Add(lbxExcluir.Items[index].ToString());
+            }
+
+            // Remover os itens selecionados da lista lbxExcluir e adicionar na lista lbxAtuais
             foreach (string item in itensSelecionados)
             {
                 lbxExcluir.Items.Remove(item);
                 lbxAtuais.Items.Add(item);
             }
+
+            // Reorganizar lbxAtuais por data
+            ReorganizarListaPorData(lbxAtuais);
+
+            // Selecionar os itens movidos na lista lbxAtuais
+            foreach (string item in itensSelecionados)
+            {
+                lbxAtuais.SetSelected(lbxAtuais.Items.IndexOf(item), true);
+            }
         }
 
-        private void ExcluirReserva(int labCod, int profCod, DateTime resData, TimeSpan resHoraInicial)
+        private void ReorganizarListaPorData(ListBox listBox)
         {
-            try
+            // Converter os itens da ListBox para uma lista de strings
+            List<string> items = new List<string>();
+            foreach (var item in listBox.Items)
             {
-                // Comando SQL para exclusão da reserva
-                string comandoSQL = "DELETE FROM reserva WHERE lab_cod = @LabCod AND prof_cod = @ProfCod AND res_data = @ResData AND res_horainicial = @ResHoraInicial";
-
-                // Parâmetros para o comando SQL
-                SqlParameter[] parametros = {
-            new SqlParameter("@LabCod", labCod),
-            new SqlParameter("@ProfCod", profCod),
-            new SqlParameter("@ResData", resData),
-            new SqlParameter("@ResHoraInicial", resHoraInicial)
-        };
-
-                // Execução do comando SQL
-                dbManager.InserirDados(comandoSQL, parametros);
+                items.Add(item.ToString());
             }
-            catch (Exception ex)
+
+            // Ordenar os itens por data
+            items.Sort((x, y) =>
             {
-                // Mensagem de erro, caso ocorra uma exceção
-                MessageBox.Show($"Erro ao excluir a reserva: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                DateTime dataX = ExtrairDataReserva(x);
+                DateTime dataY = ExtrairDataReserva(y);
+                return DateTime.Compare(dataX, dataY);
+            });
+
+            // Limpar a ListBox e adicionar os itens ordenados de volta
+            listBox.Items.Clear();
+            listBox.Items.AddRange(items.ToArray());
         }
+
+        private DateTime ExtrairDataReserva(string reserva)
+        {
+            // Extrair a data da reserva no formato "dd/MM/yyyy"
+            string[] partes = reserva.Split(new string[] { " - " }, StringSplitOptions.None);
+            string dataReserva = partes[0];
+            return DateTime.ParseExact(dataReserva, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+        }
+
+
 
 
         private void btnExcluirReserva_Click(object sender, EventArgs e)
         {
             if (lbxExcluir.SelectedItems.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Tem certeza que deseja excluir as reservas selecionadas?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
+                DialogResult result = MessageBox.Show("Tem certeza que deseja excluir as reservas selecionadas?", "Confirmação de exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    try
+                    List<string> itensSelecionados = new List<string>();
+                    foreach (var item in lbxExcluir.SelectedItems)
                     {
-                        foreach (var selectedItem in lbxExcluir.SelectedItems)
-                        {
-                            string reserva = selectedItem.ToString();
-                            string[] detalhes = reserva.Split(new string[] { " - " }, StringSplitOptions.None);
-
-                            // Depuração: Imprimir detalhes da reserva
-                            Console.WriteLine("Detalhes da reserva:");
-                            foreach (var detalhe in detalhes)
-                            {
-                                Console.WriteLine(detalhe);
-                            }
-
-                            // Verificar se o array de detalhes tem o tamanho correto
-                            if (detalhes.Length <= 6)
-                            {
-                                string labNome = detalhes[3];
-                                string labSala = detalhes[4];
-                                string labDisc = detalhes[5];
-                                DateTime resData = DateTime.ParseExact(detalhes[0], "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                                TimeSpan resHoraInicial = TimeSpan.ParseExact(detalhes[1], @"hh\:mm", CultureInfo.InvariantCulture);
-
-                                int labCod = ObterCodigoLaboratorio(labNome, labSala, labDisc);
-                                int profCod = ObterCodigoProfessor(professorSelecionado);
-
-                                ExcluirReserva(labCod, profCod, resData, resHoraInicial);
-                            }
-                            else
-                            {
-                                throw new Exception("Formato de reserva inválido.");
-                            }
-                        }
-
-
-                        // Após excluir todas as reservas selecionadas, você pode atualizar a interface ou fazer qualquer outra ação necessária
-                        btnConsultar_Click(sender, e);
+                        itensSelecionados.Add(item.ToString());
                     }
-                    catch (Exception ex)
+
+                    foreach (string item in itensSelecionados)
                     {
-                        MessageBox.Show($"Erro ao excluir as reservas: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Extrair a data e o horário inicial da reserva
+                        string[] partes = item.Split(' ');
+                        string data = partes[0];
+                        string horarioInicial = partes[2];
+
+                        // Deletar a reserva do banco de dados
+                        ExcluirReserva(professorSelecionado, data, horarioInicial);
+
+                        // Remover o item das ListBoxes
+                        lbxExcluir.Items.Remove(item);
                     }
+
+                    MessageBox.Show("Reservas excluídas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Nenhuma reserva selecionada para exclusão.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, selecione uma reserva para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-
-
-
+        private void ExcluirReserva(string professor, string data, string horarioInicial)
+        {
+            string comandoSQL = "DELETE FROM reserva WHERE prof_cod = (SELECT prof_cod FROM professor WHERE CONCAT(prof_nome, ' - ', prof_disciplina) = @Professor) AND res_data = @Data AND res_horainicial = @HorarioInicial";
+            SqlParameter[] parametros = {
+                new SqlParameter("@Professor", professor),
+                new SqlParameter("@Data", DateTime.Parse(data)),
+                new SqlParameter("@HorarioInicial", TimeSpan.Parse(horarioInicial))
+            };
+            dbManager.InserirDados(comandoSQL, parametros);
+        }
 
 
         //
         //
         //
-        // Mudança de telas
+        //
+        //Mudança de telas
         private void lnkConsultaDia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmConsultaDia abrir = new frmConsultaDia();
@@ -331,11 +332,13 @@ namespace projetoetec
             this.Hide();
         }
 
+
         //
         //
         //
         //
-        // Encerrando o programa
+        //encerramento
+
         private void frmConsultaGeral_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!isChangingForm && e.CloseReason == CloseReason.UserClosing)
@@ -351,10 +354,5 @@ namespace projetoetec
                 }
             }
         }
-
-
     }
 }
-
-
-

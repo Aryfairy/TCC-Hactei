@@ -165,61 +165,73 @@ namespace projetoetec
                 return;
             }
 
-            // Se repetirReserva for true, a reserva deve ser repetida
-            if (repetirReserva)
+            // Verifica se a checkbox de repetir está marcada
+            if (ckbRepetir.Checked)
             {
-                // Cálculo do número de dias de repetição
-                int numDias = (int)(dtpReservaRepetir.Value.Date - dtpReserva.Value.Date).TotalDays + 1;
-
-                // Verificação do limite de dias consecutivos de repetição
-                if (numDias > 10)
+                // Verifica se dtpReservaRepetir é anterior ou igual a dtpReserva
+                DateTime dataRepetir = dtpReservaRepetir.Value.Date;
+                if (dataRepetir <= dataReserva)
                 {
-                    MessageBox.Show("Você só pode repetir a reserva por até 10 dias consecutivos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("A data de repetição deve ser posterior à data da reserva inicial.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                bool conflitoReserva = false;
-                string datasConflito = "";
-
-                // Verificação de conflito de reserva para cada dia repetido
-                for (int i = 0; i < numDias; i++)
+                // Se repetirReserva for true, a reserva deve ser repetida
+                if (repetirReserva)
                 {
-                    DateTime dataAtual = dtpReserva.Value.Date.AddDays(i);
+                    // Cálculo do número de dias de repetição
+                    int numDias = (int)(dataRepetir - dataReserva).TotalDays + 1;
+
+                    // Verificação do limite de dias consecutivos de repetição
+                    if (numDias > 10)
+                    {
+                        MessageBox.Show("Você só pode repetir a reserva por até 10 dias consecutivos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    bool conflitoReserva = false;
+                    string datasConflito = "";
 
                     // Verificação de conflito de reserva para cada dia repetido
-                    if (ExisteConflitoReserva(dataAtual, dataAtual, horaInicial, horaFinal))
-                    {
-                        conflitoReserva = true;
-                        datasConflito += $"{dataAtual:dd/MM/yyyy}\n";
-                    }
-                }
-
-                // Se houver conflito de reserva em qualquer um dos dias, exibe a mensagem de erro e interrompe o processo de reserva
-                if (conflitoReserva)
-                {
-                    MessageBox.Show($"Não foi possível realizar a reserva nos seguintes dias devido a conflitos de horário:\n{datasConflito}\nPor favor, refaça a repetição levando isso em conta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Confirmação de reserva para o período de dias
-                DialogResult resultConfirmacao = MessageBox.Show(
-                    $"Deseja reservar o laboratório para o professor no período de {dtpReserva.Value:dd/MM/yyyy} a {dtpReservaRepetir.Value:dd/MM/yyyy}, das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
-                    "Confirmar Reserva",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                // Se o usuário confirmar a reserva, executa a inserção no banco de dados
-                if (resultConfirmacao == DialogResult.Yes)
-                {
-                    // Reservar laboratório para cada dia repetido
                     for (int i = 0; i < numDias; i++)
                     {
-                        DateTime dataAtual = dtpReserva.Value.Date.AddDays(i);
-                        ReservarLabProf(dataAtual, horaInicial, horaFinal);
+                        DateTime dataAtual = dataReserva.AddDays(i);
+
+                        // Verificação de conflito de reserva para cada dia repetido
+                        if (ExisteConflitoReserva(dataAtual, dataAtual, horaInicial, horaFinal))
+                        {
+                            conflitoReserva = true;
+                            datasConflito += $"{dataAtual:dd/MM/yyyy}\n";
+                        }
                     }
 
-                    // Exibição de mensagem de sucesso após repetição das reservas
-                    MessageBox.Show("Reservas realizadas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Se houver conflito de reserva em qualquer um dos dias, exibe a mensagem de erro e interrompe o processo de reserva
+                    if (conflitoReserva)
+                    {
+                        MessageBox.Show($"Não foi possível realizar a reserva nos seguintes dias devido a conflitos de horário:\n{datasConflito}\nPor favor, refaça a repetição levando isso em conta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Confirmação de reserva para o período de dias
+                    DialogResult resultConfirmacao = MessageBox.Show(
+                        $"Deseja reservar o laboratório para o professor no período de {dataReserva:dd/MM/yyyy} a {dataRepetir:dd/MM/yyyy}, das {horaInicial:HH:mm} às {horaFinal:HH:mm}?",
+                        "Confirmar Reserva",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    // Se o usuário confirmar a reserva, executa a inserção no banco de dados
+                    if (resultConfirmacao == DialogResult.Yes)
+                    {
+                        // Reservar laboratório para cada dia repetido
+                        for (int i = 0; i < numDias; i++)
+                        {
+                            DateTime dataAtual = dataReserva.AddDays(i);
+                            ReservarLabProf(dataAtual, horaInicial, horaFinal);
+                        }
+
+                        // Exibição de mensagem de sucesso após repetição das reservas
+                        MessageBox.Show("Reservas realizadas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             else
@@ -249,6 +261,8 @@ namespace projetoetec
                 }
             }
         }
+
+
 
         // Método para verificar se há conflito de reserva
         private bool ExisteConflitoReserva(DateTime dataInicio, DateTime dataFim, DateTime horaInicial, DateTime horaFinal)
@@ -390,7 +404,7 @@ namespace projetoetec
         //
         //
         // mouse hover no REPETIR (explicando o que ele faz)
-        
+
 
         private void ckbRepetir_MouseHover(object sender, EventArgs e)
         {
