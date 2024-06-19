@@ -337,6 +337,7 @@ namespace projetoetec
             this.cboProfessor.Size = new System.Drawing.Size(357, 26);
             this.cboProfessor.TabIndex = 13;
             this.cboProfessor.Text = "Selecione um(a) professor(a)";
+            this.cboProfessor.SelectedIndexChanged += new System.EventHandler(this.cboProfessor_SelectedIndexChanged);
             // 
             // picMudarTema
             // 

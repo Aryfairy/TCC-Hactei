@@ -2,6 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace projetoetec
 {
@@ -130,8 +132,6 @@ namespace projetoetec
             SqlParameter[] parametros = { new SqlParameter("@Professor", professor), new SqlParameter("@DataHoraAtual", dataHoraAtual) };
             return ConsultarDados(comandoSQL, parametros);
         }
-
-
 
 
         public void CarregarComboBox(ComboBox comboBox, string comandoSQL, string displayMember)
