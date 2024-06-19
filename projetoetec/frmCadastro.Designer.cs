@@ -121,7 +121,7 @@ namespace projetoetec
             this.txtSala.BackColor = System.Drawing.Color.White;
             this.txtSala.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSala.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSala.Location = new System.Drawing.Point(884, 277);
+            this.txtSala.Location = new System.Drawing.Point(885, 278);
             this.txtSala.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSala.MaxLength = 50;
             this.txtSala.Name = "txtSala";
@@ -137,7 +137,7 @@ namespace projetoetec
             this.maskedTxtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTxtCelular.Mask = "(00) 99999-0000";
             this.maskedTxtCelular.Name = "maskedTxtCelular";
-            this.maskedTxtCelular.Size = new System.Drawing.Size(179, 24);
+            this.maskedTxtCelular.Size = new System.Drawing.Size(172, 24);
             this.maskedTxtCelular.TabIndex = 8;
             // 
             // txtDisciplinaProf
@@ -145,7 +145,7 @@ namespace projetoetec
             this.txtDisciplinaProf.BackColor = System.Drawing.Color.White;
             this.txtDisciplinaProf.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDisciplinaProf.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisciplinaProf.Location = new System.Drawing.Point(885, 432);
+            this.txtDisciplinaProf.Location = new System.Drawing.Point(886, 433);
             this.txtDisciplinaProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDisciplinaProf.MaxLength = 50;
             this.txtDisciplinaProf.Name = "txtDisciplinaProf";
@@ -157,7 +157,7 @@ namespace projetoetec
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(884, 354);
+            this.txtEmail.Location = new System.Drawing.Point(885, 356);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
@@ -169,11 +169,11 @@ namespace projetoetec
             this.txtProfessor.BackColor = System.Drawing.Color.White;
             this.txtProfessor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProfessor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProfessor.Location = new System.Drawing.Point(225, 432);
+            this.txtProfessor.Location = new System.Drawing.Point(225, 433);
             this.txtProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProfessor.MaxLength = 50;
             this.txtProfessor.Name = "txtProfessor";
-            this.txtProfessor.Size = new System.Drawing.Size(145, 20);
+            this.txtProfessor.Size = new System.Drawing.Size(140, 20);
             this.txtProfessor.TabIndex = 7;
             // 
             // txtDisciplinaLab
@@ -181,7 +181,7 @@ namespace projetoetec
             this.txtDisciplinaLab.BackColor = System.Drawing.Color.White;
             this.txtDisciplinaLab.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDisciplinaLab.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisciplinaLab.Location = new System.Drawing.Point(225, 354);
+            this.txtDisciplinaLab.Location = new System.Drawing.Point(225, 356);
             this.txtDisciplinaLab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDisciplinaLab.MaxLength = 20;
             this.txtDisciplinaLab.Name = "txtDisciplinaLab";
@@ -193,7 +193,7 @@ namespace projetoetec
             this.txtLaboratorio.BackColor = System.Drawing.Color.White;
             this.txtLaboratorio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLaboratorio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLaboratorio.Location = new System.Drawing.Point(225, 277);
+            this.txtLaboratorio.Location = new System.Drawing.Point(225, 278);
             this.txtLaboratorio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLaboratorio.MaxLength = 50;
             this.txtLaboratorio.Name = "txtLaboratorio";
@@ -206,15 +206,13 @@ namespace projetoetec
             this.btnDeletarprof.FlatAppearance.BorderSize = 0;
             this.btnDeletarprof.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletarprof.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarprof.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarprof.Image")));
             this.btnDeletarprof.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeletarprof.Location = new System.Drawing.Point(1144, 653);
+            this.btnDeletarprof.Location = new System.Drawing.Point(1142, 653);
             this.btnDeletarprof.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeletarprof.Name = "btnDeletarprof";
             this.btnDeletarprof.Size = new System.Drawing.Size(96, 23);
             this.btnDeletarprof.TabIndex = 13;
             this.btnDeletarprof.Text = "Deletar";
-            this.btnDeletarprof.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarprof.UseCompatibleTextRendering = true;
             this.btnDeletarprof.UseVisualStyleBackColor = false;
             this.btnDeletarprof.Click += new System.EventHandler(this.btnDeletarprof_Click);
@@ -225,15 +223,13 @@ namespace projetoetec
             this.btnCadastrarProf.FlatAppearance.BorderSize = 0;
             this.btnCadastrarProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarProf.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarProf.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarProf.Image")));
             this.btnCadastrarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarProf.Location = new System.Drawing.Point(1134, 505);
+            this.btnCadastrarProf.Location = new System.Drawing.Point(1135, 507);
             this.btnCadastrarProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCadastrarProf.Name = "btnCadastrarProf";
-            this.btnCadastrarProf.Size = new System.Drawing.Size(120, 26);
+            this.btnCadastrarProf.Size = new System.Drawing.Size(106, 26);
             this.btnCadastrarProf.TabIndex = 11;
             this.btnCadastrarProf.Text = "Cadastrar";
-            this.btnCadastrarProf.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProf.UseCompatibleTextRendering = true;
             this.btnCadastrarProf.UseVisualStyleBackColor = false;
             this.btnCadastrarProf.Click += new System.EventHandler(this.btnCadastrarProf_Click);
@@ -245,15 +241,13 @@ namespace projetoetec
             this.btnDeletarLab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletarLab.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarLab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
-            this.btnDeletarLab.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarLab.Image")));
             this.btnDeletarLab.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeletarLab.Location = new System.Drawing.Point(488, 653);
+            this.btnDeletarLab.Location = new System.Drawing.Point(493, 653);
             this.btnDeletarLab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeletarLab.Name = "btnDeletarLab";
-            this.btnDeletarLab.Size = new System.Drawing.Size(98, 23);
+            this.btnDeletarLab.Size = new System.Drawing.Size(77, 23);
             this.btnDeletarLab.TabIndex = 10;
             this.btnDeletarLab.Text = "Deletar";
-            this.btnDeletarLab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarLab.UseCompatibleTextRendering = true;
             this.btnDeletarLab.UseVisualStyleBackColor = false;
             this.btnDeletarLab.Click += new System.EventHandler(this.btnDeletarLab_Click);
@@ -264,12 +258,11 @@ namespace projetoetec
             this.btnCadastrarLab.FlatAppearance.BorderSize = 0;
             this.btnCadastrarLab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarLab.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarLab.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarLab.Image")));
             this.btnCadastrarLab.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarLab.Location = new System.Drawing.Point(471, 429);
+            this.btnCadastrarLab.Location = new System.Drawing.Point(481, 431);
             this.btnCadastrarLab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCadastrarLab.Name = "btnCadastrarLab";
-            this.btnCadastrarLab.Size = new System.Drawing.Size(123, 25);
+            this.btnCadastrarLab.Size = new System.Drawing.Size(100, 25);
             this.btnCadastrarLab.TabIndex = 8;
             this.btnCadastrarLab.Text = "Cadastrar";
             this.btnCadastrarLab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -284,7 +277,7 @@ namespace projetoetec
             this.cboProfessor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProfessor.ForeColor = System.Drawing.Color.Black;
             this.cboProfessor.FormattingEnabled = true;
-            this.cboProfessor.Location = new System.Drawing.Point(878, 583);
+            this.cboProfessor.Location = new System.Drawing.Point(883, 584);
             this.cboProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProfessor.Name = "cboProfessor";
             this.cboProfessor.Size = new System.Drawing.Size(366, 25);
@@ -302,11 +295,11 @@ namespace projetoetec
             "sqsq",
             "4ty4t",
             "y5y5y"});
-            this.cboLaboratorio.Location = new System.Drawing.Point(225, 507);
+            this.cboLaboratorio.Location = new System.Drawing.Point(227, 507);
             this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboLaboratorio.MaxDropDownItems = 4;
             this.cboLaboratorio.Name = "cboLaboratorio";
-            this.cboLaboratorio.Size = new System.Drawing.Size(366, 25);
+            this.cboLaboratorio.Size = new System.Drawing.Size(361, 25);
             this.cboLaboratorio.TabIndex = 9;
             this.cboLaboratorio.Text = "Selecione o laboratório que deseja deletar";
             // 

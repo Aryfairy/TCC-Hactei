@@ -129,10 +129,10 @@ namespace projetoetec
             "Laboratório 1   00:00  Disponível",
             "Laboratório 2   00:00  Reservado",
             "Laboratório 3   00:00  Reservado"});
-            this.cboLaboratorio.Location = new System.Drawing.Point(452, 265);
+            this.cboLaboratorio.Location = new System.Drawing.Point(454, 267);
             this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboLaboratorio.Name = "cboLaboratorio";
-            this.cboLaboratorio.Size = new System.Drawing.Size(562, 25);
+            this.cboLaboratorio.Size = new System.Drawing.Size(553, 25);
             this.cboLaboratorio.TabIndex = 2;
             this.cboLaboratorio.Text = "Selecione um laboratório";
             // 
@@ -142,7 +142,7 @@ namespace projetoetec
             this.dtpData.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpData.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpData.Location = new System.Drawing.Point(249, 265);
+            this.dtpData.Location = new System.Drawing.Point(251, 267);
             this.dtpData.Margin = new System.Windows.Forms.Padding(4);
             this.dtpData.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dtpData.Name = "dtpData";
@@ -172,7 +172,7 @@ namespace projetoetec
             this.dgvReservasDia.Name = "dgvReservasDia";
             this.dgvReservasDia.ReadOnly = true;
             this.dgvReservasDia.RowHeadersWidth = 51;
-            this.dgvReservasDia.Size = new System.Drawing.Size(986, 337);
+            this.dgvReservasDia.Size = new System.Drawing.Size(986, 325);
             this.dgvReservasDia.TabIndex = 3;
             this.dgvReservasDia.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservasDia_CellDoubleClick);
             this.dgvReservasDia.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReservasDia_CellFormatting);
@@ -212,10 +212,10 @@ namespace projetoetec
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(1093, 263);
+            this.btnConsultar.Location = new System.Drawing.Point(1102, 265);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(120, 27);
+            this.btnConsultar.Size = new System.Drawing.Size(102, 27);
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;

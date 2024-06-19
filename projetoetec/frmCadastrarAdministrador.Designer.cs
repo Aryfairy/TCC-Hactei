@@ -71,7 +71,7 @@ namespace projetoetec
             this.lnkCadastrarNovoAdm.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastrarNovoAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.lnkCadastrarNovoAdm.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(202)))), ((int)(((byte)(244)))));
-            this.lnkCadastrarNovoAdm.Location = new System.Drawing.Point(910, 670);
+            this.lnkCadastrarNovoAdm.Location = new System.Drawing.Point(910, 668);
             this.lnkCadastrarNovoAdm.Name = "lnkCadastrarNovoAdm";
             this.lnkCadastrarNovoAdm.Size = new System.Drawing.Size(261, 20);
             this.lnkCadastrarNovoAdm.TabIndex = 16;
@@ -85,7 +85,7 @@ namespace projetoetec
             this.ckbMostrarSenha2.BackColor = System.Drawing.Color.Transparent;
             this.ckbMostrarSenha2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbMostrarSenha2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ckbMostrarSenha2.Location = new System.Drawing.Point(847, 574);
+            this.ckbMostrarSenha2.Location = new System.Drawing.Point(847, 578);
             this.ckbMostrarSenha2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.ckbMostrarSenha2.Name = "ckbMostrarSenha2";
             this.ckbMostrarSenha2.Size = new System.Drawing.Size(148, 24);
@@ -99,10 +99,10 @@ namespace projetoetec
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(1099, 611);
+            this.btnRegistrar.Location = new System.Drawing.Point(1110, 610);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(120, 27);
+            this.btnRegistrar.Size = new System.Drawing.Size(94, 27);
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;

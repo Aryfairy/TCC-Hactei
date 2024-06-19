@@ -43,15 +43,13 @@ namespace projetoetec
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmar.Image")));
             this.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConfirmar.Location = new System.Drawing.Point(333, 332);
+            this.btnConfirmar.Location = new System.Drawing.Point(344, 332);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(111, 25);
+            this.btnConfirmar.Size = new System.Drawing.Size(92, 25);
             this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
@@ -65,7 +63,7 @@ namespace projetoetec
             this.txtConfirmar.MaxLength = 25;
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.PasswordChar = 'l';
-            this.txtConfirmar.Size = new System.Drawing.Size(333, 18);
+            this.txtConfirmar.Size = new System.Drawing.Size(319, 18);
             this.txtConfirmar.TabIndex = 4;
             this.txtConfirmar.Tag = "";
             // 
@@ -79,7 +77,7 @@ namespace projetoetec
             this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNovaSenha.MaxLength = 25;
             this.txtNovaSenha.Name = "txtNovaSenha";
-            this.txtNovaSenha.Size = new System.Drawing.Size(333, 18);
+            this.txtNovaSenha.Size = new System.Drawing.Size(319, 18);
             this.txtNovaSenha.TabIndex = 2;
             // 
             // frmNovaSenha

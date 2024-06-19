@@ -48,7 +48,7 @@ namespace projetoetec
             this.linkEsqueceuSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.linkEsqueceuSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(202)))), ((int)(((byte)(244)))));
-            this.linkEsqueceuSenha.Location = new System.Drawing.Point(1048, 506);
+            this.linkEsqueceuSenha.Location = new System.Drawing.Point(1055, 508);
             this.linkEsqueceuSenha.Name = "linkEsqueceuSenha";
             this.linkEsqueceuSenha.Size = new System.Drawing.Size(162, 20);
             this.linkEsqueceuSenha.TabIndex = 15;
@@ -64,7 +64,7 @@ namespace projetoetec
             this.lnkCadastrar.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(104)))));
             this.lnkCadastrar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(202)))), ((int)(((byte)(244)))));
-            this.lnkCadastrar.Location = new System.Drawing.Point(983, 634);
+            this.lnkCadastrar.Location = new System.Drawing.Point(983, 631);
             this.lnkCadastrar.Name = "lnkCadastrar";
             this.lnkCadastrar.Size = new System.Drawing.Size(90, 20);
             this.lnkCadastrar.TabIndex = 16;
@@ -78,7 +78,7 @@ namespace projetoetec
             this.ckbMostrarSenha.BackColor = System.Drawing.Color.Transparent;
             this.ckbMostrarSenha.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbMostrarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ckbMostrarSenha.Location = new System.Drawing.Point(844, 504);
+            this.ckbMostrarSenha.Location = new System.Drawing.Point(844, 508);
             this.ckbMostrarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbMostrarSenha.Name = "ckbMostrarSenha";
             this.ckbMostrarSenha.Size = new System.Drawing.Size(148, 24);
@@ -94,10 +94,10 @@ namespace projetoetec
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(979, 572);
+            this.btnEntrar.Location = new System.Drawing.Point(988, 557);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(101, 24);
+            this.btnEntrar.Size = new System.Drawing.Size(79, 27);
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -108,7 +108,7 @@ namespace projetoetec
             this.txtSenha.BackColor = System.Drawing.Color.White;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(848, 469);
+            this.txtSenha.Location = new System.Drawing.Point(848, 470);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(1);
             this.txtSenha.MaxLength = 80;
             this.txtSenha.Name = "txtSenha";
@@ -122,7 +122,7 @@ namespace projetoetec
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(848, 377);
+            this.txtEmail.Location = new System.Drawing.Point(848, 379);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(1);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";

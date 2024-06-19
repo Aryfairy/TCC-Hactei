@@ -42,12 +42,14 @@ namespace projetoetec
             this.lnkReserva = new System.Windows.Forms.LinkLabel();
             this.lnkConsultaGeral = new System.Windows.Forms.LinkLabel();
             this.linkConsultaDia = new System.Windows.Forms.LinkLabel();
+            this.lblDataInicial = new System.Windows.Forms.Label();
+            this.lblDataFinal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpReservaRepetir
             // 
             this.dtpReservaRepetir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReservaRepetir.Location = new System.Drawing.Point(482, 508);
+            this.dtpReservaRepetir.Location = new System.Drawing.Point(382, 554);
             this.dtpReservaRepetir.Margin = new System.Windows.Forms.Padding(4);
             this.dtpReservaRepetir.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dtpReservaRepetir.Name = "dtpReservaRepetir";
@@ -58,14 +60,14 @@ namespace projetoetec
             // 
             this.ckbRepetir.AutoSize = true;
             this.ckbRepetir.BackColor = System.Drawing.Color.Transparent;
-            this.ckbRepetir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbRepetir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(215)))));
-            this.ckbRepetir.Location = new System.Drawing.Point(1159, 439);
+            this.ckbRepetir.Location = new System.Drawing.Point(1075, 468);
             this.ckbRepetir.Margin = new System.Windows.Forms.Padding(4);
             this.ckbRepetir.Name = "ckbRepetir";
-            this.ckbRepetir.Size = new System.Drawing.Size(90, 20);
+            this.ckbRepetir.Size = new System.Drawing.Size(92, 24);
             this.ckbRepetir.TabIndex = 13;
-            this.ckbRepetir.Text = "REPETIR";
+            this.ckbRepetir.Text = "Repetir";
             this.ckbRepetir.UseVisualStyleBackColor = false;
             this.ckbRepetir.CheckedChanged += new System.EventHandler(this.ckbRepetir_CheckedChanged);
             this.ckbRepetir.MouseHover += new System.EventHandler(this.ckbRepetir_MouseHover);
@@ -79,10 +81,10 @@ namespace projetoetec
             this.cboFinal.FormattingEnabled = true;
             this.cboFinal.IntegralHeight = false;
             this.cboFinal.ItemHeight = 20;
-            this.cboFinal.Location = new System.Drawing.Point(689, 584);
+            this.cboFinal.Location = new System.Drawing.Point(645, 643);
             this.cboFinal.Margin = new System.Windows.Forms.Padding(4);
             this.cboFinal.Name = "cboFinal";
-            this.cboFinal.Size = new System.Drawing.Size(100, 28);
+            this.cboFinal.Size = new System.Drawing.Size(125, 28);
             this.cboFinal.TabIndex = 12;
             // 
             // cboInicial
@@ -94,16 +96,16 @@ namespace projetoetec
             this.cboInicial.FormattingEnabled = true;
             this.cboInicial.IntegralHeight = false;
             this.cboInicial.ItemHeight = 20;
-            this.cboInicial.Location = new System.Drawing.Point(482, 583);
+            this.cboInicial.Location = new System.Drawing.Point(383, 643);
             this.cboInicial.Margin = new System.Windows.Forms.Padding(4);
             this.cboInicial.Name = "cboInicial";
-            this.cboInicial.Size = new System.Drawing.Size(98, 28);
+            this.cboInicial.Size = new System.Drawing.Size(130, 28);
             this.cboInicial.TabIndex = 11;
             // 
             // dtpReserva
             // 
             this.dtpReserva.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReserva.Location = new System.Drawing.Point(482, 432);
+            this.dtpReserva.Location = new System.Drawing.Point(382, 464);
             this.dtpReserva.Margin = new System.Windows.Forms.Padding(4);
             this.dtpReserva.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dtpReserva.Name = "dtpReserva";
@@ -116,10 +118,10 @@ namespace projetoetec
             this.btnReservar.FlatAppearance.BorderSize = 0;
             this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservar.Location = new System.Drawing.Point(1018, 584);
+            this.btnReservar.Location = new System.Drawing.Point(916, 643);
             this.btnReservar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(114, 28);
+            this.btnReservar.Size = new System.Drawing.Size(96, 28);
             this.btnReservar.TabIndex = 6;
             this.btnReservar.Text = "Reservar";
             this.btnReservar.UseVisualStyleBackColor = false;
@@ -132,7 +134,7 @@ namespace projetoetec
             this.cboProfessor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProfessor.ForeColor = System.Drawing.Color.Black;
             this.cboProfessor.FormattingEnabled = true;
-            this.cboProfessor.Location = new System.Drawing.Point(482, 356);
+            this.cboProfessor.Location = new System.Drawing.Point(382, 374);
             this.cboProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboProfessor.Name = "cboProfessor";
             this.cboProfessor.Size = new System.Drawing.Size(645, 28);
@@ -146,7 +148,7 @@ namespace projetoetec
             this.cboLaboratorio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLaboratorio.ForeColor = System.Drawing.Color.Black;
             this.cboLaboratorio.FormattingEnabled = true;
-            this.cboLaboratorio.Location = new System.Drawing.Point(482, 279);
+            this.cboLaboratorio.Location = new System.Drawing.Point(382, 285);
             this.cboLaboratorio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboLaboratorio.MaxDropDownItems = 1;
             this.cboLaboratorio.Name = "cboLaboratorio";
@@ -214,6 +216,32 @@ namespace projetoetec
             this.linkConsultaDia.Text = "CONSULTA DO DIA";
             this.linkConsultaDia.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkConsultaDia_LinkClicked);
             // 
+            // lblDataInicial
+            // 
+            this.lblDataInicial.AutoSize = true;
+            this.lblDataInicial.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataInicial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataInicial.ForeColor = System.Drawing.Color.White;
+            this.lblDataInicial.Location = new System.Drawing.Point(381, 432);
+            this.lblDataInicial.Name = "lblDataInicial";
+            this.lblDataInicial.Size = new System.Drawing.Size(53, 22);
+            this.lblDataInicial.TabIndex = 21;
+            this.lblDataInicial.Text = "Data";
+            this.lblDataInicial.Click += new System.EventHandler(this.lblDataInicial_Click);
+            // 
+            // lblDataFinal
+            // 
+            this.lblDataFinal.AutoSize = true;
+            this.lblDataFinal.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataFinal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataFinal.ForeColor = System.Drawing.Color.White;
+            this.lblDataFinal.Location = new System.Drawing.Point(380, 523);
+            this.lblDataFinal.Name = "lblDataFinal";
+            this.lblDataFinal.Size = new System.Drawing.Size(101, 22);
+            this.lblDataFinal.TabIndex = 22;
+            this.lblDataFinal.Text = "Data Final";
+            this.lblDataFinal.Click += new System.EventHandler(this.lblDataFinal_Click);
+            // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,6 +250,8 @@ namespace projetoetec
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1463, 822);
+            this.Controls.Add(this.lblDataFinal);
+            this.Controls.Add(this.lblDataInicial);
             this.Controls.Add(this.lnkCadastro);
             this.Controls.Add(this.cboFinal);
             this.Controls.Add(this.lnkReserva);
@@ -262,5 +292,7 @@ namespace projetoetec
         private System.Windows.Forms.ComboBox cboInicial;
         private System.Windows.Forms.CheckBox ckbRepetir;
         private System.Windows.Forms.DateTimePicker dtpReservaRepetir;
+        private System.Windows.Forms.Label lblDataInicial;
+        private System.Windows.Forms.Label lblDataFinal;
     }
 }

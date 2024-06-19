@@ -64,15 +64,13 @@ namespace projetoetec
             this.btnGerar.FlatAppearance.BorderSize = 0;
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGerar.Image")));
             this.btnGerar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGerar.Location = new System.Drawing.Point(1040, 660);
+            this.btnGerar.Location = new System.Drawing.Point(1050, 663);
             this.btnGerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(120, 27);
+            this.btnGerar.Size = new System.Drawing.Size(103, 26);
             this.btnGerar.TabIndex = 4;
             this.btnGerar.Text = "Gerar PDF";
-            this.btnGerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGerar.UseVisualStyleBackColor = false;
             // 
             // lnkCadastro

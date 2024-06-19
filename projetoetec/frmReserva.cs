@@ -468,5 +468,14 @@ namespace projetoetec
 
         }
 
+        private void lblDataInicial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDataFinal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
