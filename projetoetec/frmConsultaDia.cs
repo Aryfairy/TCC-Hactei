@@ -156,6 +156,9 @@ namespace projetoetec
                 cboLaboratorio.DataSource = laboratorios;
                 cboLaboratorio.DisplayMember = "nome_sala";
                 cboLaboratorio.ValueMember = "lab_cod";
+
+                // Configurar ComboBox para não permitir escrita
+                cboLaboratorio.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             catch (Exception ex)
             {
@@ -209,7 +212,9 @@ namespace projetoetec
                                 string deleteSQL = $"DELETE FROM reserva " +
                                                    $"WHERE reserva.prof_cod = (SELECT prof_cod FROM professor WHERE prof_nome = '{professor}') " +
                                                    $"AND reserva.lab_cod = (SELECT lab_cod FROM laboratorio WHERE CONCAT(lab_nome, ' - ', lab_sala, ' - ', lab_disc) = '{laboratorio}') " +
-                                                   $"AND res_horainicial = '{horaInicial}'";
+                                                   $"AND res_horainicial = '{horaInicial}' " +
+                                                   $"AND res_data = '{dataSelecionada:yyyy-MM-dd}'";
+
 
 
                                 try
@@ -230,6 +235,10 @@ namespace projetoetec
             }
         }
 
+        //
+        //
+        //
+        //
         // Mudança de telas
         private void lnkReserva_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
